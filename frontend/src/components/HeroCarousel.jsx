@@ -106,7 +106,7 @@ const HeroCarousel = () => {
                 </div>
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-full"
+                  className="bg-violet-600 hover:bg-blue-600/90 text-white px-8 py-6 text-lg rounded-full"
                 >
                   TAKE A TOUR
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -120,14 +120,14 @@ const HeroCarousel = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white hover:bg-primary hover:text-white text-foreground rounded-full p-3 md:p-4 shadow-lg transition-all z-10"
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white hover:bg-blue-600 hover:text-white text-foreground rounded-full p-3 md:p-4 shadow-lg transition-all z-10"
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-white hover:bg-primary hover:text-white text-foreground rounded-full p-3 md:p-4 shadow-lg transition-all z-10"
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-white hover:bg-blue-600 hover:text-white text-foreground rounded-full p-3 md:p-4 shadow-lg transition-all z-10"
         aria-label="Next slide"
       >
         <ChevronRight className="w-6 h-6" />

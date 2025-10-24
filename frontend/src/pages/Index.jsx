@@ -7,6 +7,8 @@ import Destinations from "../components/Destinations";
 import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
+import WhatsAppButton from "../components/WhatsAppButton";
+import WhatsAppPopup from "../components/WhatsAppPopup";
 
 const Index = () => {
   return (
@@ -23,6 +25,8 @@ const Index = () => {
         <Testimonials />
       </div>
       <Footer />
+      <WhatsAppPopup />
+      <WhatsAppButton />
       <ScrollToTop />
     </div>
   );

@@ -39,7 +39,7 @@ const SearchTabs = () => {
               <TabsTrigger
                 key={tab.id}
                 value={tab.id}
-                className="flex items-center space-x-2 px-6 py-4 data-[state=active]:bg-primary data-[state=active]:text-white rounded-t-xl flex-1 min-w-fit"
+                className="flex items-center space-x-2 px-6 py-4 data-[state=active]:bg-violet-600 data-[state=active]:text-white rounded-t-xl flex-1 min-w-fit"
               >
                 <Icon className="w-5 h-5" />
                 <span>{tab.label}</span>
@@ -114,7 +114,7 @@ const SearchTabs = () => {
                   </div>
                   <Button
                     size="lg"
-                    className="bg-secondary hover:bg-secondary/90 h-12 px-8"
+                    className="bg-orange-500 hover:bg-orange-500/90 h-12 px-8"
                   >
                     Search <Search className="ml-2 w-4 h-4" />
                   </Button>

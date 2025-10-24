@@ -9,7 +9,7 @@ const DiscoverSection = () => {
           {/* Left Content */}
           <div>
             <p
-              className="text-primary font-semibold text-lg mb-2"
+              className="text-violet-600 font-semibold text-lg mb-2"
               style={{ fontStyle: "italic" }}
             >
               Dream Your Next Trip
@@ -25,8 +25,8 @@ const DiscoverSection = () => {
 
             <div className="space-y-6 mb-8">
               <div className="flex items-start space-x-4">
-                <div className="bg-primary/10 rounded-full p-3 mt-1">
-                  <Globe className="w-8 h-8 text-primary" />
+                <div className="bg-violet-600/10 rounded-full p-3 mt-1">
+                  <Globe className="w-8 h-8 text-blue-600" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Best Travel Agency</h3>
@@ -38,8 +38,8 @@ const DiscoverSection = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="bg-primary/10 rounded-full p-3 mt-1">
-                  <Shield className="w-8 h-8 text-primary" />
+                <div className="bg-violet-600/10 rounded-full p-3 mt-1">
+                  <Shield className="w-8 h-8 text-blue-600" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">
@@ -55,7 +55,7 @@ const DiscoverSection = () => {
 
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 px-8 py-6 text-lg rounded-full"
+              className="bg-violet-600 hover:bg-violet-600/90 px-8 py-6 text-lg rounded-full"
             >
               BOOK YOUR TRIP
               <ArrowRight className="ml-2 w-5 h-5" />

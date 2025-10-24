@@ -37,7 +37,7 @@ const Destinations = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <p
-            className="text-primary font-semibold text-lg mb-2"
+            className="text-violet-600 font-semibold text-lg mb-2"
             style={{ fontStyle: "italic" }}
           >
             Next Adventure Destination
@@ -65,10 +65,10 @@ const Destinations = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <Badge className="bg-primary text-white border-0 mb-3">
+                <Badge className="bg-violet-600 text-white border-0 mb-3">
                   {destination.tours}
                 </Badge>
-                <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
+                <h3 className="text-2xl font-bold group-hover:text-violet-600 transition-colors">
                   {destination.name}
                 </h3>
               </div>

@@ -42,6 +42,10 @@ export default {
           DEFAULT: "hsl(var(--color-popover))",
           foreground: "hsl(var(--color-popover-foreground))",
         },
+        navy: {
+          DEFAULT: "hsl(var(--color-navy))",
+          foreground: "hsl(var(--color-navy-foreground))",
+        },
       },
     },
   },

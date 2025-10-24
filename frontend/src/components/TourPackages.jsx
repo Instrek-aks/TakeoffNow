@@ -115,7 +115,7 @@ const TourPackages = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <p
-            className="text-primary font-semibold text-lg mb-2"
+            className="text-violet-600 font-semibold text-lg mb-2"
             style={{ fontStyle: "italic" }}
           >
             Most Popular Tour Packages
@@ -139,8 +139,8 @@ const TourPackages = () => {
               key={tab}
               className={`px-6 py-3 rounded-lg font-medium transition-all ${
                 idx === 0
-                  ? "bg-primary text-white"
-                  : "bg-muted text-foreground hover:bg-primary hover:text-white"
+                  ? "bg-violet-600 text-white"
+                  : "bg-muted text-foreground hover:bg-violet-600 hover:text-white"
               }`}
             >
               {tab}
@@ -165,10 +165,10 @@ const TourPackages = () => {
                   <Badge
                     className={`absolute top-4 left-4 ${
                       pkg.badge.type === "new"
-                        ? "bg-accent"
+                        ? "bg-green-500"
                         : pkg.badge.type === "offer"
-                        ? "bg-accent"
-                        : "bg-secondary"
+                        ? "bg-green-500"
+                        : "bg-orange-500"
                     } text-white border-0`}
                   >
                     {pkg.badge.label}
@@ -176,12 +176,12 @@ const TourPackages = () => {
                 )}
                 <button
                   onClick={() => toggleFavorite(pkg.id)}
-                  className="absolute top-4 right-4 bg-white rounded-full p-2 hover:bg-primary hover:text-white transition-all"
+                  className="absolute top-4 right-4 bg-white rounded-full p-2 hover:bg-violet-600 hover:text-white transition-all"
                 >
                   <Heart
                     className={`w-5 h-5 ${
                       favorites.includes(pkg.id)
-                        ? "fill-primary text-primary"
+                        ? "fill-violet-600 text-violet-600"
                         : ""
                     }`}
                   />
@@ -189,21 +189,21 @@ const TourPackages = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold mb-3 group-hover:text-violet-600 transition-colors">
                   {pkg.title}
                 </h3>
-                <div className="flex items-center text-muted-foreground text-sm mb-2">
+                <div className="flex items-center text-white text-sm mb-2">
                   <MapPin className="w-4 h-4 mr-1" />
                   {pkg.location}
                 </div>
-                <div className="flex items-center text-muted-foreground text-sm mb-4">
+                <div className="flex items-center text-white text-sm mb-4">
                   <Clock className="w-4 h-4 mr-1" />
                   {pkg.duration}
                 </div>
 
                 <div className="flex items-center justify-between">
                   <div className="relative">
-                    <div className="bg-primary text-white px-4 py-3 rounded-lg font-bold text-lg relative z-10">
+                    <div className="bg-violet-600 text-white px-4 py-3 rounded-lg font-bold text-lg relative z-10">
                       {pkg.originalPrice !== pkg.price && (
                         <span className="line-through text-sm text-white/70 mr-2">
                           ${pkg.originalPrice}
@@ -212,10 +212,10 @@ const TourPackages = () => {
                       ${pkg.price}
                       <span className="text-sm font-normal">/Person</span>
                     </div>
-                    <div className="absolute -bottom-1 -right-1 w-0 h-0 border-l-[20px] border-l-transparent border-b-[20px] border-b-primary/30"></div>
+                    <div className="absolute -bottom-1 -right-1 w-0 h-0 border-l-[20px] border-l-transparent border-b-[20px] border-b-violet-600/30"></div>
                   </div>
                   <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 fill-secondary text-secondary" />
+                    <Star className="w-4 h-4 fill-orange-500 text-orange-500" />
                     <span className="text-sm font-semibold">
                       ({pkg.reviews} Reviews)
                     </span>

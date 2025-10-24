@@ -32,22 +32,23 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-sm shadow-md"
-          : "bg-transparent"
+        isScrolled ? "bg-white/95 backdrop-blur-sm shadow-md" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-2">
-            <div className="bg-primary rounded-full p-2 w-10 h-10 flex items-center justify-center">
+            <div className="bg-blue-600 rounded-full p-2 w-10 h-10 flex items-center justify-center">
               <svg viewBox="0 0 24 24" fill="white" className="w-6 h-6">
                 <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
               </svg>
             </div>
             <div>
-              <div className="text-xl font-bold text-foreground">Tourex</div>
+              <div className="text-xl font-bold text-foreground">
+                {" "}
+                Takeoffnow
+              </div>
               <div className="text-xs text-muted-foreground -mt-1">
                 A Travel Agency
               </div>
@@ -59,11 +60,11 @@ const Navbar = () => {
             {navLinks.map((link) =>
               link.hasDropdown ? (
                 <DropdownMenu key={link.name}>
-                  <DropdownMenuTrigger className="flex items-center space-x-1 text-foreground hover:text-primary transition-colors cursor-pointer">
+                  <DropdownMenuTrigger className="flex items-center space-x-1 text-foreground hover:text-blue-600 transition-colors cursor-pointer">
                     <span>{link.name}</span>
                     <ChevronDown className="w-4 h-4" />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="bg-background">
+                  <DropdownMenuContent className="bg-white">
                     <DropdownMenuItem>Option 1</DropdownMenuItem>
                     <DropdownMenuItem>Option 2</DropdownMenuItem>
                     <DropdownMenuItem>Option 3</DropdownMenuItem>
@@ -73,7 +74,7 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-foreground hover:text-primary transition-colors"
+                  className="text-foreground hover:text-blue-600 transition-colors"
                 >
                   {link.name}
                 </a>
@@ -86,7 +87,7 @@ const Navbar = () => {
             {/* Phone */}
             <a
               href="tel:+1235959666"
-              className="hidden md:flex items-center space-x-2 text-foreground hover:text-primary transition-colors"
+              className="hidden md:flex items-center space-x-2 text-foreground hover:text-blue-600 transition-colors"
             >
               <Phone className="w-5 h-5" />
               <div className="text-sm">
@@ -98,13 +99,13 @@ const Navbar = () => {
             {/* Cart */}
             <Button variant="ghost" size="icon" className="relative">
               <ShoppingCart className="w-5 h-5" />
-              <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-secondary text-xs">
+              <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-orange-500 text-xs">
                 0
               </Badge>
             </Button>
 
             {/* Login Button */}
-            <Button className="hidden md:flex items-center space-x-2 bg-primary hover:bg-primary/90">
+            <Button className="hidden md:flex items-center space-x-2 bg-blue-600 hover:bg-blue-600/90">
               <User className="w-4 h-4" />
               <span>Login</span>
             </Button>
@@ -122,12 +123,12 @@ const Navbar = () => {
                     <a
                       key={link.name}
                       href={link.href}
-                      className="text-lg text-foreground hover:text-primary transition-colors py-2"
+                      className="text-lg text-foreground hover:text-blue-600 transition-colors py-2"
                     >
                       {link.name}
                     </a>
                   ))}
-                  <Button className="w-full mt-4 bg-primary hover:bg-primary/90">
+                  <Button className="w-full mt-4 bg-blue-600 hover:bg-blue-600/90">
                     <User className="w-4 h-4 mr-2" />
                     Login
                   </Button>

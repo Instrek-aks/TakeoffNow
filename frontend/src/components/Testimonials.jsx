@@ -32,11 +32,11 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-24 bg-gray-100/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <p
-            className="text-primary font-semibold text-lg mb-2"
+            className="text-violet-600 font-semibold text-lg mb-2"
             style={{ fontStyle: "italic" }}
           >
             Clients Feedback About Us
@@ -72,9 +72,7 @@ const Testimonials = () => {
                 </div>
               </div>
 
-              <p className="text-muted-foreground italic mb-6">
-                {testimonial.text}
-              </p>
+              <p className="text-gray-600 italic mb-6">{testimonial.text}</p>
 
               <div className="flex space-x-1">
                 {[...Array(5)].map((_, i) => (
@@ -82,8 +80,8 @@ const Testimonials = () => {
                     key={i}
                     className={`w-5 h-5 ${
                       i < testimonial.rating
-                        ? "fill-secondary text-secondary"
-                        : "fill-muted text-muted"
+                        ? "fill-orange-500 text-orange-500"
+                        : "fill-gray-300 text-gray-300"
                     }`}
                   />
                 ))}
