@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Button } from "../components/ui/Button";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
@@ -36,13 +36,13 @@ const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     if (!isAnimating) {
       setIsAnimating(true);
       setCurrentSlide((prev) => (prev + 1) % slides.length);
       setTimeout(() => setIsAnimating(false), 600);
     }
-  };
+  }, [isAnimating]);
 
   const prevSlide = () => {
     if (!isAnimating) {
@@ -55,7 +55,7 @@ const HeroCarousel = () => {
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [nextSlide]);
 
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">

@@ -1,12 +1,12 @@
-import Navbar from "@/components/Navbar";
-import HeroCarousel from "@/components/HeroCarousel";
-import SearchTabs from "@/components/SearchTabs";
-import TourPackages from "@/components/TourPackages";
-import DiscoverSection from "@/components/DiscoverSection";
-import Destinations from "@/components/Destinations";
-import Testimonials from "@/components/Testimonials";
-import Footer from "@/components/Footer";
-import ScrollToTop from "@/components/ScrollToTop";
+import Navbar from "../components/Navbar";
+import HeroCarousel from "../components/HeroCarousel";
+import SearchTabs from "../components/SearchTabs";
+import TourPackages from "../components/TourPackages";
+import DiscoverSection from "../components/DiscoverSection";
+import Destinations from "../components/Destinations";
+import Testimonials from "../components/Testimonials";
+import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Index = () => {
   return (

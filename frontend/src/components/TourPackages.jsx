@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "../components/ui/Badge";
 import { Heart, MapPin, Clock, Star } from "lucide-react";
 import { useState } from "react";
 
