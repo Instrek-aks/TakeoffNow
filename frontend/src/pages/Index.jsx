@@ -8,7 +8,6 @@ import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 import WhatsAppButton from "../components/WhatsAppButton";
-import WhatsAppPopup from "../components/WhatsAppPopup";
 
 const Index = () => {
   return (
@@ -16,8 +15,17 @@ const Index = () => {
       <Navbar />
       <div className="relative">
         <HeroCarousel />
+        {/* SearchTabs positioned absolutely on desktop, but below on mobile */}
+        <div className="hidden md:block absolute bottom-0 left-0 right-0 z-10">
+          <SearchTabs />
+        </div>
+      </div>
+
+      {/* SearchTabs visible on mobile below HeroCarousel */}
+      <div className="block md:hidden -mt-16 relative z-10">
         <SearchTabs />
       </div>
+
       <div className="pt-32">
         <DiscoverSection />
         <TourPackages />
@@ -25,7 +33,6 @@ const Index = () => {
         <Testimonials />
       </div>
       <Footer />
-      <WhatsAppPopup />
       <WhatsAppButton />
       <ScrollToTop />
     </div>
