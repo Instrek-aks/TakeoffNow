@@ -22,8 +22,8 @@ const Index = () => {
       </div>
 
       {/* SearchTabs visible on mobile below HeroCarousel */}
-      <div className="block md:hidden relative z-10 bg-white">
-        <div className="relative top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 z-20">
+      <div className="block md:hidden relative z-10 bg-white min-h-[200px]">
+        <div className="relative top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 z-20 bg-white">
           <SearchTabs />
         </div>
       </div>

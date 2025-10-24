@@ -117,13 +117,16 @@ const Navbar = () => {
                   <Menu className="w-6 h-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-80">
-                <div className="flex flex-col space-y-4 mt-8">
+              <SheetContent
+                side="right"
+                className="w-80 bg-white h-auto max-h-screen overflow-y-auto"
+              >
+                <div className="flex flex-col space-y-4 mt-8 pb-8">
                   {navLinks.map((link) => (
                     <a
                       key={link.name}
                       href={link.href}
-                      className="text-lg text-foreground hover:text-blue-600 transition-colors py-2"
+                      className="text-lg text-gray-800 hover:text-blue-600 transition-colors py-2"
                     >
                       {link.name}
                     </a>
