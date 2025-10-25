@@ -206,10 +206,10 @@ const TourPackages = () => {
                     <div className="bg-violet-600 text-white px-4 py-3 rounded-lg font-bold text-lg relative z-10">
                       {pkg.originalPrice !== pkg.price && (
                         <span className="line-through text-sm text-white/70 mr-2">
-                          ${pkg.originalPrice}
+                          INR {pkg.originalPrice}
                         </span>
                       )}
-                      ${pkg.price}
+                      INR {pkg.price}
                       <span className="text-sm font-normal">/Person</span>
                     </div>
                     <div className="absolute -bottom-1 -right-1 w-0 h-0 border-l-[20px] border-l-transparent border-b-[20px] border-b-violet-600/30"></div>
