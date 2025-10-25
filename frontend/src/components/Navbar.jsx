@@ -26,7 +26,7 @@ const Navbar = () => {
     {
       name: "Home",
       href: "#home",
-      hasDropdown: true,
+      hasDropdown: false,
       dropdownItems: [
         "Hero banner (images + tagline)",
         "Highlights (Top packages, testimonials, CTA buttons)",
@@ -57,7 +57,7 @@ const Navbar = () => {
     {
       name: "Gallery / Destinations",
       href: "#gallery",
-      hasDropdown: true,
+      hasDropdown: false,
       dropdownItems: ["Images for Website", "Destination Highlights"],
     },
     {
