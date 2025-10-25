@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { Input } from "../components/ui/Input";
 import {
@@ -18,14 +19,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand Column */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="bg-violet-900 rounded-full p-2 w-10 h-10 flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="white" className="w-6 h-6">
-                  <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
-                </svg>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-16 h-10 flex items-center justify-center">
+                <img
+                  src="/logoB.png"
+                  alt="TakeoffNow Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
-                <div className="text-xl font-bold">Tourex</div>
+                <div className="text-xl font-bold">TakeoffNow</div>
                 <div className="text-xs text-blue-600/70 -mt-1">
                   A Travel Agency
                 </div>
@@ -48,27 +51,24 @@ const Footer = () => {
             <div className="flex space-x-3 mt-6">
               <a
                 href="#"
-                className="bg-blue-600/10 hover:bg-primary rounded-full p-2 transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
                 className="bg-white/10 hover:bg-primary rounded-full p-2 transition-colors"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="bg-white/10 hover:bg-primary rounded-full p-2 transition-colors"
+                title="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="#"
                 className="bg-white/10 hover:bg-primary rounded-full p-2 transition-colors"
+                title="Facebook"
               >
-                <Youtube className="w-5 h-5" />
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="#"
+                className="bg-white/10 hover:bg-primary rounded-full p-2 transition-colors"
+                title="Twitter"
+              >
+                <Twitter className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -77,18 +77,21 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-3">
-              {["Home", "About Us", "Services", "Tour Guide", "Contact Us"].map(
-                (link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-white/70 hover:text-primary transition-colors"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                )
-              )}
+              {[
+                { name: "Home", path: "/" },
+                { name: "About Us", path: "/about" },
+                { name: "Packages", path: "/packages" },
+                { name: "Contact", path: "/contact" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.path}
+                    className="text-white/70 hover:text-primary transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -97,7 +100,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Information</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-primary mt-1 shrink-0" />
                 <div className="text-white/70 text-sm">
                   58 Street Commercial Road
                   <br />
@@ -105,11 +108,11 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <Phone className="w-5 h-5 text-primary mt-1 shrink-0" />
                 <div className="text-white/70 text-sm">+123 888 9999</div>
               </div>
               <div className="flex items-start space-x-3">
-                <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <Clock className="w-5 h-5 text-primary mt-1 shrink-0" />
                 <div className="text-white/70 text-sm">
                   Mon – Sat: 8 Am – 5 Pm,
                   <br />
@@ -119,17 +122,11 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Utility Pages */}
+          {/* Legal Pages */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Utility Pages</h3>
+            <h3 className="text-xl font-bold mb-4">Legal</h3>
             <ul className="space-y-3">
-              {[
-                "Style Guide",
-                "Password Protected",
-                "404 Error",
-                "Changelog",
-                "License",
-              ].map((link) => (
+              {["Terms & Conditions", "Privacy Policy"].map((link) => (
                 <li key={link}>
                   <a
                     href="#"
@@ -145,7 +142,7 @@ const Footer = () => {
 
         <div className="border-t border-white/10 pt-8">
           <p className="text-center text-white/70 text-sm">
-            Copyright ©Tourex | All Right Reserved
+            Copyright ©TakeoffNow | All Right Reserved
           </p>
         </div>
       </div>

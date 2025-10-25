@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { Phone, ShoppingCart, Menu, ChevronDown, User } from "lucide-react";
 import {
@@ -22,11 +23,54 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#home", hasDropdown: true },
-    { name: "Features", href: "#features", hasDropdown: true },
-    { name: "Pages", href: "#pages", hasDropdown: true },
-    { name: "Blogs", href: "#blogs", hasDropdown: true },
-    { name: "Contact", href: "#contact", hasDropdown: false },
+    {
+      name: "Home",
+      href: "#home",
+      hasDropdown: true,
+      dropdownItems: [
+        "Hero banner (images + tagline)",
+        "Highlights (Top packages, testimonials, CTA buttons)",
+        "Quick contact / WhatsApp chat icon",
+      ],
+    },
+    {
+      name: "About Us",
+      href: "/about",
+      hasDropdown: false,
+      dropdownItems: [
+        "Who We Are",
+        "What We Do (Website Description)",
+        "Client Testimonials",
+        "Team (optional)",
+      ],
+    },
+    {
+      name: "Packages",
+      href: "/packages",
+      hasDropdown: false,
+      dropdownItems: [
+        "Basic Packages",
+        "Ready-made Itineraries",
+        "Starting Prices",
+      ],
+    },
+    {
+      name: "Gallery / Destinations",
+      href: "#gallery",
+      hasDropdown: true,
+      dropdownItems: ["Images for Website", "Destination Highlights"],
+    },
+    {
+      name: "Contact",
+      href: "/contact",
+      hasDropdown: false,
+      dropdownItems: [
+        "Contact Form",
+        "Email & Phone",
+        "Map / Office Location",
+        "WhatsApp Chat Integration",
+      ],
+    },
   ];
 
   return (
@@ -38,22 +82,15 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="flex items-center space-x-2">
-            <div className="bg-blue-600 rounded-full p-2 w-10 h-10 flex items-center justify-center">
-              <svg viewBox="0 0 24 24" fill="white" className="w-6 h-6">
-                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
-              </svg>
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="w-20 h-12 flex items-center justify-center">
+              <img
+                src="/logoB.png"
+                alt="TakeoffNow Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
-            <div>
-              <div className="text-xl font-bold text-foreground">
-                {" "}
-                Takeoffnow
-              </div>
-              <div className="text-xs text-muted-foreground -mt-1">
-                A Travel Agency
-              </div>
-            </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -65,19 +102,21 @@ const Navbar = () => {
                     <ChevronDown className="w-4 h-4" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="bg-white">
-                    <DropdownMenuItem>Option 1</DropdownMenuItem>
-                    <DropdownMenuItem>Option 2</DropdownMenuItem>
-                    <DropdownMenuItem>Option 3</DropdownMenuItem>
+                    {link.dropdownItems.map((item, index) => (
+                      <DropdownMenuItem key={index} className="text-sm">
+                        {item}
+                      </DropdownMenuItem>
+                    ))}
                   </DropdownMenuContent>
                 </DropdownMenu>
               ) : (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   className="text-foreground hover:text-blue-600 transition-colors"
                 >
                   {link.name}
-                </a>
+                </Link>
               )
             )}
           </div>
@@ -97,18 +136,18 @@ const Navbar = () => {
             </a>
 
             {/* Cart */}
-            <Button variant="ghost" size="icon" className="relative">
+            {/* <Button variant="ghost" size="icon" className="relative">
               <ShoppingCart className="w-5 h-5" />
               <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-orange-500 text-xs">
                 0
               </Badge>
-            </Button>
+            </Button> */}
 
             {/* Login Button */}
-            <Button className="hidden md:flex items-center space-x-2 bg-blue-600 hover:bg-blue-600/90">
+            {/* <Button className="hidden md:flex items-center space-x-2 bg-blue-600 hover:bg-blue-600/90">
               <User className="w-4 h-4" />
               <span>Login</span>
-            </Button>
+            </Button> */}
 
             {/* Mobile Menu */}
             <Sheet>
@@ -123,13 +162,27 @@ const Navbar = () => {
               >
                 <div className="flex flex-col space-y-4 mt-8 pb-8">
                   {navLinks.map((link) => (
-                    <a
-                      key={link.name}
-                      href={link.href}
-                      className="text-lg text-gray-800 hover:text-blue-600 transition-colors py-2"
-                    >
-                      {link.name}
-                    </a>
+                    <div key={link.name} className="space-y-2">
+                      <Link
+                        to={link.href}
+                        className="text-lg text-gray-800 hover:text-blue-600 transition-colors py-2 block font-semibold"
+                      >
+                        {link.name}
+                      </Link>
+                      {link.hasDropdown && (
+                        <div className="ml-4 space-y-1">
+                          {link.dropdownItems.map((item, index) => (
+                            <Link
+                              key={index}
+                              to={link.href}
+                              className="text-sm text-gray-600 hover:text-blue-600 transition-colors py-1 block"
+                            >
+                              • {item}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                   <Button className="w-full mt-4 bg-blue-600 hover:bg-blue-600/90">
                     <User className="w-4 h-4 mr-2" />
