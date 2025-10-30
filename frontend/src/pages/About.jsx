@@ -79,10 +79,11 @@ const About = () => {
   ];
 
   const stats = [
-    { number: "10,000+", label: "Happy Travelers" },
-    { number: "50+", label: "Countries Covered" },
-    { number: "15+", label: "Years Experience" },
-    { number: "98%", label: "Customer Satisfaction" },
+    { number: "2000+", label: "Custom Itineraries Designed" },
+    { number: "100+", label: "Corporate Clients Served" },
+    { number: "50+", label: "Global Destinations" },
+    { number: "98%", label: "Client Satisfaction" },
+    { number: "8+", label: "Years of Experience" },
   ];
 
   return (
@@ -125,18 +126,16 @@ const About = () => {
                   Who We Are
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  TakeoffNow is more than just a travel agency – we're your
-                  gateway to the world's most incredible destinations. Founded
-                  with a passion for exploration and a commitment to excellence,
-                  we've been creating unforgettable travel experiences for over
-                  15 years.
+                  At TakeoffNow, we turn travel dreams into beautifully crafted
+                  experiences. We design personalized itineraries that match
+                  your interests, pace, and style — making every trip
+                  stress-free and memorable.
                 </p>
                 <p className="text-lg text-gray-600 mb-8">
-                  Our team of travel experts combines local knowledge with
-                  global expertise to craft personalized journeys that exceed
-                  expectations. We believe that travel has the power to
-                  transform lives, broaden perspectives, and create lasting
-                  memories.
+                  From quick getaways to luxury international vacations, our
+                  team of passionate travelers plans every detail with care and
+                  creativity. With TakeoffNow, you don’t just travel — you
+                  experience the world, your way.
                 </p>
 
                 <div className="grid grid-cols-2 gap-6">
@@ -185,9 +184,9 @@ const About = () => {
                 What We Do
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We specialize in creating bespoke travel experiences that cater
-                to every type of traveler, from luxury seekers to adventure
-                enthusiasts.
+                We specialize in end-to-end travel planning — from flights and
+                hotels to local activities and guided tours. Every itinerary is
+                tailored around your interests and budget.
               </p>
             </div>
 

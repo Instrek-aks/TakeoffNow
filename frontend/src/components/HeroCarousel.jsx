@@ -4,31 +4,20 @@ import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
 const slides = [
   {
-    title: "Maldives island",
-    subtitle:
-      "When An Unknown Printer Took Ar Galley Offer Type Area Year Anddey Make Specimen Book",
-    price: "299",
-    offer: "* This Offer Valid Till 22 August",
+    title: "Your Journey, Perfectly Planned",
+    subtitle: "From flights to stays, we design trips that fit you perfectly.",
     image:
       "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&h=1080&fit=crop",
   },
   {
-    title: "Swiss Alps Adventure",
-    subtitle:
-      "Experience The Breathtaking Beauty Of Mountain Peaks And Crystal Clear Lakes",
-    price: "399",
-    offer: "* Limited Time Offer",
-    image:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop",
+    title: "Travel Smarter, Experience More",
+    subtitle: "Discover handcrafted itineraries that make every moment count.",
+    image: "/slider1.jpg",
   },
   {
-    title: "Dubai Skyline",
-    subtitle:
-      "Discover Luxury And Modern Architecture In The Heart Of The Desert",
-    price: "349",
-    offer: "* Book Now & Save 20%",
-    image:
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&h=1080&fit=crop",
+    title: "Let’s Take Off to Your Dream Destination",
+    subtitle: "We turn your travel goals into seamless experiences.",
+    image: "/slider2.jpg",
   },
 ];
 
@@ -87,9 +76,7 @@ const HeroCarousel = () => {
                     : "opacity-0 translate-y-10"
                 }`}
               >
-                <p className="text-sm md:text-base mb-4 font-light">
-                  {slide.offer}
-                </p>
+                {/* Tagline only; removed offer */}
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 capitalize">
                   {slide.title}
                 </h1>
@@ -97,13 +84,7 @@ const HeroCarousel = () => {
                 <p className="text-sm md:text-lg mb-8 max-w-3xl mx-auto font-light">
                   {slide.subtitle}
                 </p>
-                <div className="text-2xl md:text-3xl mb-8">
-                  Booking Start From{" "}
-                  <span className="text-5xl md:text-6xl font-bold">
-                    ${slide.price}
-                  </span>
-                  <span className="text-xl">/night</span>
-                </div>
+                {/* Removed price block */}
                 <Button
                   size="lg"
                   className="bg-violet-600 hover:bg-blue-600/90 text-white px-8 py-6 text-lg rounded-full"

@@ -12,45 +12,49 @@ const DiscoverSection = () => {
               className="text-violet-600 font-semibold text-lg mb-2"
               style={{ fontStyle: "italic" }}
             >
-              Dream Your Next Trip
+              Why Choose TakeoffNow
             </p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Discover When Even You Want To Go
+              Travel Smarter. Experience More.
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              Are You Tired Of The Typical Tourist Destinations And Looking To
-              Step Out Of Your Comfort Zone? Adventure Travel May Be The Perfect
-              Solution For You! Here Are Four.
+              Handcrafted itineraries, end-to-end planning, and dedicated
+              support — we make every moment count.
             </p>
 
-            <div className="space-y-6 mb-8">
-              <div className="flex items-start space-x-4">
-                <div className="bg-violet-600/10 rounded-full p-3 mt-1">
-                  <Globe className="w-8 h-8 text-blue-600" />
+            <div className="space-y-4 mb-8">
+              {[
+                {
+                  title: "Personalized Itineraries",
+                  desc: "Every trip is tailored to your interests, budget, and travel style.",
+                },
+                {
+                  title: "End-to-End Planning",
+                  desc: "Flights, hotels, transport, and activities – we handle it all.",
+                },
+                {
+                  title: "Trusted Expertise",
+                  desc: "Experienced travel planners with global partnerships.",
+                },
+                {
+                  title: "Best Value Guarantee",
+                  desc: "Affordable and transparent pricing with premium experiences.",
+                },
+                {
+                  title: "24/7 Assistance",
+                  desc: "Dedicated travel support before and during your trip.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start space-x-4">
+                  <div className="bg-violet-600/10 rounded-full p-3 mt-1">
+                    <Shield className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-1">{item.title}</h3>
+                    <p className="text-muted-foreground">{item.desc}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Best Travel Agency</h3>
-                  <p className="text-muted-foreground">
-                    Are you tired of the typical tourist destinatio and looking
-                    step out of your comfort.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="bg-violet-600/10 rounded-full p-3 mt-1">
-                  <Shield className="w-8 h-8 text-blue-600" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">
-                    Secure Journey With Us
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Are you tired of the typical tourist destinatio and looking
-                    step out of your comfort.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
 
             <Button
@@ -95,17 +99,49 @@ const DiscoverSection = () => {
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="mt-24 text-center">
-          <p
-            className="text-primary font-semibold text-lg mb-2"
-            style={{ fontStyle: "italic" }}
-          >
-            Most Popular Tour
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Let's Discover The World With Our Excellent Eyes
-          </h2>
+        {/* How It Works */}
+        <div className="mt-24">
+          <div className="text-center mb-10">
+            <p
+              className="text-primary font-semibold text-lg mb-2"
+              style={{ fontStyle: "italic" }}
+            >
+              How It Works
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold">Plan. Book. Fly.</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[
+              {
+                step: "1.",
+                title: "Share Your Preferences",
+                desc: "Tell us where you want to go and what you love doing.",
+              },
+              {
+                step: "2.",
+                title: "We Design Your Itinerary",
+                desc: "Our experts craft the perfect travel plan for you.",
+              },
+              {
+                step: "3.",
+                title: "Book & Confirm",
+                desc: "Review, pay securely, and confirm your bookings.",
+              },
+              {
+                step: "4.",
+                title: "Enjoy Your Trip!",
+                desc: "Travel confidently with real-time assistance.",
+              },
+            ].map((it, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6 shadow">
+                <div className="text-2xl font-bold text-blue-600 mb-2">
+                  {it.step}
+                </div>
+                <div className="font-semibold mb-1">{it.title}</div>
+                <div className="text-muted-foreground text-sm">{it.desc}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
