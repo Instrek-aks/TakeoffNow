@@ -95,8 +95,8 @@ const About = () => {
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&h=1080&fit=crop"
-            alt="Travel Background"
+            src="/about us 1.png"
+            alt="About TakeoffNow"
             className="w-full h-full object-cover"
           />
         </div>
@@ -156,9 +156,9 @@ const About = () => {
               </div>
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?w=600&h=600&fit=crop"
-                  alt="Our Team"
-                  className="rounded-2xl shadow-2xl"
+                  src="/who we are 1.png"
+                  alt="Who We Are"
+                  className="rounded-2xl shadow-2xl w-full"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded-2xl shadow-xl">
                   <div className="flex items-center space-x-2">

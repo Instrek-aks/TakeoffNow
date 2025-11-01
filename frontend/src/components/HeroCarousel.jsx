@@ -6,18 +6,17 @@ const slides = [
   {
     title: "Your Journey, Perfectly Planned",
     subtitle: "From flights to stays, we design trips that fit you perfectly.",
-    image:
-      "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&h=1080&fit=crop",
+    image: "/banner1.png",
   },
   {
     title: "Travel Smarter, Experience More",
     subtitle: "Discover handcrafted itineraries that make every moment count.",
-    image: "/slider1.jpg",
+    image: "/banner2.png",
   },
   {
-    title: "Let’s Take Off to Your Dream Destination",
+    title: "Let's Take Off to Your Dream Destination",
     subtitle: "We turn your travel goals into seamless experiences.",
-    image: "/slider2.jpg",
+    image: "/banner3.png",
   },
 ];
 

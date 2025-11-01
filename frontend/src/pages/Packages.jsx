@@ -402,7 +402,7 @@ const Packages = () => {
       </section>
 
       {/* Basic Packages Section */}
-      {(selectedCategory === "all" || selectedCategory === "basic") && (
+      {/* {(selectedCategory === "all" || selectedCategory === "basic") && (
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
@@ -509,7 +509,7 @@ const Packages = () => {
             </div>
           </div>
         </section>
-      )}
+      )} */}
 
       {/* Ready-made Itineraries Section */}
       {(selectedCategory === "all" || selectedCategory === "itineraries") && (
