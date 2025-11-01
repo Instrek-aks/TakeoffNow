@@ -71,7 +71,7 @@ const DiscoverSection = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <img
-                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=500&fit=crop"
+                  src="slider1.jpg"
                   alt="Beach boats"
                   className="w-full h-80 object-cover rounded-2xl shadow-lg"
                 />
@@ -83,7 +83,7 @@ const DiscoverSection = () => {
                   className="w-full h-64 object-cover rounded-2xl shadow-lg"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop"
+                  src="slider2.jpg"
                   alt="Beach aerial"
                   className="w-full h-64 object-cover rounded-2xl shadow-lg"
                 />
