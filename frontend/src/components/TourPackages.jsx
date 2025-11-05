@@ -5,11 +5,10 @@ import { useState } from "react";
 const packages = [
   {
     id: 1,
-    title: "Two Hour Walking Tour Of Manhattan",
-    location: "Veins City, Italy",
+    title: "Beautiful Bali Escape",
+    location: "Bali, Indonesia",
     duration: "7 Days",
-    image:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+    image: "/bali.webp",
     originalPrice: 320,
     price: 320,
     reviews: 5,
@@ -17,23 +16,21 @@ const packages = [
   },
   {
     id: 2,
-    title: "When You Visit The Eternal Dubai City",
-    location: "Dubai, Emirates",
-    duration: "2 Days",
-    image:
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop",
+    title: "Dazzling Dubai & Abu Dhabi",
+    location: "UAE, Emirates",
+    duration: "6 Days",
+    image: "/thieland.webp",
     originalPrice: 299,
-    price: 149,
+    price: 299,
     reviews: 5,
     badge: { type: "offer", label: "% Offer" },
   },
   {
     id: 3,
-    title: "The Pulau Seribu, Jakarta Indonesia",
-    location: "51 Dekor Land, Thailand",
+    title: "Sensational Singapore Discovery",
+    location: "Singapore City",
     duration: "5 Days",
-    image:
-      "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop",
+    image: "/singapore.webp",
     originalPrice: 349,
     price: 349,
     reviews: 5,
@@ -41,63 +38,58 @@ const packages = [
   },
   {
     id: 4,
-    title: "American Parks Trail End Rapid City Express",
-    location: "New York, USA",
-    duration: "3 Days",
-    image:
-      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&h=600&fit=crop",
+    title: "Thrilling Thailand Getaway",
+    location: "Pattaya & Bangkok, Thailand",
+    duration: "5 Days",
+    image: "/vietnam.webp",
     originalPrice: 280,
-    price: 255,
+    price: 280,
     reviews: 4,
     badge: { type: "featured", label: "Featured" },
   },
   {
     id: 5,
-    title: "Southwestern Switzerland Akam City",
-    location: "Switzerland City",
-    duration: "3 Days",
-    image:
-      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=800&h=600&fit=crop",
+    title: "Majestic Malaysia Adventure",
+    location: "Kuala Lumpur, Malaysia",
+    duration: "6 Days",
+    image: "/mal.webp",
     originalPrice: 280,
-    price: 255,
+    price: 280,
     reviews: 4,
     badge: null,
   },
   {
     id: 6,
-    title: "Modern Stefano La Piazze Wergeland",
-    location: "East Norway",
-    duration: "5 Days",
-    image:
-      "https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=800&h=600&fit=crop",
-    originalPrice: 280,
-    price: 255,
-    reviews: 4,
+    title: "Vibrant Vietnam Experience",
+    location: "Hanoi, Danang & Phu Quoc",
+    duration: "7 Days",
+    image: "/dubai.webp",
+    originalPrice: 290,
+    price: 290,
+    reviews: 5,
     badge: { type: "featured", label: "Featured" },
   },
   {
     id: 7,
-    title: "Vatican Museums, Sistine Chapel Skip The Line",
-    location: "Rome City",
-    duration: "7 Days",
-    image:
-      "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&h=600&fit=crop",
-    originalPrice: 280,
-    price: 142,
+    title: "Exotic Bali Bliss Retreat",
+    location: "Ubud & Seminyak, Indonesia",
+    duration: "6 Days",
+    image: "/bali1.webp",
+    originalPrice: 340,
+    price: 340,
     reviews: 5,
-    badge: null,
+    badge: { type: "offer", label: "Special" },
   },
   {
     id: 8,
-    title: "Win Cities On Opposite Sides Of The",
-    location: "Sydney, Australia",
-    duration: "4 Days",
-    image:
-      "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&h=600&fit=crop",
-    originalPrice: 240,
-    price: 110,
+    title: "Enchanting Vietnam Trails",
+    location: "Ho Chi Minh to Hanoi",
+    duration: "8 Days",
+    image: "/veietnam2.webp",
+    originalPrice: 360,
+    price: 360,
     reviews: 5,
-    badge: null,
+    badge: { type: "new", label: "New" },
   },
 ];
 
@@ -126,7 +118,7 @@ const TourPackages = () => {
         </div>
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        {/* <div className="flex flex-wrap justify-center gap-4 mb-12">
           {[
             "Tour",
             "Hotel",
@@ -146,78 +138,81 @@ const TourPackages = () => {
               {tab}
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Package Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {packages.map((pkg) => (
             <div
               key={pkg.id}
-              className="group bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              className="group bg-card rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100"
             >
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden h-72">
                 <img
                   src={pkg.image}
                   alt={pkg.title}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125"
                 />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+
+                {/* Location Badge on Image */}
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="flex items-center space-x-2 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-xl shadow-lg">
+                    <MapPin className="w-5 h-5 text-violet-600 flex-shrink-0" />
+                    <span className="text-sm font-bold text-gray-800 truncate">
+                      {pkg.location}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Badge */}
                 {pkg.badge && (
                   <Badge
-                    className={`absolute top-4 left-4 ${
+                    className={`absolute top-4 left-4 z-10 ${
                       pkg.badge.type === "new"
                         ? "bg-green-500"
                         : pkg.badge.type === "offer"
                         ? "bg-green-500"
                         : "bg-orange-500"
-                    } text-white border-0`}
+                    } text-white border-0 shadow-lg font-semibold px-3 py-1`}
                   >
                     {pkg.badge.label}
                   </Badge>
                 )}
+
+                {/* Favorite Button */}
                 <button
                   onClick={() => toggleFavorite(pkg.id)}
-                  className="absolute top-4 right-4 bg-white rounded-full p-2 hover:bg-violet-600 hover:text-white transition-all"
+                  className="absolute top-4 right-4 z-10 bg-white/90 backdrop-blur-sm rounded-full p-2.5 hover:bg-violet-600 hover:text-white transition-all duration-300 shadow-lg hover:scale-110"
                 >
                   <Heart
-                    className={`w-5 h-5 ${
+                    className={`w-5 h-5 transition-all ${
                       favorites.includes(pkg.id)
                         ? "fill-violet-600 text-violet-600"
-                        : ""
+                        : "text-gray-700"
                     }`}
                   />
                 </button>
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 group-hover:text-violet-600 transition-colors">
+              <div className="p-6 bg-gradient-to-b from-white to-gray-50">
+                <h3 className="text-xl font-bold mb-4 group-hover:text-violet-600 transition-colors duration-300 line-clamp-2 min-h-[3.5rem]">
                   {pkg.title}
                 </h3>
-                <div className="flex items-center text-white text-sm mb-2">
-                  <MapPin className="w-4 h-4 mr-1" />
-                  {pkg.location}
-                </div>
-                <div className="flex items-center text-white text-sm mb-4">
-                  <Clock className="w-4 h-4 mr-1" />
-                  {pkg.duration}
-                </div>
 
-                <div className="flex items-center justify-between">
-                  <div className="relative">
-                    <div className="bg-violet-600 text-white px-4 py-3 rounded-lg font-bold text-lg relative z-10">
-                      {pkg.originalPrice !== pkg.price && (
-                        <span className="line-through text-sm text-white/70 mr-2">
-                          INR {pkg.originalPrice}
-                        </span>
-                      )}
-                      INR {pkg.price}
-                      <span className="text-sm font-normal">/Person</span>
-                    </div>
-                    <div className="absolute -bottom-1 -right-1 w-0 h-0 border-l-[20px] border-l-transparent border-b-[20px] border-b-violet-600/30"></div>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 fill-orange-500 text-orange-500" />
+                {/* Duration and Reviews */}
+                <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+                  <div className="flex items-center space-x-2 text-gray-600">
+                    <Clock className="w-4 h-4 text-violet-600" />
                     <span className="text-sm font-semibold">
-                      ({pkg.reviews} Reviews)
+                      {pkg.duration}
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-1.5">
+                    <Star className="w-4 h-4 fill-orange-500 text-orange-500" />
+                    <span className="text-sm font-semibold text-gray-700">
+                      {pkg.reviews}
                     </span>
                   </div>
                 </div>

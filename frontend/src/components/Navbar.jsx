@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { Phone, ShoppingCart, Menu, ChevronDown, User } from "lucide-react";
 import {
@@ -13,6 +13,7 @@ import { Badge } from "../components/ui/Badge";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,10 +23,17 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleHomeClick = (e) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   const navLinks = [
     {
       name: "Home",
-      href: "#home",
+      href: "/",
       hasDropdown: false,
       dropdownItems: [
         "Hero banner (images + tagline)",
@@ -109,6 +117,7 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.href}
+                  onClick={link.name === "Home" ? handleHomeClick : undefined}
                   className="text-foreground hover:text-blue-600 transition-colors"
                 >
                   {link.name}
@@ -127,7 +136,7 @@ const Navbar = () => {
               <Phone className="w-5 h-5" />
               <div className="text-sm">
                 <div className="text-xs text-muted-foreground">Call Us:</div>
-                <div className="font-semibold">+123 5959 66</div>
+                <div className="font-semibold">+91 9549134848</div>
               </div>
             </a>
 
@@ -161,6 +170,9 @@ const Navbar = () => {
                     <div key={link.name} className="space-y-2">
                       <Link
                         to={link.href}
+                        onClick={
+                          link.name === "Home" ? handleHomeClick : undefined
+                        }
                         className="text-lg text-gray-800 hover:text-blue-600 transition-colors py-2 block font-semibold"
                       >
                         {link.name}
