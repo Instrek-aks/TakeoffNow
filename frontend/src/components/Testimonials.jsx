@@ -35,12 +35,6 @@ const Testimonials = () => {
     <section className="py-24 bg-gray-100/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <p
-            className="text-violet-600 font-semibold text-lg mb-2"
-            style={{ fontStyle: "italic" }}
-          >
-            Clients Feedback About Us
-          </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             See Those Lovely Words From Clients
           </h2>

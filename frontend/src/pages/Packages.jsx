@@ -34,8 +34,7 @@ const Packages = () => {
       price: 15000,
       originalPrice: 18000,
       discount: "17%",
-      image:
-        "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop",
+      image: "/slider1.jpg",
       description:
         "Experience the city from above with our signature airplane tour",
       features: [
@@ -57,8 +56,7 @@ const Packages = () => {
       price: 25000,
       originalPrice: 30000,
       discount: "17%",
-      image:
-        "https://images.unsplash.com/photo-1551524164-6cf2ac531f03?w=600&h=400&fit=crop",
+      image: "/slider2.jpg",
       description:
         "Soar over majestic mountains and valleys in our luxury helicopter",
       features: [
@@ -80,8 +78,7 @@ const Packages = () => {
       price: 12000,
       originalPrice: 15000,
       discount: "20%",
-      image:
-        "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=400&fit=crop",
+      image: "/slider1.jpg",
       description:
         "Fly along the beautiful coastline with breathtaking ocean views",
       features: [
@@ -105,8 +102,7 @@ const Packages = () => {
       price: 145000,
       originalPrice: 165000,
       discount: "12%",
-      image:
-        "https://images.unsplash.com/photo-1541417904950-b855846fe074?w=1200&fit=crop",
+      image: "/bali.webp",
       description:
         "Water sports, Nusa Penida West, temple sunsets, jungle swing, Phinisi dinner cruise and more.",
       itinerary: [
@@ -136,8 +132,7 @@ const Packages = () => {
       price: 125000,
       originalPrice: 145000,
       discount: "14%",
-      image:
-        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&fit=crop",
+      image: "/dubai.webp",
       description:
         "Marina Dhow Cruise, Dubai City Tour, Burj Khalifa, Dubai Frame, Desert Safari, Global Village, and Miracle Garden.",
       itinerary: [
@@ -165,8 +160,7 @@ const Packages = () => {
       price: 175000,
       originalPrice: 199000,
       discount: "12%",
-      image:
-        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&fit=crop",
+      image: "/dubai.webp",
       description:
         "Desert Safari, Burj Khalifa, Sky Views, Dubai Frame, Miracle Garden, Global Village, Abu Dhabi city tour.",
       itinerary: [
@@ -189,8 +183,7 @@ const Packages = () => {
       price: 160000,
       originalPrice: 185000,
       discount: "14%",
-      image:
-        "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1200&fit=crop",
+      image: "/singapore.webp",
       description:
         "Night Safari, Bird Paradise, S.E.A. Aquarium, Wings of Time, Universal Studios, Sands SkyPark & Gardens by the Bay.",
       itinerary: [
@@ -214,8 +207,7 @@ const Packages = () => {
       price: 95000,
       originalPrice: 115000,
       discount: "17%",
-      image:
-        "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1200&fit=crop",
+      image: "/singapore.webp",
       description:
         "Return economy class airfare, 06 nights' accommodation, daily breakfast, city tours, Gardens by the Bay, Universal Studios, Sentosa Island, Kuala Lumpur, Genting Highlands, and more.",
       itinerary: [
@@ -256,8 +248,7 @@ const Packages = () => {
       price: 51000,
       originalPrice: 60000,
       discount: "15%",
-      image:
-        "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=1200&fit=crop",
+      image: "/thieland.webp",
       description:
         "Relax in 4-star hotels in Pattaya & Bangkok with daily breakfast. Coral Island tour, Nong Nooch Village, Alcazar Show, Chao Phraya Dinner Cruise, and Safari World & Marine Park.",
       itinerary: [
@@ -288,8 +279,7 @@ const Packages = () => {
       price: 110000,
       originalPrice: 129000,
       discount: "15%",
-      image:
-        "https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1200&fit=crop",
+      image: "/mal.webp",
       description:
         "KL city tour, KL Tower deck, Genting cable car + Batu Caves, Putrajaya cruise, Legoland day, Themepark + Waterpark + Sealife.",
       itinerary: [
@@ -316,8 +306,7 @@ const Packages = () => {
       price: 125000,
       originalPrice: 145000,
       discount: "14%",
-      image:
-        "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=1200&fit=crop",
+      image: "/vietnam.webp",
       description:
         "Grandworld, VinWonders + VinSafari, 4-Island Hopping with lunch + cable car + Aquatopia.",
       itinerary: [
@@ -340,8 +329,7 @@ const Packages = () => {
       price: 215000,
       originalPrice: 249000,
       discount: "14%",
-      image:
-        "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1200&fit=crop",
+      image: "/veietnam2.webp",
       description:
         "HCMC + Cu Chi, Phu Quoc highlights, Danang & Hoi An, Ba Na Hills, Hanoi city & Halong Bay day cruise.",
       itinerary: [
@@ -373,8 +361,7 @@ const Packages = () => {
       price: 45000,
       originalPrice: 55000,
       discount: "18%",
-      image:
-        "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1200&fit=crop",
+      image: "/vietnam.webp",
       description:
         "Explore Ho Chi Minh City, Cu Chi Tunnels, Mekong Delta, Da Nang, Ba Na Hills, Hoi An Ancient Town, Hanoi, and Halong Bay.",
       itinerary: [
@@ -459,7 +446,7 @@ const Packages = () => {
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&h=1080&fit=crop"
+            src="/banner1.png"
             alt="Aviation Background"
             className="w-full h-full object-cover"
           />
@@ -528,11 +515,11 @@ const Packages = () => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
                 {basicPackages.map((pkg) => (
                   <div
                     key={pkg.id}
-                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
+                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100 flex flex-col h-full"
                   >
                     {pkg.popular && (
                       <div className="absolute top-4 right-4 z-10">
@@ -549,8 +536,7 @@ const Packages = () => {
                         className="w-full h-48 object-cover"
                         onError={(e) => {
                           console.log("Image failed to load:", pkg.image);
-                          e.target.src =
-                            "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop";
+                          e.target.src = "/slider1.jpg";
                         }}
                       />
                       <div className="absolute top-4 left-4">
@@ -559,33 +545,35 @@ const Packages = () => {
                         </Badge>
                       </div>
                     </div>
-                    <div className="p-6">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-gray-900">
+                    <div className="p-6 flex flex-col grow">
+                      <div className="flex items-start justify-between mb-3">
+                        <h3 className="text-xl font-bold text-gray-900 min-h-12 line-clamp-2">
                           {pkg.title}
                         </h3>
-                        <div className="flex items-center">
+                        <div className="flex items-center ml-2 shrink-0">
                           <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                          <span className="ml-1 text-sm text-gray-600">
+                          <span className="ml-1 text-sm text-gray-600 whitespace-nowrap">
                             {pkg.rating} ({pkg.reviews})
                           </span>
                         </div>
                       </div>
-                      <p className="text-gray-600 mb-4">{pkg.description}</p>
+                      <p className="text-gray-600 mb-4 min-h-12 line-clamp-2">
+                        {pkg.description}
+                      </p>
 
                       <div className="flex items-center space-x-2 mb-4">
-                        <Clock className="w-4 h-4 text-gray-500" />
+                        <Clock className="w-4 h-4 text-gray-500 shrink-0" />
                         <span className="text-sm text-gray-600">
                           {pkg.duration}
                         </span>
-                        <Users className="w-4 h-4 text-gray-500 ml-4" />
+                        <Users className="w-4 h-4 text-gray-500 ml-4 shrink-0" />
                         <span className="text-sm text-gray-600">
                           Up to 6 people
                         </span>
                       </div>
 
                       <div className="mb-4">
-                        <div className="flex items-center space-x-2">
+                        <div className="flex items-center space-x-2 flex-wrap">
                           <span className="text-2xl font-bold text-blue-600">
                             {formatPrice(pkg.price)}
                           </span>
@@ -598,7 +586,7 @@ const Packages = () => {
                         </div>
                       </div>
 
-                      <ul className="space-y-2 mb-6">
+                      <ul className="space-y-2 mb-6 grow">
                         {pkg.features.map((feature, index) => (
                           <li
                             key={index}
@@ -610,7 +598,7 @@ const Packages = () => {
                         ))}
                       </ul>
 
-                      <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                      <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white mt-auto">
                         Book Now
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
@@ -655,8 +643,7 @@ const Packages = () => {
                               "Image failed to load:",
                               itinerary.image
                             );
-                            e.target.src =
-                              "https://images.unsplash.com/photo-1506905925346-04b8e0e7c4c0?w=600&h=400&fit=crop";
+                            e.target.src = "/slider1.jpg";
                           }}
                         />
                       </div>

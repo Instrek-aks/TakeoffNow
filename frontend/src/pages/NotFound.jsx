@@ -1,5 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import ScrollToTop from "../components/ScrollToTop";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 const NotFound = () => {
   const location = useLocation();
@@ -20,6 +22,8 @@ const NotFound = () => {
           Return to Home
         </a>
       </div>
+      <WhatsAppButton />
+      <ScrollToTop />
     </div>
   );
 };

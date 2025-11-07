@@ -141,13 +141,13 @@ const TourPackages = () => {
         </div> */}
 
         {/* Package Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {packages.map((pkg) => (
             <div
               key={pkg.id}
               className="group bg-card rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100"
             >
-              <div className="relative overflow-hidden h-72">
+              <div className="relative overflow-hidden h-56 sm:h-64 md:h-72">
                 <img
                   src={pkg.image}
                   alt={pkg.title}
@@ -196,13 +196,13 @@ const TourPackages = () => {
                 </button>
               </div>
 
-              <div className="p-6 bg-gradient-to-b from-white to-gray-50">
-                <h3 className="text-xl font-bold mb-4 group-hover:text-violet-600 transition-colors duration-300 line-clamp-2 min-h-[3.5rem]">
+              <div className="p-4 sm:p-5 md:p-6 bg-gradient-to-b from-white to-gray-50">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-2.5 md:mb-3 group-hover:text-violet-600 transition-colors duration-300 line-clamp-2 min-h-[3rem] sm:min-h-[3.25rem] md:min-h-[3.5rem]">
                   {pkg.title}
                 </h3>
 
                 {/* Duration and Reviews */}
-                <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+                <div className="flex items-center justify-between pt-2 sm:pt-2.5 md:pt-3 border-t border-gray-200">
                   <div className="flex items-center space-x-2 text-gray-600">
                     <Clock className="w-4 h-4 text-violet-600" />
                     <span className="text-sm font-semibold">

@@ -113,7 +113,7 @@ const Contact = () => {
         </div>
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl md:text-2xl mb-8 text-blue-100">
+          <p className="text-xl md:text-2xl mb-8 text-blue-700">
             Get in touch with our aviation experts and start planning your next
             adventure
           </p>

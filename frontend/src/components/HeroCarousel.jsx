@@ -79,7 +79,7 @@ const HeroCarousel = () => {
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 capitalize">
                   {slide.title}
                 </h1>
-                <div className="w-20 h-1 bg-white mx-auto mb-6"></div>
+                {/* <div className="w-20 h-1 bg-white mx-auto mb-6"></div> */}
                 <p className="text-sm md:text-lg mb-8 max-w-3xl mx-auto font-light">
                   {slide.subtitle}
                 </p>
@@ -98,7 +98,7 @@ const HeroCarousel = () => {
       ))}
 
       {/* Navigation Arrows */}
-      <button
+      {/* <button
         onClick={prevSlide}
         className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white hover:bg-blue-600 hover:text-white text-foreground rounded-full p-3 md:p-4 shadow-lg transition-all z-10"
         aria-label="Previous slide"
@@ -111,7 +111,7 @@ const HeroCarousel = () => {
         aria-label="Next slide"
       >
         <ChevronRight className="w-6 h-6" />
-      </button>
+      </button> */}
 
       {/* Slide Indicators */}
       <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex space-x-2 z-10">

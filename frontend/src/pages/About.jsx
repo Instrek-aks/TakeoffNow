@@ -128,13 +128,13 @@ const About = () => {
                 <p className="text-lg text-gray-600 mb-6">
                   At TakeoffNow, we turn travel dreams into beautifully crafted
                   experiences. We design personalized itineraries that match
-                  your interests, pace, and style — making every trip
-                  stress-free and memorable.
+                  your interests, pace, and style making every trip stress-free
+                  and memorable.
                 </p>
                 <p className="text-lg text-gray-600 mb-8">
                   From quick getaways to luxury international vacations, our
                   team of passionate travelers plans every detail with care and
-                  creativity. With TakeoffNow, you don’t just travel — you
+                  creativity. With TakeoffNow, you don’t just travel. you
                   experience the world, your way.
                 </p>
 
@@ -160,7 +160,7 @@ const About = () => {
                   alt="Who We Are"
                   className="rounded-2xl shadow-2xl w-full"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded-2xl shadow-xl">
+                {/* <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded-2xl shadow-xl">
                   <div className="flex items-center space-x-2">
                     <Award className="w-8 h-8" />
                     <div>
@@ -168,7 +168,7 @@ const About = () => {
                       <div className="text-sm">Travel Agency</div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -184,7 +184,7 @@ const About = () => {
                 What We Do
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We specialize in end-to-end travel planning — from flights and
+                We specialize in end-to-end travel planning from flights and
                 hotels to local activities and guided tours. Every itinerary is
                 tailored around your interests and budget.
               </p>
@@ -279,7 +279,7 @@ const About = () => {
                 What Our Clients Say
               </h2>
               <p className="text-xl text-gray-600">
-                Don't just take our word for it – hear from our satisfied
+                Don't just take our word for it-hear from our satisfied
                 travelers
               </p>
             </div>

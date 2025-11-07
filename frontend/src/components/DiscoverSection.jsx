@@ -1,5 +1,5 @@
 import { Button } from "../components/ui/Button";
-import { ArrowRight, Globe, Shield } from "lucide-react";
+import { ArrowRight, Globe, CheckCircle } from "lucide-react";
 
 const DiscoverSection = () => {
   return (
@@ -19,7 +19,7 @@ const DiscoverSection = () => {
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
               Handcrafted itineraries, end-to-end planning, and dedicated
-              support — we make every moment count.
+              support we make every moment count.
             </p>
 
             <div className="space-y-4 mb-8">
@@ -47,7 +47,7 @@ const DiscoverSection = () => {
               ].map((item, i) => (
                 <div key={i} className="flex items-start space-x-4">
                   <div className="bg-violet-600/10 rounded-full p-3 mt-1">
-                    <Shield className="w-8 h-8 text-blue-600" />
+                    <CheckCircle className="w-8 h-8 text-violet-600" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-1">{item.title}</h3>
@@ -112,7 +112,7 @@ const DiscoverSection = () => {
             </p>
           </div>
           <div className="relative">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 relative">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 relative items-stretch">
               {[
                 {
                   step: "1",
@@ -135,7 +135,7 @@ const DiscoverSection = () => {
                   desc: "Travel confidently with real-time assistance.",
                 },
               ].map((it, i) => (
-                <div key={i} className="relative">
+                <div key={i} className="relative flex">
                   {/* Arrow between boxes - Desktop horizontal, Mobile vertical */}
                   {i < 3 && (
                     <>
@@ -154,7 +154,7 @@ const DiscoverSection = () => {
                     </>
                   )}
                   {/* Yellow Box */}
-                  <div className="bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 rounded-3xl p-8 shadow-2xl hover:shadow-yellow-500/50 transition-all duration-300 hover:-translate-y-2 border-2 border-yellow-300/50 relative overflow-hidden group">
+                  <div className="bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 rounded-3xl p-8 shadow-2xl hover:shadow-yellow-500/50 transition-all duration-300 hover:-translate-y-2 border-2 border-yellow-300/50 relative overflow-hidden group flex flex-col h-full w-full">
                     {/* Decorative background pattern */}
                     <div className="absolute inset-0 opacity-10">
                       <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -mr-16 -mt-16"></div>
@@ -171,11 +171,11 @@ const DiscoverSection = () => {
                     </div>
 
                     {/* Content */}
-                    <div className="relative z-10">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors">
+                    <div className="relative z-10 flex flex-col flex-grow">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors min-h-[3rem]">
                         {it.title}
                       </h3>
-                      <p className="text-gray-700 text-sm leading-relaxed">
+                      <p className="text-gray-700 text-sm leading-relaxed flex-grow">
                         {it.desc}
                       </p>
                     </div>
