@@ -98,7 +98,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50">
       <Navbar />
 
       {/* Hero Section */}
@@ -138,7 +138,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Information Cards */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -154,7 +154,7 @@ const Contact = () => {
               {contactInfo.map((info, index) => (
                 <div
                   key={index}
-                  className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow"
+                  className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 border border-amber-200 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow"
                 >
                   <div className="mb-4 flex justify-center">{info.icon}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -176,12 +176,12 @@ const Contact = () => {
       </section>
 
       {/* Contact Form & Map Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div className="bg-white rounded-2xl shadow-lg p-8">
+              <div className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 border border-amber-200 rounded-2xl shadow-lg p-8">
                 <div className="mb-8">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Send us a Message
@@ -329,7 +329,7 @@ const Contact = () => {
               {/* Map & Office Location */}
               <div className="space-y-8">
                 {/* Map */}
-                <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 border border-amber-200 rounded-2xl shadow-lg overflow-hidden">
                   <div className="h-64">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.1234567890!2d77.2295!3d28.6129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2daa9eb4d0b%3A0x717971125923e5d!2sIndia%20Gate!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin"
@@ -345,7 +345,7 @@ const Contact = () => {
                 </div>
 
                 {/* Office Details */}
-                <div className="bg-white rounded-2xl shadow-lg p-8">
+                <div className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 border border-amber-200 rounded-2xl shadow-lg p-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">
                     Visit Our Office
                   </h3>
@@ -467,7 +467,7 @@ const Contact = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 text-lg"
+                className="bg-amber-50 text-green-600 hover:bg-amber-100 border border-amber-300 px-8 py-4 text-lg"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Start WhatsApp Chat
@@ -486,7 +486,7 @@ const Contact = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">

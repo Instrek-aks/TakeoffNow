@@ -37,7 +37,7 @@ const Destinations = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <p
-            className="text-violet-600 font-semibold text-lg mb-2"
+            className="text-[#11224E] font-semibold text-lg mb-2"
             style={{ fontStyle: "italic" }}
           >
             Next Adventure Destination

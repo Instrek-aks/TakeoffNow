@@ -132,17 +132,17 @@ const TravelStories = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-stretch">
           {packages.map((pkg, index) => {
             const user = generateUserData(index);
             return (
               <div
                 key={pkg.id}
-                className="bg-gradient-to-br from-stone-50 to-slate-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-stone-200"
+                className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-amber-200 flex flex-col h-full"
               >
                 {/* User Header - Yellow Bar */}
-                <div className="bg-yellow-400 px-3 py-2 flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-yellow-400 border-2 border-white flex items-center justify-center font-bold text-white text-xs">
+                <div className="bg-yellow-400 px-3 py-2 flex items-center gap-2 shrink-0">
+                  <div className="w-6 h-6 rounded-full bg-yellow-400 border-2 border-white flex items-center justify-center font-bold text-white text-xs shrink-0">
                     {user.avatar}
                   </div>
                   <div className="flex-1 min-w-0">
@@ -150,18 +150,17 @@ const TravelStories = () => {
                       {user.name} from {user.location}
                     </p>
                   </div>
-                  <span className="text-xs text-gray-700 whitespace-nowrap">
+                  <span className="text-xs text-gray-700 whitespace-nowrap shrink-0">
                     • {user.time}
                   </span>
                 </div>
 
                 {/* Image */}
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden shrink-0">
                   <img
                     src={pkg.image}
                     alt={pkg.title}
                     className="w-full h-40 object-cover"
-                    loading="lazy"
                     onError={(e) => {
                       e.target.src = "/slider1.webp";
                     }}
@@ -169,29 +168,33 @@ const TravelStories = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-4">
+                <div className="p-4 flex flex-col grow">
                   <h3 className="text-sm font-bold mb-2 text-gray-900 line-clamp-2 min-h-10">
                     {pkg.title}
                   </h3>
 
-                  <div className="flex items-center text-gray-500 text-xs mb-2">
+                  <div className="flex items-center text-gray-500 text-xs mb-2 shrink-0">
                     <MapPin className="w-3 h-3 mr-1 shrink-0" />
                     <span className="truncate">{pkg.location}</span>
                   </div>
 
-                  {pkg.badge && (
-                    <Badge className="bg-pink-500 text-white border-0 text-xs px-2 py-0.5 mb-3">
-                      {pkg.badge.label}
-                    </Badge>
-                  )}
+                  <div className="mb-3 min-h-6 shrink-0">
+                    {pkg.badge ? (
+                      <Badge className="bg-pink-500 text-white border-0 text-xs px-2 py-0.5">
+                        {pkg.badge.label}
+                      </Badge>
+                    ) : (
+                      <div className="h-5"></div>
+                    )}
+                  </div>
 
-                  <div className="flex items-end justify-between gap-2">
+                  <div className="mt-auto flex items-end justify-between gap-2">
                     <div className="flex-1 min-w-0">
                       <p className="text-lg font-bold text-gray-900">
                         {formatPrice(pkg.price)}
                       </p>
                       <div className="flex items-center gap-1 mt-1">
-                        <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />
+                        <Star className="w-3 h-3 text-yellow-400 fill-yellow-400 shrink-0" />
                         <span className="text-xs text-gray-500">
                           {pkg.reviews} • {pkg.duration}
                         </span>

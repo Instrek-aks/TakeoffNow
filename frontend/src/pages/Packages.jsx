@@ -790,7 +790,7 @@ const Packages = () => {
                 {readyMadeItineraries.map((itinerary) => (
                   <div
                     key={itinerary.id}
-                    className="bg-gradient-to-br from-stone-50 to-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-stone-200"
+                    className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-amber-200"
                   >
                     <div className="md:flex">
                       <div className="md:w-1/3">
@@ -997,7 +997,7 @@ const Packages = () => {
 
       {/* Price Form Dialog */}
       <Dialog open={showPriceForm} onOpenChange={setShowPriceForm}>
-        <DialogContent className="sm:max-w-md bg-gradient-to-br from-sky-50 to-cyan-50">
+        <DialogContent className="sm:max-w-md bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 border border-amber-200">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-gray-900">
               {selectedPackage?.title}

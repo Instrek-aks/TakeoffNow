@@ -32,7 +32,7 @@ const SearchTabs = () => {
   return (
     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-full max-w-7xl px-4 z-20">
       <Tabs defaultValue="tour" className="w-full">
-        <TabsList className="bg-gradient-to-br from-stone-50 to-slate-50 border border-stone-200 rounded-t-xl shadow-lg flex justify-between w-full h-auto p-0 overflow-x-auto">
+        <TabsList className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 border border-amber-200 rounded-t-xl shadow-lg flex justify-between w-full h-auto p-0 overflow-x-auto">
           {tabs.map((tab) => {
             const Icon = tab.icon;
             return (
@@ -52,7 +52,7 @@ const SearchTabs = () => {
           <TabsContent
             key={tab.id}
             value={tab.id}
-            className="bg-gradient-to-br from-stone-50 to-slate-50 border border-stone-200 rounded-b-xl rounded-tr-xl shadow-lg p-8"
+            className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 border border-amber-200 rounded-b-xl rounded-tr-xl shadow-lg p-8"
           >
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
               {/* Destination */}

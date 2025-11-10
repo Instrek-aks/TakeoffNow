@@ -28,7 +28,7 @@ const Index = () => {
         </div>
       </div> */}
 
-      <div className="pt-32">
+      <div className="">
         <DiscoverSection />
         <TourPackages />
         <Testimonials />

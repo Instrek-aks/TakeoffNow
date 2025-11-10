@@ -35,10 +35,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <p className="text-white/70 text-sm mb-6">
-              Pharetra Maecenas Felis Vestibulum Convallis Mollis Nullam Congue
-              Sit.D Rivers Of Finland Quebec.
-            </p>
+
             <div className="flex space-x-2">
               <Input
                 type="email"
