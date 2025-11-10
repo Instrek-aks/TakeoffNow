@@ -31,7 +31,6 @@ const Index = () => {
       <div className="pt-32">
         <DiscoverSection />
         <TourPackages />
-        <Destinations />
         <Testimonials />
       </div>
       <Footer />

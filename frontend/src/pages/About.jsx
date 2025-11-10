@@ -22,31 +22,30 @@ import {
 const About = () => {
   const teamMembers = [
     {
-      name: "Sarah Johnson",
-      role: "Founder & CEO",
-      image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
-      description: "Passionate traveler with 15+ years in tourism industry",
+      name: "Akshat",
+      role: "Founder & Travel Expert",
+      image: "/about us 2.webp",
+      description: "Passionate traveler with extensive experience in creating personalized travel experiences. Dedicated to crafting unique journeys tailored to each traveler's dreams.",
     },
     {
-      name: "Michael Chen",
+      name: "Sarah Johnson",
       role: "Travel Director",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
       description: "Expert in creating unforgettable travel experiences",
     },
     {
-      name: "Emily Rodriguez",
+      name: "Michael Chen",
       role: "Customer Relations",
       image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
       description: "Dedicated to ensuring every client's satisfaction",
     },
     {
-      name: "David Thompson",
+      name: "Emily Rodriguez",
       role: "Adventure Specialist",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
       description: "Expert in adventure and outdoor travel experiences",
     },
   ];
@@ -95,13 +94,13 @@ const About = () => {
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute inset-0">
           <img
-            src="/about us 1.png"
+            src="/about us 1.webp"
             alt="About TakeoffNow"
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="relative z-10 text-center text-blue-400 px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-violet-400 via-pink-400 to-orange-400 bg-clip-text text-transparent drop-shadow-2xl">
             About TakeoffNow
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-blue-900">
@@ -117,7 +116,7 @@ const About = () => {
       </section>
 
       {/* Who We Are Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-violet-50 via-pink-50 to-orange-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -156,7 +155,7 @@ const About = () => {
               </div>
               <div className="relative">
                 <img
-                  src="/who we are 1.png"
+                  src="/who we are 1.webp"
                   alt="Who We Are"
                   className="rounded-2xl shadow-2xl w-full"
                 />
@@ -176,7 +175,7 @@ const About = () => {
       </section>
 
       {/* What We Do Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -242,25 +241,32 @@ const About = () => {
               ))}
             </div>
 
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12 text-white text-center">
+            <div className="bg-gradient-to-r from-violet-600 via-pink-600 to-orange-600 rounded-2xl p-12 text-white text-center">
               <h3 className="text-3xl font-bold mb-6">
                 Ready to Start Your Adventure?
               </h3>
-              <p className="text-xl mb-8 text-blue-100">
+              <p className="text-xl mb-8 text-white/90">
                 Let us help you plan the perfect trip that matches your dreams
                 and budget.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
-                  className="bg-white text-blue-600 hover:bg-gray-100"
+                  className="bg-white text-violet-600 hover:bg-gray-100"
+                  onClick={() => {
+                    const phoneNumber = "+919549134848";
+                    const message = "Hello! I'm ready to start my adventure. Please help me plan my perfect trip.";
+                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                    window.open(whatsappUrl, "_blank");
+                  }}
                 >
                   Get Free Quote
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-blue-600"
+                  className="border-white text-white hover:bg-white hover:text-violet-600"
+                  onClick={() => window.location.href = "/packages"}
                 >
                   View Packages
                 </Button>
@@ -270,71 +276,9 @@ const About = () => {
         </div>
       </section>
 
-      {/* Client Testimonials Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                What Our Clients Say
-              </h2>
-              <p className="text-xl text-gray-600">
-                Don't just take our word for it-hear from our satisfied
-                travelers
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
-                >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5 text-yellow-400 fill-current"
-                      />
-                    ))}
-                  </div>
-                  <Quote className="w-8 h-8 text-blue-600 mb-4" />
-                  <p className="text-gray-700 mb-6 italic">
-                    "{testimonial.text}"
-                  </p>
-                  <div className="flex items-center">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full mr-4 object-cover"
-                    />
-                    <div>
-                      <div className="font-bold text-gray-900">
-                        {testimonial.name}
-                      </div>
-                      <div className="text-gray-600 text-sm">
-                        {testimonial.location}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <Button
-                size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white"
-              >
-                Read More Reviews
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-orange-50 via-yellow-50 to-pink-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">

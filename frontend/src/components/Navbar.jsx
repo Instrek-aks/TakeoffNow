@@ -56,17 +56,7 @@ const Navbar = () => {
       name: "Packages",
       href: "/packages",
       hasDropdown: false,
-      dropdownItems: [
-        "Basic Packages",
-        "Ready-made Itineraries",
-        "Starting Prices",
-      ],
-    },
-    {
-      name: "Gallery / Destinations",
-      href: "#gallery",
-      hasDropdown: false,
-      dropdownItems: ["Images for Website", "Destination Highlights"],
+      dropdownItems: ["Ready-made Itineraries"],
     },
     {
       name: "Contact",
@@ -82,16 +72,21 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md transition-all duration-300">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <div className="w-20 h-12 flex items-center justify-center">
               <img
-                src="/logoB.png"
+                src="/logoB.webp"
                 alt="TakeoffNow Logo"
                 className="w-full h-full object-contain"
+                loading="eager"
               />
             </div>
           </Link>
@@ -101,7 +96,13 @@ const Navbar = () => {
             {navLinks.map((link) =>
               link.hasDropdown ? (
                 <DropdownMenu key={link.name}>
-                  <DropdownMenuTrigger className="flex items-center space-x-1 text-foreground hover:text-blue-600 transition-colors cursor-pointer">
+                  <DropdownMenuTrigger
+                    className={`flex items-center space-x-1 transition-colors cursor-pointer ${
+                      isScrolled
+                        ? "text-foreground hover:text-blue-600"
+                        : "text-white hover:text-blue-200"
+                    }`}
+                  >
                     <span>{link.name}</span>
                     <ChevronDown className="w-4 h-4" />
                   </DropdownMenuTrigger>
@@ -118,7 +119,11 @@ const Navbar = () => {
                   key={link.name}
                   to={link.href}
                   onClick={link.name === "Home" ? handleHomeClick : undefined}
-                  className="text-foreground hover:text-blue-600 transition-colors"
+                  className={`transition-colors ${
+                    isScrolled
+                      ? "text-foreground hover:text-blue-600"
+                      : "text-white hover:text-blue-200"
+                  }`}
                 >
                   {link.name}
                 </Link>
@@ -130,12 +135,22 @@ const Navbar = () => {
           <div className="flex items-center space-x-4">
             {/* Phone */}
             <a
-              href="tel:+1235959666"
-              className="hidden md:flex items-center space-x-2 text-foreground hover:text-blue-600 transition-colors"
+              href="tel:+919549134848"
+              className={`hidden md:flex items-center space-x-2 transition-colors ${
+                isScrolled
+                  ? "text-foreground hover:text-blue-600"
+                  : "text-white hover:text-blue-200"
+              }`}
             >
               <Phone className="w-5 h-5" />
               <div className="text-sm">
-                <div className="text-xs text-muted-foreground">Call Us:</div>
+                <div
+                  className={`text-xs ${
+                    isScrolled ? "text-muted-foreground" : "text-white/70"
+                  }`}
+                >
+                  Call Us:
+                </div>
                 <div className="font-semibold">+91 9549134848</div>
               </div>
             </a>

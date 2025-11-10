@@ -6,17 +6,17 @@ const slides = [
   {
     title: "Your Journey, Perfectly Planned",
     subtitle: "From flights to stays, we design trips that fit you perfectly.",
-    image: "/banner1.png",
+    image: "/banner1.webp",
   },
   {
     title: "Travel Smarter, Experience More",
     subtitle: "Discover handcrafted itineraries that make every moment count.",
-    image: "/banner2.png",
+    image: "/banner2.webp",
   },
   {
     title: "Let's Take Off to Your Dream Destination",
     subtitle: "We turn your travel goals into seamless experiences.",
-    image: "/banner3.png",
+    image: "/banner3.webp",
   },
 ];
 
@@ -44,6 +44,14 @@ const HeroCarousel = () => {
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
   }, [nextSlide]);
+
+  // Preload images
+  useEffect(() => {
+    slides.forEach((slide) => {
+      const img = new Image();
+      img.src = slide.image;
+    });
+  }, []);
 
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">

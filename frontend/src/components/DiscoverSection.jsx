@@ -17,9 +17,12 @@ const DiscoverSection = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Travel Smarter. Experience More.
             </h2>
-            <p className="text-muted-foreground text-lg mb-8">
-              Handcrafted itineraries, end-to-end planning, and dedicated
-              support we make every moment count.
+            <p className="text-muted-foreground text-lg mb-4">
+              Handcrafted itineraries, seamless planning, and dedicated support,
+              we ensure every moment truly counts.
+            </p>
+            <p className="text-violet-600 font-semibold italic text-lg mb-8">
+              ✨ Your journey, designed just for you
             </p>
 
             <div className="space-y-4 mb-8">
@@ -71,21 +74,24 @@ const DiscoverSection = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <img
-                  src="slider1.jpg"
+                  src="/slider1.webp"
                   alt="Beach boats"
                   className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                  loading="lazy"
                 />
               </div>
               <div className="space-y-4 pt-12">
                 <img
-                  src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=400&h=300&fit=crop"
+                  src="/slider2.webp"
                   alt="Couple traveling"
                   className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                  loading="lazy"
                 />
                 <img
-                  src="slider2.jpg"
+                  src="/slider1.webp"
                   alt="Beach aerial"
                   className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                  loading="lazy"
                 />
               </div>
             </div>

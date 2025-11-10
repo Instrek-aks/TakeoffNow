@@ -22,9 +22,10 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-16 h-10 flex items-center justify-center">
                 <img
-                  src="/logoB.png"
+                  src="/logoB.webp"
                   alt="TakeoffNow Logo"
                   className="w-full h-full object-contain"
+                  loading="lazy"
                 />
               </div>
               <div>
@@ -118,9 +119,9 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary mt-1 shrink-0" />
                 <div className="text-white/70 text-sm">
-                  Shop No. 06, Dev Plaza, Bhiwadi Alwar Bypass Road
+                  Shop No. 06, Dev Plaza, Bhiwadi - Alwar Bypass Road,
                   <br />
-                  Alampur-301019
+                  301019
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -130,7 +131,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Clock className="w-5 h-5 text-primary mt-1 shrink-0" />
                 <div className="text-white/70 text-sm">
-                  Mon – Sat: 8 Am – 5 Pm,
+                  Mon – Sat: 10:00 AM – 7:00 PM,
                   <br />
                   Sunday: <span className="font-bold text-white">CLOSED</span>
                 </div>
