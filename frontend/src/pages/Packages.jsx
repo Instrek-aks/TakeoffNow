@@ -126,35 +126,43 @@ const Packages = () => {
       itinerary: [
         {
           title: "Arrival in Bali",
-          description: "Touch down in paradise and transfer to your resort. Relax and unwind after your journey, soaking in the tropical vibes.",
+          description:
+            "Touch down in paradise and transfer to your resort. Relax and unwind after your journey, soaking in the tropical vibes.",
         },
         {
           title: "Water Adventures & Romantic Beach Dinner",
-          description: "Dive into an exciting day of water sports - Banana Boat, Fly Fish, and Jet Ski. In the evening, witness a magical sunset at Uluwatu Temple, followed by a romantic candlelight dinner at Jimbaran Beach with Indian cuisine, roses, and wine.",
+          description:
+            "Dive into an exciting day of water sports - Banana Boat, Fly Fish, and Jet Ski. In the evening, witness a magical sunset at Uluwatu Temple, followed by a romantic candlelight dinner at Jimbaran Beach with Indian cuisine, roses, and wine.",
         },
         {
           title: "Nusa Penida West Island Tour (Private)",
-          description: "Embark on a private trip to Nusa Penida West, visiting the island's most stunning spots - Kelingking Beach, Angel's Billabong, Broken Bay, and Bubu Beach. Enjoy complimentary snorkeling (time permitting) and a local lunch.",
+          description:
+            "Embark on a private trip to Nusa Penida West, visiting the island's most stunning spots - Kelingking Beach, Angel's Billabong, Broken Bay, and Bubu Beach. Enjoy complimentary snorkeling (time permitting) and a local lunch.",
         },
         {
           title: "Temple Trails & Sunset Serenity",
-          description: "Discover the serene Ulun Danu Beratan Temple, followed by a breathtaking sunset at Tanah Lot Temple - a perfect blend of culture and romance.",
+          description:
+            "Discover the serene Ulun Danu Beratan Temple, followed by a breathtaking sunset at Tanah Lot Temple - a perfect blend of culture and romance.",
         },
         {
           title: "Highlands & Jungle Adventures",
-          description: "Experience the natural beauty of Kintamani and a visit to a coffee plantation. Then, embrace your adventurous side with the Bali Jungle Swing - featuring unlimited swings and iconic nests. A complimentary local lunch is included.",
+          description:
+            "Experience the natural beauty of Kintamani and a visit to a coffee plantation. Then, embrace your adventurous side with the Bali Jungle Swing - featuring unlimited swings and iconic nests. A complimentary local lunch is included.",
         },
         {
           title: "Phinisi Sunset Dinner Cruise",
-          description: "Sail into the evening aboard a luxurious Phinisi cruise. Enjoy live entertainment, dinner, and panoramic sunset views over the ocean.",
+          description:
+            "Sail into the evening aboard a luxurious Phinisi cruise. Enjoy live entertainment, dinner, and panoramic sunset views over the ocean.",
         },
         {
           title: "Leisure Day",
-          description: "Spend the day your way - explore local markets, indulge in a spa session, or simply relax by the pool.",
+          description:
+            "Spend the day your way - explore local markets, indulge in a spa session, or simply relax by the pool.",
         },
         {
           title: "Departure",
-          description: "Check out from your resort and transfer with unforgettable Bali memories.",
+          description:
+            "Check out from your resort and transfer with unforgettable Bali memories.",
         },
       ],
       includes: [
@@ -180,23 +188,28 @@ const Packages = () => {
       itinerary: [
         {
           title: "Arrival & Marina Dhow Cruise",
-          description: "Arrive and transfer to your hotel. In the evening, enjoy a magical Marina Dhow Cruise with buffet dinner and live entertainment as you sail through Dubai's stunning waterfront.",
+          description:
+            "Arrive and transfer to your hotel. In the evening, enjoy a magical Marina Dhow Cruise with buffet dinner and live entertainment as you sail through Dubai's stunning waterfront.",
         },
         {
           title: "Dubai City Discovery",
-          description: "Explore Dubai's rich heritage on a half-day city tour - visit heritage sites, wander through Gold & Spice Souks, see the iconic Palm Jumeirah, and capture stunning photos at Dubai Frame, Burj Al Arab & Museum of the Future.",
+          description:
+            "Explore Dubai's rich heritage on a half-day city tour - visit heritage sites, wander through Gold & Spice Souks, see the iconic Palm Jumeirah, and capture stunning photos at Dubai Frame, Burj Al Arab & Museum of the Future.",
         },
         {
           title: "Burj Khalifa & Dubai Mall",
-          description: "Ascend to the Top of Burj Khalifa (124th Floor) for breathtaking panoramic city views. Explore Dubai Mall and witness the mesmerizing Fountain show, then visit Dubai Frame for cultural exhibits and stunning vistas.",
+          description:
+            "Ascend to the Top of Burj Khalifa (124th Floor) for breathtaking panoramic city views. Explore Dubai Mall and witness the mesmerizing Fountain show, then visit Dubai Frame for cultural exhibits and stunning vistas.",
         },
         {
           title: "Desert Safari Adventure",
-          description: "Experience the thrill of dune bashing, enjoy camel rides and sandboarding. As evening falls, savor a delicious BBQ dinner under the stars with traditional shows and entertainment.",
+          description:
+            "Experience the thrill of dune bashing, enjoy camel rides and sandboarding. As evening falls, savor a delicious BBQ dinner under the stars with traditional shows and entertainment.",
         },
         {
           title: "Global Village & Miracle Garden",
-          description: "Discover the cultural extravaganza at Global Village with shopping and food from 70+ countries. Then visit Dubai Miracle Garden - the world's largest flower garden featuring unique floral designs and stunning displays.",
+          description:
+            "Discover the cultural extravaganza at Global Village with shopping and food from 70+ countries. Then visit Dubai Miracle Garden - the world's largest flower garden featuring unique floral designs and stunning displays.",
         },
       ],
       includes: [
@@ -223,23 +236,28 @@ const Packages = () => {
       itinerary: [
         {
           title: "Arrival & Desert Safari",
-          description: "Arrive and transfer to your hotel. In the evening, embark on an exciting Desert Safari adventure with BBQ dinner and traditional entertainment.",
+          description:
+            "Arrive and transfer to your hotel. In the evening, embark on an exciting Desert Safari adventure with BBQ dinner and traditional entertainment.",
         },
         {
           title: "Burj Khalifa & Sky Views",
-          description: "Visit the Top of Burj Khalifa (124th Floor) for stunning city views, experience the thrilling Glass Slide at Sky Views, and explore Dubai Frame for panoramic vistas and cultural exhibits.",
+          description:
+            "Visit the Top of Burj Khalifa (124th Floor) for stunning city views, experience the thrilling Glass Slide at Sky Views, and explore Dubai Frame for panoramic vistas and cultural exhibits.",
         },
         {
           title: "Miracle Garden & Global Village",
-          description: "Discover the world's largest flower garden at Dubai Miracle Garden, then explore Global Village - a cultural extravaganza with shopping and food from around the world.",
+          description:
+            "Discover the world's largest flower garden at Dubai Miracle Garden, then explore Global Village - a cultural extravaganza with shopping and food from around the world.",
         },
         {
           title: "Abu Dhabi City Tour",
-          description: "Transfer to Abu Dhabi and explore the city's highlights including the magnificent BAPS Temple. Discover the capital's rich culture and stunning architecture.",
+          description:
+            "Transfer to Abu Dhabi and explore the city's highlights including the magnificent BAPS Temple. Discover the capital's rich culture and stunning architecture.",
         },
         {
           title: "Yas Island Adventure",
-          description: "Spend a full day at Yas Island with access to 2 parks - enjoy thrilling rides, water attractions, and endless entertainment for the whole family.",
+          description:
+            "Spend a full day at Yas Island with access to 2 parks - enjoy thrilling rides, water attractions, and endless entertainment for the whole family.",
         },
       ],
       includes: ["All tours/transfers PVT except Desert Safari (SIC)"],
@@ -260,27 +278,33 @@ const Packages = () => {
       itinerary: [
         {
           title: "Night Safari & Bird Paradise",
-          description: "Experience the magic of Singapore's Night Safari with complimentary shows and tram rides. Explore Bird Paradise and witness exotic birds in their natural habitat.",
+          description:
+            "Experience the magic of Singapore's Night Safari with complimentary shows and tram rides. Explore Bird Paradise and witness exotic birds in their natural habitat.",
         },
         {
           title: "Experiential Singapore Tour",
-          description: "Discover Singapore's hidden gems with a licensed guide. Explore local neighborhoods, cultural sites, and experience the authentic side of this vibrant city.",
+          description:
+            "Discover Singapore's hidden gems with a licensed guide. Explore local neighborhoods, cultural sites, and experience the authentic side of this vibrant city.",
         },
         {
           title: "S.E.A. Aquarium",
-          description: "Dive into the underwater world at S.E.A. Aquarium. Explore marine life from around the globe in one of the world's largest aquariums.",
+          description:
+            "Dive into the underwater world at S.E.A. Aquarium. Explore marine life from around the globe in one of the world's largest aquariums.",
         },
         {
           title: "Wings of Time",
-          description: "Witness the spectacular Wings of Time show - a mesmerizing display of lights, water, and fire that tells a timeless story.",
+          description:
+            "Witness the spectacular Wings of Time show - a mesmerizing display of lights, water, and fire that tells a timeless story.",
         },
         {
           title: "Universal Studios",
-          description: "Enjoy a full day of thrills and entertainment at Universal Studios Singapore. Experience world-class rides, shows, and attractions across 7 themed areas.",
+          description:
+            "Enjoy a full day of thrills and entertainment at Universal Studios Singapore. Experience world-class rides, shows, and attractions across 7 themed areas.",
         },
         {
           title: "Sands SkyPark & Gardens by the Bay",
-          description: "Take in panoramic views from Sands SkyPark, then explore Gardens by the Bay - marvel at the Cloud Forest and Flower Dome, featuring stunning floral displays and climate-controlled environments.",
+          description:
+            "Take in panoramic views from Sands SkyPark, then explore Gardens by the Bay - marvel at the Cloud Forest and Flower Dome, featuring stunning floral displays and climate-controlled environments.",
         },
       ],
       includes: ["9 tour transfers per plan", "Licensed guide where noted"],
@@ -301,27 +325,33 @@ const Packages = () => {
       itinerary: [
         {
           title: "Arrival in Singapore",
-          description: "Arrive and transfer to your hotel. Settle in and prepare for an amazing adventure ahead.",
+          description:
+            "Arrive and transfer to your hotel. Settle in and prepare for an amazing adventure ahead.",
         },
         {
           title: "Singapore City Discovery",
-          description: "Explore Singapore's vibrant neighborhoods - Little India, see the iconic Merlion Statue, wander through Chinatown, visit Sri Mariamman Temple and Esplanade. Then discover Gardens by the Bay with Cloud Forest, Flower Dome, and Light & Sound Show. End with a scenic River Cruise along Singapore River.",
+          description:
+            "Explore Singapore's vibrant neighborhoods - Little India, see the iconic Merlion Statue, wander through Chinatown, visit Sri Mariamman Temple and Esplanade. Then discover Gardens by the Bay with Cloud Forest, Flower Dome, and Light & Sound Show. End with a scenic River Cruise along Singapore River.",
         },
         {
           title: "Marina Bay & Sentosa Island",
-          description: "Take in breathtaking views from Marina Bay Sands Sky Park Observation Deck. Then head to Sentosa Island for a cable car ride, visit Madame Tussauds 5-in-1, and witness the spectacular Wings of Time show.",
+          description:
+            "Take in breathtaking views from Marina Bay Sands Sky Park Observation Deck. Then head to Sentosa Island for a cable car ride, visit Madame Tussauds 5-in-1, and witness the spectacular Wings of Time show.",
         },
         {
           title: "Universal Studios Adventure",
-          description: "Spend a full day at Universal Studios Singapore exploring 7 themed areas with thrilling rides and world-class entertainment. Then transfer to Malaysia for the next leg of your journey.",
+          description:
+            "Spend a full day at Universal Studios Singapore exploring 7 themed areas with thrilling rides and world-class entertainment. Then transfer to Malaysia for the next leg of your journey.",
         },
         {
           title: "Putrajaya & Kuala Lumpur",
-          description: "Discover Putrajaya's stunning architecture with photo stops at National Mosque, Putra Bridge, and official government buildings. Then explore Kuala Lumpur - visit the National Mosque, King's Palace, Sultan Abdul Samad Building, Merdeka Square, and Menara KL Tower.",
+          description:
+            "Discover Putrajaya's stunning architecture with photo stops at National Mosque, Putra Bridge, and official government buildings. Then explore Kuala Lumpur - visit the National Mosque, King's Palace, Sultan Abdul Samad Building, Merdeka Square, and Menara KL Tower.",
         },
         {
           title: "Batu Caves & Genting Highlands",
-          description: "Visit the iconic Batu Caves with its colorful steps and temple. Then journey to Genting Highlands via cable car, enjoy the Skyway Ride, and experience the cool mountain air and entertainment.",
+          description:
+            "Visit the iconic Batu Caves with its colorful steps and temple. Then journey to Genting Highlands via cable car, enjoy the Skyway Ride, and experience the cool mountain air and entertainment.",
         },
       ],
       includes: [
@@ -357,23 +387,28 @@ const Packages = () => {
       itinerary: [
         {
           title: "Arrival & Transfer to Pattaya",
-          description: "Arrive and transfer to your 4-star hotel in Pattaya. Relax and enjoy the beautiful beachside location with daily breakfast included.",
+          description:
+            "Arrive and transfer to your 4-star hotel in Pattaya. Relax and enjoy the beautiful beachside location with daily breakfast included.",
         },
         {
           title: "Coral Island & Thai Culture",
-          description: "Embark on an exciting Coral Island Tour with water activities. Then explore authentic Thai culture at Nong Nooch Village Show featuring traditional performances, followed by a delicious local lunch.",
+          description:
+            "Embark on an exciting Coral Island Tour with water activities. Then explore authentic Thai culture at Nong Nooch Village Show featuring traditional performances, followed by a delicious local lunch.",
         },
         {
           title: "Alcazar Show",
-          description: "Experience the dazzling Alcazar Show - a spectacular display of Thai culture, music, and dance featuring world-class performances and stunning costumes.",
+          description:
+            "Experience the dazzling Alcazar Show - a spectacular display of Thai culture, music, and dance featuring world-class performances and stunning costumes.",
         },
         {
           title: "Bangkok & Romantic Dinner Cruise",
-          description: "Transfer to Bangkok and check into your 4-star hotel. In the evening, enjoy a romantic Chao Phraya Dinner Cruise with stunning river views, delicious cuisine, and live entertainment.",
+          description:
+            "Transfer to Bangkok and check into your 4-star hotel. In the evening, enjoy a romantic Chao Phraya Dinner Cruise with stunning river views, delicious cuisine, and live entertainment.",
         },
         {
           title: "Safari World & Marine Park",
-          description: "Spend a fun-filled day at Safari World & Marine Park. Witness amazing wildlife, enjoy thrilling shows, and explore marine life. A delicious lunch is included.",
+          description:
+            "Spend a fun-filled day at Safari World & Marine Park. Witness amazing wildlife, enjoy thrilling shows, and explore marine life. A delicious lunch is included.",
         },
       ],
       includes: [
@@ -401,27 +436,33 @@ const Packages = () => {
       itinerary: [
         {
           title: "Arrival in Kuala Lumpur",
-          description: "Arrive and transfer to your hotel. Settle in and prepare for an exciting Malaysian adventure.",
+          description:
+            "Arrive and transfer to your hotel. Settle in and prepare for an exciting Malaysian adventure.",
         },
         {
           title: "Kuala Lumpur City Tour",
-          description: "Explore Kuala Lumpur's iconic landmarks on a private city tour. Visit the KL Tower Observation Deck for panoramic city views and discover the city's rich culture and history.",
+          description:
+            "Explore Kuala Lumpur's iconic landmarks on a private city tour. Visit the KL Tower Observation Deck for panoramic city views and discover the city's rich culture and history.",
         },
         {
           title: "Genting Highlands & Batu Caves",
-          description: "Journey to Genting Highlands via cable car, enjoying stunning mountain views. En route, visit the famous Batu Caves with its colorful steps and temple. Spend the day exploring the cool mountain resort.",
+          description:
+            "Journey to Genting Highlands via cable car, enjoying stunning mountain views. En route, visit the famous Batu Caves with its colorful steps and temple. Spend the day exploring the cool mountain resort.",
         },
         {
           title: "Putrajaya Cruise",
-          description: "Discover Putrajaya's stunning architecture and beautiful lakes on a sharing cruise. Experience the modern administrative capital with its impressive buildings and green spaces.",
+          description:
+            "Discover Putrajaya's stunning architecture and beautiful lakes on a sharing cruise. Experience the modern administrative capital with its impressive buildings and green spaces.",
         },
         {
           title: "Legoland Adventure",
-          description: "Spend a full day at Legoland Malaysia - enjoy thrilling rides, explore themed areas, and experience endless fun for all ages. Private transfers included.",
+          description:
+            "Spend a full day at Legoland Malaysia - enjoy thrilling rides, explore themed areas, and experience endless fun for all ages. Private transfers included.",
         },
         {
           title: "Theme Park & Water Park",
-          description: "Enjoy a full day of fun with access to Theme Park, Water Park, and Sealife combo - perfect for families seeking adventure and entertainment.",
+          description:
+            "Enjoy a full day of fun with access to Theme Park, Water Park, and Sealife combo - perfect for families seeking adventure and entertainment.",
         },
       ],
       includes: [
@@ -445,23 +486,28 @@ const Packages = () => {
       itinerary: [
         {
           title: "Arrival in Phu Quoc",
-          description: "Arrive and transfer to North Phu Quoc. Check into your resort and begin your island paradise experience.",
+          description:
+            "Arrive and transfer to North Phu Quoc. Check into your resort and begin your island paradise experience.",
         },
         {
           title: "Grandworld Phu Quoc",
-          description: "Explore Grandworld Phu Quoc - a vibrant entertainment complex featuring cultural shows, shopping, and dining experiences showcasing Vietnamese culture.",
+          description:
+            "Explore Grandworld Phu Quoc - a vibrant entertainment complex featuring cultural shows, shopping, and dining experiences showcasing Vietnamese culture.",
         },
         {
           title: "VinWonders & VinSafari",
-          description: "Spend the day at VinWonders theme park and VinSafari - enjoy thrilling rides, explore wildlife, and experience world-class entertainment in one amazing combo.",
+          description:
+            "Spend the day at VinWonders theme park and VinSafari - enjoy thrilling rides, explore wildlife, and experience world-class entertainment in one amazing combo.",
         },
         {
           title: "4 Island Hopping Adventure",
-          description: "Embark on an exciting 4-island hopping tour by speedboat. Enjoy snorkeling, visit stunning beaches, ride the cable car, explore Aquatopia, and savor a delicious lunch on board.",
+          description:
+            "Embark on an exciting 4-island hopping tour by speedboat. Enjoy snorkeling, visit stunning beaches, ride the cable car, explore Aquatopia, and savor a delicious lunch on board.",
         },
         {
           title: "Shopping & Leisure",
-          description: "Enjoy flexible time for shopping, exploring local markets, and dining at your favorite restaurants. Private transfers available for your convenience.",
+          description:
+            "Enjoy flexible time for shopping, exploring local markets, and dining at your favorite restaurants. Private transfers available for your convenience.",
         },
       ],
       includes: ["Private transfers as listed", "SIC tour where noted"],
@@ -482,39 +528,48 @@ const Packages = () => {
       itinerary: [
         {
           title: "Arrival in Ho Chi Minh City",
-          description: "Arrive and transfer to your hotel. Begin your Vietnamese adventure in the vibrant city of Ho Chi Minh.",
+          description:
+            "Arrive and transfer to your hotel. Begin your Vietnamese adventure in the vibrant city of Ho Chi Minh.",
         },
         {
           title: "Cu Chi Tunnels & City Tour",
-          description: "Explore the historic Cu Chi Tunnels - an incredible network of underground tunnels used during the war. Then discover Ho Chi Minh City's iconic landmarks and rich history.",
+          description:
+            "Explore the historic Cu Chi Tunnels - an incredible network of underground tunnels used during the war. Then discover Ho Chi Minh City's iconic landmarks and rich history.",
         },
         {
           title: "Phu Quoc Island",
-          description: "Transfer to Phu Quoc Island and check into your resort. Explore Grand World Phu Quoc - a cultural and entertainment complex showcasing Vietnamese traditions.",
+          description:
+            "Transfer to Phu Quoc Island and check into your resort. Explore Grand World Phu Quoc - a cultural and entertainment complex showcasing Vietnamese traditions.",
         },
         {
           title: "VinWonders & VinSafari",
-          description: "Experience the best of Phu Quoc at VinWonders theme park and VinSafari. Enjoy thrilling rides, wildlife encounters, and world-class entertainment.",
+          description:
+            "Experience the best of Phu Quoc at VinWonders theme park and VinSafari. Enjoy thrilling rides, wildlife encounters, and world-class entertainment.",
         },
         {
           title: "4 Island Hopping",
-          description: "Embark on an island-hopping adventure by speedboat. Enjoy snorkeling, visit pristine beaches, ride the cable car, explore Aquatopia, and savor a delicious lunch.",
+          description:
+            "Embark on an island-hopping adventure by speedboat. Enjoy snorkeling, visit pristine beaches, ride the cable car, explore Aquatopia, and savor a delicious lunch.",
         },
         {
           title: "Danang & Hoi An",
-          description: "Transfer to Danang and explore the charming ancient town of Hoi An. Experience a unique Coconut Forest Basket Boat ride and enjoy a magical Lantern Boat cruise along the river.",
+          description:
+            "Transfer to Danang and explore the charming ancient town of Hoi An. Experience a unique Coconut Forest Basket Boat ride and enjoy a magical Lantern Boat cruise along the river.",
         },
         {
           title: "Ba Na Hills",
-          description: "Journey to Ba Na Hills via cable car. Walk across the iconic Golden Bridge supported by colossal hands, explore Fantasy Park, visit the French Village, and enjoy stunning mountain views.",
+          description:
+            "Journey to Ba Na Hills via cable car. Walk across the iconic Golden Bridge supported by colossal hands, explore Fantasy Park, visit the French Village, and enjoy stunning mountain views.",
         },
         {
           title: "Hanoi City",
-          description: "Transfer to Hanoi and explore Vietnam's capital. Discover the city's rich history, visit ancient temples, and experience the vibrant local culture on a half-day city tour.",
+          description:
+            "Transfer to Hanoi and explore Vietnam's capital. Discover the city's rich history, visit ancient temples, and experience the vibrant local culture on a half-day city tour.",
         },
         {
           title: "Halong Bay Cruise",
-          description: "Experience the breathtaking beauty of Halong Bay on a deluxe day cruise. Enjoy kayaking through limestone karsts, savor a delicious lunch, and witness a stunning sunset party on the water.",
+          description:
+            "Experience the breathtaking beauty of Halong Bay on a deluxe day cruise. Enjoy kayaking through limestone karsts, savor a delicious lunch, and witness a stunning sunset party on the water.",
         },
       ],
       includes: [
@@ -539,31 +594,38 @@ const Packages = () => {
       itinerary: [
         {
           title: "Arrival & Ho Chi Minh City",
-          description: "Arrive and transfer to your hotel. Begin your exploration with a Ho Chi Minh City Tour, discovering the vibrant streets, historic landmarks, and rich culture of Vietnam's largest city.",
+          description:
+            "Arrive and transfer to your hotel. Begin your exploration with a Ho Chi Minh City Tour, discovering the vibrant streets, historic landmarks, and rich culture of Vietnam's largest city.",
         },
         {
           title: "Cu Chi Tunnels",
-          description: "Explore the historic Cu Chi Tunnels - an incredible underground network that played a crucial role during the Vietnam War. Learn about the resilience and ingenuity of the Vietnamese people.",
+          description:
+            "Explore the historic Cu Chi Tunnels - an incredible underground network that played a crucial role during the Vietnam War. Learn about the resilience and ingenuity of the Vietnamese people.",
         },
         {
           title: "Mekong Delta Adventure",
-          description: "Journey to the Mekong Delta and experience authentic Vietnamese life. Visit Vinh Trang Pagoda, take a boat ride to Unicorn Island, explore local bee farms and fruit orchards, and enjoy a peaceful rowboat ride through water coconut trees. A delicious local lunch is included.",
+          description:
+            "Journey to the Mekong Delta and experience authentic Vietnamese life. Visit Vinh Trang Pagoda, take a boat ride to Unicorn Island, explore local bee farms and fruit orchards, and enjoy a peaceful rowboat ride through water coconut trees. A delicious local lunch is included.",
         },
         {
           title: "Ba Na Hills & Golden Bridge",
-          description: "Transfer to Da Nang and ascend to Ba Na Hills via cable car. Walk across the iconic Golden Bridge supported by colossal hands, visit Linh Ung Pagoda with its 27m Buddha statue, and explore the beautiful Le Jardin gardens. Lunch included.",
+          description:
+            "Transfer to Da Nang and ascend to Ba Na Hills via cable car. Walk across the iconic Golden Bridge supported by colossal hands, visit Linh Ung Pagoda with its 27m Buddha statue, and explore the beautiful Le Jardin gardens. Lunch included.",
         },
         {
           title: "Hoi An Ancient Town",
-          description: "Discover the charming ancient town of Hoi An - a UNESCO World Heritage site. Visit Phuc Kien Assembly Hall, Tan Ky Ancient House, and the Japanese Covered Bridge. In the evening, participate in the magical Lantern Release Ceremony along the Hoai River.",
+          description:
+            "Discover the charming ancient town of Hoi An - a UNESCO World Heritage site. Visit Phuc Kien Assembly Hall, Tan Ky Ancient House, and the Japanese Covered Bridge. In the evening, participate in the magical Lantern Release Ceremony along the Hoai River.",
         },
         {
           title: "Hanoi City Discovery",
-          description: "Transfer to Hanoi and explore Vietnam's capital city. Visit the Temple of Literature, discover the historic Hoa Lo Prison Museum (Hanoi Hilton), and experience the city's rich culture and history. Guided tour with lunch included.",
+          description:
+            "Transfer to Hanoi and explore Vietnam's capital city. Visit the Temple of Literature, discover the historic Hoa Lo Prison Museum (Hanoi Hilton), and experience the city's rich culture and history. Guided tour with lunch included.",
         },
         {
           title: "Halong Bay Cruise",
-          description: "Experience the breathtaking beauty of Halong Bay on a scenic day cruise. Explore iconic islets like Surprising Cave and Pelican Grotto, visit stunning grottos, and enjoy swimming or relaxing on the sundeck. A delicious lunch is included.",
+          description:
+            "Experience the breathtaking beauty of Halong Bay on a scenic day cruise. Explore iconic islets like Surprising Cave and Pelican Grotto, visit stunning grottos, and enjoy swimming or relaxing on the sundeck. A delicious lunch is included.",
         },
       ],
       includes: [
@@ -647,7 +709,8 @@ const Packages = () => {
             Travel Packages
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white">
-            Discover handcrafted itineraries designed just for you. Your journey, perfectly planned.
+            Discover handcrafted itineraries designed just for you. Your
+            journey, perfectly planned.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -655,8 +718,11 @@ const Packages = () => {
               className="bg-violet-600 hover:bg-violet-700 text-white px-8 py-4 text-lg"
               onClick={() => {
                 const phoneNumber = "+919549134848";
-                const message = "Hello! I'm interested in exploring your travel packages.";
-                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                const message =
+                  "Hello! I'm interested in exploring your travel packages.";
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                  message
+                )}`;
                 window.open(whatsappUrl, "_blank");
               }}
             >
@@ -700,7 +766,6 @@ const Packages = () => {
         </div>
       </section>
 
-
       {/* Ready-made Itineraries Section */}
       {(selectedCategory === "all" || selectedCategory === "itineraries") && (
         <section className="py-20 bg-gradient-to-br from-violet-50 via-pink-50 to-orange-50">
@@ -711,7 +776,10 @@ const Packages = () => {
                   Ready-made Itineraries
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  Complete travel experiences designed just for you. <span className="font-semibold text-violet-600">Your journey, customized to your dreams.</span>
+                  Complete travel experiences designed just for you.{" "}
+                  <span className="font-semibold text-violet-600">
+                    Your journey, customized to your dreams.
+                  </span>
                 </p>
                 <p className="text-lg text-violet-600 font-semibold italic mt-4">
                   ✨ Every itinerary is personalized for each traveler
@@ -765,35 +833,60 @@ const Packages = () => {
                             Your Journey:
                           </h4>
                           <div className="space-y-4">
-                            {Array.isArray(itinerary.itinerary) && itinerary.itinerary[0]?.title ? (
-                              // New format with title and description
-                              itinerary.itinerary.map((item, index) => (
-                                <div key={index} className="bg-gradient-to-r from-violet-50 via-pink-50 to-orange-50 rounded-xl p-4 border-l-4 border-violet-600">
-                                  <h5 className="font-bold text-gray-900 mb-2 text-lg">{item.title}</h5>
-                                  <p className="text-gray-700 text-sm leading-relaxed">{item.description}</p>
-                                </div>
-                              ))
-                            ) : (
-                              // Old format - convert to new format
-                              itinerary.itinerary.map((day, index) => {
-                                // Remove Day labels and flight references
-                                const cleanDay = day
-                                  .replace(/^(Day \d+|D\d+):\s*/i, '')
-                                  .replace(/→\s*Airport|Airport\s*→|Airport transfer|Airport Drop|Departure|Arrival at.*Airport/gi, '')
-                                  .replace(/→\s*Hotel|Hotel\s*check-in/gi, 'Transfer to hotel')
-                                  .trim();
-                                
-                                if (!cleanDay || cleanDay.toLowerCase().includes('airport') || cleanDay.toLowerCase().includes('flight')) {
-                                  return null;
-                                }
-                                
-                                return (
-                                  <div key={index} className="bg-gradient-to-r from-violet-50 via-pink-50 to-orange-50 rounded-xl p-4 border-l-4 border-violet-600">
-                                    <p className="text-gray-700 text-sm leading-relaxed">{cleanDay}</p>
+                            {Array.isArray(itinerary.itinerary) &&
+                            itinerary.itinerary[0]?.title
+                              ? // New format with title and description
+                                itinerary.itinerary.map((item, index) => (
+                                  <div
+                                    key={index}
+                                    className="bg-gradient-to-r from-violet-50 via-pink-50 to-orange-50 rounded-xl p-4 border-l-4 border-violet-600"
+                                  >
+                                    <h5 className="font-bold text-gray-900 mb-2 text-lg">
+                                      {item.title}
+                                    </h5>
+                                    <p className="text-gray-700 text-sm leading-relaxed">
+                                      {item.description}
+                                    </p>
                                   </div>
-                                );
-                              }).filter(Boolean)
-                            )}
+                                ))
+                              : // Old format - convert to new format
+                                itinerary.itinerary
+                                  .map((day, index) => {
+                                    // Remove Day labels and flight references
+                                    const cleanDay = day
+                                      .replace(/^(Day \d+|D\d+):\s*/i, "")
+                                      .replace(
+                                        /→\s*Airport|Airport\s*→|Airport transfer|Airport Drop|Departure|Arrival at.*Airport/gi,
+                                        ""
+                                      )
+                                      .replace(
+                                        /→\s*Hotel|Hotel\s*check-in/gi,
+                                        "Transfer to hotel"
+                                      )
+                                      .trim();
+
+                                    if (
+                                      !cleanDay ||
+                                      cleanDay
+                                        .toLowerCase()
+                                        .includes("airport") ||
+                                      cleanDay.toLowerCase().includes("flight")
+                                    ) {
+                                      return null;
+                                    }
+
+                                    return (
+                                      <div
+                                        key={index}
+                                        className="bg-gradient-to-r from-violet-50 via-pink-50 to-orange-50 rounded-xl p-4 border-l-4 border-violet-600"
+                                      >
+                                        <p className="text-gray-700 text-sm leading-relaxed">
+                                          {cleanDay}
+                                        </p>
+                                      </div>
+                                    );
+                                  })
+                                  .filter(Boolean)}
                           </div>
                         </div>
                         <div className="mb-6">
@@ -802,7 +895,11 @@ const Packages = () => {
                           </h4>
                           <ul className="space-y-1">
                             {itinerary.includes
-                              .filter(item => !item.toLowerCase().includes('airfare') && !item.toLowerCase().includes('flight'))
+                              .filter(
+                                (item) =>
+                                  !item.toLowerCase().includes("airfare") &&
+                                  !item.toLowerCase().includes("flight")
+                              )
                               .map((item, index) => (
                                 <li
                                   key={index}
@@ -827,7 +924,7 @@ const Packages = () => {
                               Your journey, designed just for you
                             </p>
                           </div>
-                          <Button 
+                          <Button
                             className="bg-violet-600 hover:bg-violet-700 text-white px-6"
                             onClick={() => {
                               setSelectedPackage(itinerary);
@@ -855,14 +952,14 @@ const Packages = () => {
         </section>
       )}
 
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-violet-900 via-pink-900 to-orange-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold mb-6">Ready to Take Off Now?</h2>
             <p className="text-xl mb-8 text-white/90">
-              Book your perfect travel experience today and create memories that last a lifetime
+              Book your perfect travel experience today and create memories that
+              last a lifetime
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -883,8 +980,11 @@ const Packages = () => {
                 className="border-white text-white hover:bg-white hover:text-violet-600"
                 onClick={() => {
                   const phoneNumber = "+919549134848";
-                  const message = "Hello! I'm interested in your travel packages. Please provide more information.";
-                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                  const message =
+                    "Hello! I'm interested in your travel packages. Please provide more information.";
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                    message
+                  )}`;
                   window.open(whatsappUrl, "_blank");
                 }}
               >
@@ -906,7 +1006,8 @@ const Packages = () => {
               {formStep === 1 && "Select your departure city"}
               {formStep === 2 && "Choose your travel dates"}
               {formStep === 3 && "Select hotel category"}
-              {formStep === 4 && "Enter your phone number to connect via WhatsApp"}
+              {formStep === 4 &&
+                "Enter your phone number to connect via WhatsApp"}
             </DialogDescription>
           </DialogHeader>
 
@@ -918,7 +1019,12 @@ const Packages = () => {
                 </label>
                 <select
                   value={priceFormData.departureCity}
-                  onChange={(e) => setPriceFormData({ ...priceFormData, departureCity: e.target.value })}
+                  onChange={(e) =>
+                    setPriceFormData({
+                      ...priceFormData,
+                      departureCity: e.target.value,
+                    })
+                  }
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
                 >
                   <option value="">Select departure city</option>
@@ -952,11 +1058,16 @@ const Packages = () => {
                 <Input
                   type="date"
                   value={priceFormData.travelDate}
-                  onChange={(e) => setPriceFormData({ ...priceFormData, travelDate: e.target.value })}
-                  min={new Date().toISOString().split('T')[0]}
+                  onChange={(e) =>
+                    setPriceFormData({
+                      ...priceFormData,
+                      travelDate: e.target.value,
+                    })
+                  }
+                  min={new Date().toISOString().split("T")[0]}
                   className="w-full"
                 />
-                <div className="flex gap-2 mt-4">
+                <div className="flex gap-2 mt-4 text-white">
                   <Button
                     variant="outline"
                     className="flex-1"
@@ -987,7 +1098,12 @@ const Packages = () => {
                   {["3★", "4★", "5★"].map((star) => (
                     <button
                       key={star}
-                      onClick={() => setPriceFormData({ ...priceFormData, hotelCategory: star })}
+                      onClick={() =>
+                        setPriceFormData({
+                          ...priceFormData,
+                          hotelCategory: star,
+                        })
+                      }
                       className={`px-4 py-3 rounded-lg border-2 transition-all ${
                         priceFormData.hotelCategory === star
                           ? "border-violet-600 bg-violet-50 text-violet-600 font-bold"
@@ -998,7 +1114,7 @@ const Packages = () => {
                     </button>
                   ))}
                 </div>
-                <div className="flex gap-2 mt-4">
+                <div className="flex gap-2 mt-4 text-white">
                   <Button
                     variant="outline"
                     className="flex-1"
@@ -1029,10 +1145,15 @@ const Packages = () => {
                   type="tel"
                   placeholder="Enter your phone number"
                   value={priceFormData.phoneNumber}
-                  onChange={(e) => setPriceFormData({ ...priceFormData, phoneNumber: e.target.value })}
+                  onChange={(e) =>
+                    setPriceFormData({
+                      ...priceFormData,
+                      phoneNumber: e.target.value,
+                    })
+                  }
                   className="w-full"
                 />
-                <div className="flex gap-2 mt-4">
+                <div className="flex gap-2 mt-4 text-white">
                   <Button
                     variant="outline"
                     className="flex-1"
@@ -1046,7 +1167,9 @@ const Packages = () => {
                       if (priceFormData.phoneNumber) {
                         const phoneNumber = "+919549134848";
                         const message = `Hello! I'm interested in ${selectedPackage?.title}.\n\nDetails:\n- Departure City: ${priceFormData.departureCity}\n- Travel Date: ${priceFormData.travelDate}\n- Hotel Category: ${priceFormData.hotelCategory}\n- Phone: ${priceFormData.phoneNumber}\n\nPlease provide pricing and details.`;
-                        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                          message
+                        )}`;
                         window.open(whatsappUrl, "_blank");
                         setShowPriceForm(false);
                         setFormStep(1);
