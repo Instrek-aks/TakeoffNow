@@ -86,7 +86,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50">
       <Navbar />
 
       {/* Hero Section */}
@@ -230,7 +230,7 @@ const About = () => {
               ].map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                  className="bg-gradient-to-br from-stone-50 to-slate-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-stone-200"
                 >
                   <div className="mb-4">{service.icon}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -252,7 +252,7 @@ const About = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
-                  className="bg-white text-violet-600 hover:bg-gray-100"
+                  className="bg-stone-50 text-violet-600 hover:bg-stone-100 border border-stone-200"
                   onClick={() => {
                     const phoneNumber = "+919549134848";
                     const message = "Hello! I'm ready to start my adventure. Please help me plan my perfect trip.";
@@ -295,7 +295,7 @@ const About = () => {
               {teamMembers.map((member, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                  className="bg-gradient-to-br from-stone-50 to-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-stone-200"
                 >
                   <div className="relative">
                     <img
@@ -321,7 +321,7 @@ const About = () => {
             </div>
 
             {/* <div className="text-center mt-16">
-              <div className="bg-white rounded-2xl p-12 shadow-lg max-w-4xl mx-auto">
+              <div className="bg-gradient-to-br from-sky-50 to-cyan-50 rounded-2xl p-12 shadow-lg max-w-4xl mx-auto border border-sky-200">
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">
                   Join Our Team
                 </h3>
@@ -355,7 +355,7 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-white text-blue-600 hover:bg-gray-100"
+                className="bg-stone-50 text-blue-600 hover:bg-stone-100 border border-stone-200"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Us Now

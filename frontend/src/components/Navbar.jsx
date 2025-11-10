@@ -74,7 +74,9 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-transparent"
+        isScrolled
+          ? "bg-sky-50/95 backdrop-blur-md shadow-md"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-4">
@@ -106,7 +108,7 @@ const Navbar = () => {
                     <span>{link.name}</span>
                     <ChevronDown className="w-4 h-4" />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="bg-white">
+                  <DropdownMenuContent className="bg-gradient-to-br from-sky-50 to-cyan-50 border border-sky-200">
                     {link.dropdownItems.map((item, index) => (
                       <DropdownMenuItem key={index} className="text-sm">
                         {item}
@@ -178,7 +180,7 @@ const Navbar = () => {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-80 bg-white h-auto max-h-screen overflow-y-auto"
+                className="w-80 bg-gradient-to-br from-sky-50 to-cyan-50 border border-sky-200 h-auto max-h-screen overflow-y-auto"
               >
                 <div className="flex flex-col space-y-4 mt-8 pb-8">
                   {navLinks.map((link) => (

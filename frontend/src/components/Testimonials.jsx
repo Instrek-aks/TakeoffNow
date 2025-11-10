@@ -32,7 +32,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-24 bg-gray-100/30">
+    <section className="py-24 bg-gradient-to-br from-cyan-50 via-sky-50 to-blue-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -48,7 +48,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative"
+              className="bg-gradient-to-br from-stone-50 to-slate-50 border border-stone-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative"
             >
               <Quote className="absolute top-6 right-6 w-12 h-12 text-muted-foreground/20" />
 

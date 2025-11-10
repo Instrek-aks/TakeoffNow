@@ -118,7 +118,7 @@ const formatPrice = (price) => {
 
 const TravelStories = () => {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <p
@@ -138,7 +138,7 @@ const TravelStories = () => {
             return (
               <div
                 key={pkg.id}
-                className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
+                className="bg-gradient-to-br from-stone-50 to-slate-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-stone-200"
               >
                 {/* User Header - Yellow Bar */}
                 <div className="bg-yellow-400 px-3 py-2 flex items-center gap-2">

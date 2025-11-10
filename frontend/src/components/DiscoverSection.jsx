@@ -163,13 +163,13 @@ const DiscoverSection = () => {
                   <div className="bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 rounded-3xl p-8 shadow-2xl hover:shadow-yellow-500/50 transition-all duration-300 hover:-translate-y-2 border-2 border-yellow-300/50 relative overflow-hidden group flex flex-col h-full w-full">
                     {/* Decorative background pattern */}
                     <div className="absolute inset-0 opacity-10">
-                      <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -mr-16 -mt-16"></div>
-                      <div className="absolute bottom-0 left-0 w-24 h-24 bg-white rounded-full -ml-12 -mb-12"></div>
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-sky-100 rounded-full -mr-16 -mt-16"></div>
+                      <div className="absolute bottom-0 left-0 w-24 h-24 bg-cyan-100 rounded-full -ml-12 -mb-12"></div>
                     </div>
 
                     {/* Step Number Circle */}
                     <div className="relative z-10 mb-6">
-                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-16 h-16 bg-stone-50 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 border border-stone-200">
                         <span className="text-3xl font-bold text-yellow-600">
                           {it.step}
                         </span>
