@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { Input } from "../components/ui/Input";
 import {
@@ -9,7 +9,9 @@ import {
   ChevronDown,
   User,
   Search,
+  MapPin,
 } from "lucide-react";
+import { searchDestinations } from "../utils/searchData";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,7 +23,12 @@ import { Badge } from "../components/ui/Badge";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [showSearchResults, setShowSearchResults] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const searchRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +37,46 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (searchQuery.trim()) {
+      const results = searchDestinations(searchQuery);
+      setSearchResults(results.slice(0, 5)); // Show max 5 results
+      setShowSearchResults(results.length > 0);
+    } else {
+      setSearchResults([]);
+      setShowSearchResults(false);
+    }
+  }, [searchQuery]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
+        setShowSearchResults(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      setShowSearchResults(false);
+      setSearchQuery("");
+    }
+  };
+
+  const handleDestinationClick = (destinationName) => {
+    navigate(`/destination/${encodeURIComponent(destinationName)}`);
+    setShowSearchResults(false);
+    setSearchQuery("");
+  };
 
   const handleHomeClick = (e) => {
     if (location.pathname === "/") {
@@ -145,21 +192,54 @@ const Navbar = () => {
 
           {/* Search Bar - Mobile (Centered) */}
           <div className="flex-1 lg:hidden mx-4">
-            <div className="relative max-w-md mx-auto">
-              <Search
-                className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 ${
-                  isScrolled ? "text-gray-400" : "text-gray-600"
-                }`}
-              />
-              <Input
-                type="search"
-                placeholder="Search packages..."
-                className={`pl-10 pr-4 py-2 w-full ${
-                  isScrolled
-                    ? "bg-white border-gray-300 text-gray-900 placeholder-gray-400"
-                    : "bg-white/90 backdrop-blur-sm border-white/30 text-gray-900 placeholder-gray-500"
-                } rounded-full focus:ring-2 focus:ring-amber-500`}
-              />
+            <div className="relative max-w-md mx-auto" ref={searchRef}>
+              <form onSubmit={handleSearchSubmit}>
+                <Search
+                  className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 ${
+                    isScrolled ? "text-gray-400" : "text-gray-600"
+                  }`}
+                />
+                <Input
+                  type="search"
+                  placeholder="Search Countries..."
+                  value={searchQuery}
+                  onChange={handleSearchChange}
+                  className={`pl-10 pr-4 py-2 w-full ${
+                    isScrolled
+                      ? "bg-white border-gray-300 text-gray-900 placeholder-gray-400"
+                      : "bg-white/90 backdrop-blur-sm border-white/30 text-gray-900 placeholder-gray-500"
+                  } rounded-full focus:ring-2 focus:ring-amber-500`}
+                />
+              </form>
+              {showSearchResults && searchResults.length > 0 && (
+                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-xl border border-amber-200 z-50 max-h-80 overflow-y-auto">
+                  {searchResults.map((dest) => (
+                    <button
+                      key={dest.name}
+                      onClick={() => handleDestinationClick(dest.name)}
+                      className="w-full px-4 py-3 text-left hover:bg-amber-50 transition-colors flex items-center gap-3 border-b border-gray-100 last:border-b-0"
+                    >
+                      <MapPin className="w-5 h-5 text-amber-600 flex-shrink-0" />
+                      <div className="flex-1 min-w-0">
+                        <p className="font-semibold text-gray-900 truncate">
+                          {dest.name}
+                        </p>
+                        <p className="text-sm text-gray-600 truncate">
+                          {dest.country} • {dest.packages.length} packages
+                        </p>
+                      </div>
+                    </button>
+                  ))}
+                  {searchResults.length === 5 && (
+                    <button
+                      onClick={handleSearchSubmit}
+                      className="w-full px-4 py-3 text-center text-amber-600 font-semibold hover:bg-amber-50 transition-colors border-t border-gray-200"
+                    >
+                      View all results
+                    </button>
+                  )}
+                </div>
+              )}
             </div>
           </div>
 
@@ -167,21 +247,54 @@ const Navbar = () => {
           <div className="flex items-center space-x-4">
             {/* Search Bar - Desktop (Right Side) */}
             <div className="hidden lg:block">
-              <div className="relative">
-                <Search
-                  className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 ${
-                    isScrolled ? "text-gray-400" : "text-gray-400"
-                  }`}
-                />
-                <Input
-                  type="search"
-                  placeholder="Search packages..."
-                  className={`pl-10 pr-4 py-2 w-64 ${
-                    isScrolled
-                      ? "bg-white border-gray-300 text-gray-900 placeholder-gray-400"
-                      : "bg-white/90 backdrop-blur-sm border-white/30 text-gray-900 placeholder-gray-500"
-                  } rounded-full focus:ring-2 focus:ring-amber-500`}
-                />
+              <div className="relative" ref={searchRef}>
+                <form onSubmit={handleSearchSubmit}>
+                  <Search
+                    className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 ${
+                      isScrolled ? "text-gray-400" : "text-gray-400"
+                    }`}
+                  />
+                  <Input
+                    type="search"
+                    placeholder="Search Countries, Cities..."
+                    value={searchQuery}
+                    onChange={handleSearchChange}
+                    className={`pl-10 pr-4 py-2 w-64 ${
+                      isScrolled
+                        ? "bg-white border-gray-300 text-gray-900 placeholder-gray-400"
+                        : "bg-white/90 backdrop-blur-sm border-white/30 text-gray-900 placeholder-gray-500"
+                    } rounded-full focus:ring-2 focus:ring-amber-500`}
+                  />
+                </form>
+                {showSearchResults && searchResults.length > 0 && (
+                  <div className="absolute top-full right-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-amber-200 z-50 max-h-80 overflow-y-auto">
+                    {searchResults.map((dest) => (
+                      <button
+                        key={dest.name}
+                        onClick={() => handleDestinationClick(dest.name)}
+                        className="w-full px-4 py-3 text-left hover:bg-amber-50 transition-colors flex items-center gap-3 border-b border-gray-100 last:border-b-0"
+                      >
+                        <MapPin className="w-5 h-5 text-amber-600 flex-shrink-0" />
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-gray-900 truncate">
+                            {dest.name}
+                          </p>
+                          <p className="text-sm text-gray-600 truncate">
+                            {dest.country} • {dest.packages.length} packages
+                          </p>
+                        </div>
+                      </button>
+                    ))}
+                    {searchResults.length === 5 && (
+                      <button
+                        onClick={handleSearchSubmit}
+                        className="w-full px-4 py-3 text-center text-amber-600 font-semibold hover:bg-amber-50 transition-colors border-t border-gray-200"
+                      >
+                        View all results
+                      </button>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
 
