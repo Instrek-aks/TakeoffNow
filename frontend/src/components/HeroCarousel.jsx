@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
@@ -21,6 +22,7 @@ const slides = [
 ];
 
 const HeroCarousel = () => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -61,8 +63,8 @@ const HeroCarousel = () => {
           key={index}
           className={`absolute inset-0 transition-all duration-700 ease-in-out ${
             index === currentSlide
-              ? "opacity-100 scale-100"
-              : "opacity-0 scale-105"
+              ? "opacity-100 scale-100 z-10"
+              : "opacity-0 scale-105 pointer-events-none"
           }`}
           style={{
             backgroundImage: `url(${slide.image})`,
@@ -71,10 +73,10 @@ const HeroCarousel = () => {
           }}
         >
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-black/30 pointer-events-none" />
 
           {/* Content */}
-          <div className="relative h-full flex items-center justify-center">
+          <div className="relative h-full flex items-center justify-center z-20">
             <div className="container mx-auto px-4 text-center text-white">
               <div
                 className={`transition-all duration-700 delay-100 ${
@@ -92,13 +94,20 @@ const HeroCarousel = () => {
                   {slide.subtitle}
                 </p>
                 {/* Removed price block */}
-                <Button
-                  size="lg"
-                  className="bg-violet-600 hover:bg-blue-600/90 text-white px-8 py-6 text-lg rounded-full"
-                >
-                  TAKE A TOUR
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
+                {index === currentSlide && (
+                  <Button
+                    size="lg"
+                    className="bg-violet-600 hover:bg-blue-600/90 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 transform hover:scale-105 relative z-30 cursor-pointer"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      navigate("/packages");
+                    }}
+                  >
+                    TAKE A TOUR
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                )}
               </div>
             </div>
           </div>
