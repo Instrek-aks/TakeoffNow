@@ -80,7 +80,11 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6 text-blue-600" />,
       title: "Office Location",
-      details: ["Shop No. 06, Dev Plaza", "Bhiwadi - Alwar Bypass Road", "301019"],
+      details: [
+        "Shop No. 06, Dev Plaza",
+        "Bhiwadi - Alwar Bypass Road",
+        "301019",
+      ],
       description: "Visit our main office",
     },
     {
@@ -126,8 +130,11 @@ const Contact = () => {
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg"
               onClick={() => {
                 const phoneNumber = "919549134848";
-                const message = "Hello! I'm interested in your travel services.";
-                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                const message =
+                  "Hello! I'm interested in your travel services.";
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                  message
+                )}`;
                 window.location.href = whatsappUrl;
               }}
             >
@@ -458,8 +465,11 @@ const Contact = () => {
                 className="bg-amber-50 text-green-600 hover:bg-amber-100 border border-amber-300 px-8 py-4 text-lg"
                 onClick={() => {
                   const phoneNumber = "919549134848";
-                  const message = "Hello! I'm interested in your travel services.";
-                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                  const message =
+                    "Hello! I'm interested in your travel services.";
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                    message
+                  )}`;
                   window.location.href = whatsappUrl;
                 }}
               >
@@ -483,7 +493,7 @@ const Contact = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50">
+      {/* <section className="py-20 bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -535,7 +545,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
       <WhatsAppButton />
