@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import ScrollToTop from "../components/ScrollToTop";
 import WhatsAppButton from "../components/WhatsAppButton";
 import { Button } from "../components/ui/Button";
 import {
@@ -361,7 +360,6 @@ const About = () => {
 
       <Footer />
       <WhatsAppButton />
-      <ScrollToTop />
     </div>
   );
 };

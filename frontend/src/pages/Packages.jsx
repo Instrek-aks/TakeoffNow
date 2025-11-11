@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import ScrollToTop from "../components/ScrollToTop";
 import WhatsAppButton from "../components/WhatsAppButton";
 import { Button } from "../components/ui/Button";
 import { Badge } from "../components/ui/Badge";
@@ -30,6 +29,7 @@ import {
   Camera,
   Utensils,
   Hotel,
+  Plane,
 } from "lucide-react";
 
 const Packages = () => {
@@ -47,21 +47,26 @@ const Packages = () => {
   const basicPackages = [
     {
       id: 1,
-      title: "City Explorer Tour",
+      title: "DUBAI 4 NIGHTS",
       type: "City Tour",
-      duration: "1 Day",
-      price: 15000,
-      originalPrice: 18000,
-      discount: "17%",
-      image: "/slider1.webp",
+      duration: "4 Nights | 5 Days",
+      price: 0,
+      originalPrice: 0,
+      discount: null,
+      image:
+        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop",
       description:
-        "Discover the city's hidden gems and iconic landmarks with our guided city tour",
+        "Experience the best of Dubai with iconic landmarks, desert adventures, and cultural attractions",
       features: [
-        "Professional local guide",
-        "All entry tickets included",
-        "City landmarks tour",
-        "Photo opportunities",
-        "Lunch included",
+        "Evening Marina Dhow Cruise with buffet dinner & live entertainment",
+        "Half-Day Dubai City Tour – heritage sites, Gold & Spice Souks, Palm Jumeirah",
+        "Photo stops at Dubai Frame, Burj Al Arab & Museum of the Future",
+        "Top of Burj Khalifa (124th Floor) with Dubai Mall & Fountain show",
+        "Dubai Frame Visit – panoramic city views & cultural exhibits",
+        "Desert Safari Adventure – dune bashing, camel rides, sandboarding & BBQ dinner",
+        "Global Village Entry – cultural extravaganza with shopping & food from 70+ countries",
+        "Dubai Miracle Garden – the world's largest flower garden",
+        "Airport and Sightseeing transfers",
       ],
       rating: 4.8,
       reviews: 124,
@@ -69,47 +74,89 @@ const Packages = () => {
     },
     {
       id: 2,
-      title: "Mountain Adventure Getaway",
+      title: "VIETNAM DISCOVERY",
       type: "Adventure",
-      duration: "2 Days",
-      price: 25000,
-      originalPrice: 30000,
-      discount: "17%",
-      image: "/slider2.webp",
+      duration: "6 Nights | 7 Days",
+      price: 45000,
+      originalPrice: 55000,
+      discount: "18%",
+      image:
+        "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&h=600&fit=crop",
       description:
-        "Experience the beauty of mountains with trekking, scenic views, and local culture",
+        "Explore Ho Chi Minh City, Da Nang, and Hanoi with cultural tours, ancient towns, and Halong Bay cruise",
       features: [
-        "Expert trekking guide",
-        "Mountain range views",
-        "Scenic photo spots",
-        "Professional photography",
-        "Accommodation included",
+        "Ho Chi Minh City Tour & Cu Chi Tunnels Tour (Shared Basis)",
+        "Mekong Delta Tour with Vinh Trang Pagoda, boat rides, and local experiences",
+        "Ba Na Hills Tour with Golden Bridge, Linh Ung Pagoda, and 27m Buddha statue",
+        "Hoi An Ancient Town Tour with Phuc Kien Assembly Hall & Japanese Covered Bridge",
+        "Lantern Release Ceremony along the Hoai River",
+        "Hanoi City Tour with Temple of Literature & Hoa Lo Prison Museum",
+        "Halong Bay Day Cruise exploring Surprising Cave, Pelican Grotto, and grottos",
+        "Single Entry Vietnam E-Visa included",
+        "All airport and sightseeing transfers (Private/Shared as specified)",
       ],
       rating: 4.9,
       reviews: 89,
-      popular: false,
+      popular: true,
     },
     {
       id: 3,
-      title: "Coastal Beach Experience",
+      title: "THAILAND GETAWAY",
       type: "Beach",
-      duration: "1 Day",
-      price: 12000,
-      originalPrice: 15000,
-      discount: "20%",
-      image: "/slider1.webp",
+      duration: "5 Nights | 6 Days",
+      price: 51000,
+      originalPrice: 60000,
+      discount: "15%",
+      image:
+        "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
       description:
-        "Relax on pristine beaches with water activities and stunning ocean views",
+        "Relax in 4-star hotels in Pattaya & Bangkok with exciting tours, shows, and cultural experiences",
       features: [
-        "Beach access",
-        "Water sports activities",
-        "Professional guide",
-        "Comfortable facilities",
-        "Lunch included",
+        "4-star hotels in Pattaya & Bangkok with daily breakfast",
+        "Private transfers throughout",
+        "Coral Island Tour with water activities",
+        "Nong Nooch Village Show with authentic Thai culture & lunch",
+        "Alcazar Show – dazzling performances of Thai culture, music, and dance",
+        "Chao Phraya Dinner Cruise with stunning river views and live entertainment",
+        "Safari World & Marine Park with wildlife shows and lunch",
       ],
       rating: 4.7,
       reviews: 156,
-      popular: false,
+      popular: true,
+      withFlights: true,
+    },
+    {
+      id: 4,
+      title: "SINGAPORE & MALAYSIA",
+      type: "City Tour",
+      duration: "6 Nights | 7 Days",
+      price: 0,
+      originalPrice: 0,
+      discount: null,
+      image:
+        "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&h=600&fit=crop",
+      description:
+        "Return Economy Class Airfare with comprehensive tours of Singapore and Malaysia's best attractions",
+      features: [
+        "Return Economy Class Airfare (up to 1 stopover)",
+        "06 nights' accommodation in Singapore and Malaysia",
+        "Daily Continental Breakfast",
+        "Singapore City Tour (Little India, Merlion, Chinatown, Sri Mariamman Temple)",
+        "Gardens by the Bay (Cloud Forest, Flower Dome, Light & Sound Show)",
+        "River Cruise (Bum Boat Ride along Singapore River)",
+        "Marina Bay Sands Sky Park Observation Deck",
+        "Sentosa Island Tour (Cable Car, Madame Tussauds 5-in-1, Wings of Time)",
+        "Full Day at Universal Studios Singapore (7 themed areas)",
+        "Putrajaya orientation tour with photo-stops",
+        "Kuala Lumpur City Tour (National Mosque, King's Palace, Menara KL Tower)",
+        "Batu Caves and Genting Highlands Tour (Cable Car, Skyway Ride)",
+        "Travel Insurance for passengers up to 69 years",
+        "All entry fees and attraction tickets included",
+      ],
+      rating: 4.8,
+      reviews: 102,
+      popular: true,
+      withFlights: true,
     },
   ];
 
@@ -765,16 +812,24 @@ const Packages = () => {
                         }}
                       />
                       {pkg.popular && (
-                        <Badge className="absolute top-4 right-4 bg-red-500 text-white">
+                        <Badge className="absolute top-4 right-4 bg-red-500 text-white z-10">
                           <Star className="w-3 h-3 mr-1" />
                           Popular
                         </Badge>
                       )}
-                      {pkg.discount && (
-                        <Badge className="absolute top-4 left-4 bg-green-500 text-white">
-                          {pkg.discount} OFF
-                        </Badge>
-                      )}
+                      <div className="absolute top-4 left-4 flex flex-col gap-2 z-10">
+                        {pkg.discount && (
+                          <Badge className="bg-green-500 text-white">
+                            {pkg.discount} OFF
+                          </Badge>
+                        )}
+                        {pkg.withFlights && (
+                          <Badge className="bg-blue-500 text-white">
+                            <Plane className="w-3 h-3 mr-1" />
+                            With Flights
+                          </Badge>
+                        )}
+                      </div>
                     </div>
                     <div className="p-6 flex flex-col flex-grow">
                       <div className="mb-4">
@@ -810,16 +865,16 @@ const Packages = () => {
 
                       <div className="mb-4 flex-grow">
                         <h4 className="font-semibold text-gray-900 mb-3">
-                          Features:
+                          Highlights:
                         </h4>
-                        <ul className="space-y-2">
+                        <ul className="space-y-2 max-h-64 overflow-y-auto pr-2">
                           {pkg.features.map((feature, index) => (
                             <li
                               key={index}
-                              className="text-sm text-gray-600 flex items-center"
+                              className="text-sm text-gray-600 flex items-start"
                             >
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 shrink-0" />
-                              {feature}
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 shrink-0" />
+                              <span>{feature}</span>
                             </li>
                           ))}
                         </ul>
@@ -832,26 +887,36 @@ const Packages = () => {
                             {pkg.duration}
                           </div>
                           <div className="text-right">
-                            <p className="text-sm text-gray-500 line-through">
-                              {formatPrice(pkg.originalPrice)}
-                            </p>
-                            <p className="text-2xl font-bold text-violet-600">
-                              {formatPrice(pkg.price)}
-                            </p>
+                            {pkg.price > 0 ? (
+                              <>
+                                {pkg.originalPrice > 0 && (
+                                  <p className="text-sm text-gray-500 line-through">
+                                    {formatPrice(pkg.originalPrice)}
+                                  </p>
+                                )}
+                                <p className="text-lg font-bold text-violet-600">
+                                  Starting from {formatPrice(pkg.price)}
+                                </p>
+                              </>
+                            ) : (
+                              <p className="text-lg font-bold text-violet-600">
+                                Contact for Pricing
+                              </p>
+                            )}
                           </div>
                         </div>
                         <Button
                           className="w-full bg-violet-600 hover:bg-violet-700 text-white"
                           onClick={() => {
                             const phoneNumber = "919549134848";
-                            const message = `Hello! I'm interested in ${pkg.title}. Please provide more details.`;
+                            const message = `Hello! I'm interested in ${pkg.title}. Please provide pricing and more details.`;
                             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                               message
                             )}`;
                             window.location.href = whatsappUrl;
                           }}
                         >
-                          Book Now
+                          Get Quote
                           <ArrowRight className="w-4 h-4 ml-2" />
                         </Button>
                       </div>
@@ -1290,7 +1355,6 @@ const Packages = () => {
 
       <Footer />
       <WhatsAppButton />
-      <ScrollToTop />
     </div>
   );
 };

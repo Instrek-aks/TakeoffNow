@@ -7,7 +7,6 @@ import DiscoverSection from "../components/DiscoverSection";
 import Destinations from "../components/Destinations";
 import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
-import ScrollToTop from "../components/ScrollToTop";
 import WhatsAppButton from "../components/WhatsAppButton";
 
 const Index = () => {
@@ -37,7 +36,7 @@ const Index = () => {
       </div>
       <Footer />
       <WhatsAppButton />
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
     </div>
   );
 };

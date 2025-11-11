@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import ScrollToTop from "../components/ScrollToTop";
 import WhatsAppButton from "../components/WhatsAppButton";
 import { Button } from "../components/ui/Button";
 import { Input } from "../components/ui/Input";
@@ -543,7 +542,6 @@ const Contact = () => {
 
       <Footer />
       <WhatsAppButton />
-      <ScrollToTop />
     </div>
   );
 };
