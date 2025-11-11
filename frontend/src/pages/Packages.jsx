@@ -14,8 +14,6 @@ import {
   DialogDescription,
 } from "../components/ui/Dialogs";
 import {
-  Plane,
-  Zap,
   MapPin,
   Clock,
   Users,
@@ -29,6 +27,9 @@ import {
   Award,
   Heart,
   X,
+  Camera,
+  Utensils,
+  Hotel,
 } from "lucide-react";
 
 const Packages = () => {
@@ -46,21 +47,21 @@ const Packages = () => {
   const basicPackages = [
     {
       id: 1,
-      title: "City Sky Tour",
-      type: "Airplane",
-      duration: "2 Hours",
+      title: "City Explorer Tour",
+      type: "City Tour",
+      duration: "1 Day",
       price: 15000,
       originalPrice: 18000,
       discount: "17%",
       image: "/slider1.webp",
       description:
-        "Experience the city from above with our signature airplane tour",
+        "Discover the city's hidden gems and iconic landmarks with our guided city tour",
       features: [
-        "Professional pilot",
-        "Safety briefing",
+        "Professional local guide",
+        "All entry tickets included",
         "City landmarks tour",
         "Photo opportunities",
-        "Refreshments included",
+        "Lunch included",
       ],
       rating: 4.8,
       reviews: 124,
@@ -68,21 +69,21 @@ const Packages = () => {
     },
     {
       id: 2,
-      title: "Mountain Helicopter Adventure",
-      type: "Helicopter",
-      duration: "3 Hours",
+      title: "Mountain Adventure Getaway",
+      type: "Adventure",
+      duration: "2 Days",
       price: 25000,
       originalPrice: 30000,
       discount: "17%",
       image: "/slider2.webp",
       description:
-        "Soar over majestic mountains and valleys in our luxury helicopter",
+        "Experience the beauty of mountains with trekking, scenic views, and local culture",
       features: [
-        "Expert helicopter pilot",
+        "Expert trekking guide",
         "Mountain range views",
-        "Landing at scenic spots",
+        "Scenic photo spots",
         "Professional photography",
-        "Safety equipment provided",
+        "Accommodation included",
       ],
       rating: 4.9,
       reviews: 89,
@@ -90,21 +91,21 @@ const Packages = () => {
     },
     {
       id: 3,
-      title: "Coastal Flight Experience",
-      type: "Airplane",
-      duration: "1.5 Hours",
+      title: "Coastal Beach Experience",
+      type: "Beach",
+      duration: "1 Day",
       price: 12000,
       originalPrice: 15000,
       discount: "20%",
       image: "/slider1.webp",
       description:
-        "Fly along the beautiful coastline with breathtaking ocean views",
+        "Relax on pristine beaches with water activities and stunning ocean views",
       features: [
-        "Coastal route flight",
-        "Ocean view experience",
+        "Beach access",
+        "Water sports activities",
         "Professional guide",
-        "Comfortable seating",
-        "Weather guarantee",
+        "Comfortable facilities",
+        "Lunch included",
       ],
       rating: 4.7,
       reviews: 156,
@@ -642,43 +643,9 @@ const Packages = () => {
     },
   ];
 
-  const startingPrices = [
-    {
-      category: "Airplane Tours",
-      minPrice: 8000,
-      maxPrice: 50000,
-      icon: <Plane className="w-8 h-8 text-blue-600" />,
-      description: "From scenic city tours to long-distance flights",
-      features: [
-        "Professional pilots",
-        "Safety certified",
-        "Weather dependent",
-      ],
-    },
-    {
-      category: "Helicopter Adventures",
-      minPrice: 15000,
-      maxPrice: 80000,
-      icon: <Zap className="w-8 h-8 text-green-600" />,
-      description: "Mountain tours, coastal flights, and special landings",
-      features: ["Expert pilots", "Flexible routes", "Scenic landings"],
-    },
-    {
-      category: "Private Jet Charters",
-      minPrice: 100000,
-      maxPrice: 500000,
-      icon: <Award className="w-8 h-8 text-purple-600" />,
-      description: "Luxury private jet services for special occasions",
-      features: [
-        "Luxury aircraft",
-        "Personalized service",
-        "Flexible scheduling",
-      ],
-    },
-  ];
-
   const categories = [
     { id: "all", name: "All Packages" },
+    { id: "basic", name: "Basic Packages" },
     { id: "itineraries", name: "Ready-made Itineraries" },
   ];
 
@@ -700,7 +667,7 @@ const Packages = () => {
         <div className="absolute inset-0">
           <img
             src="/banner1.webp"
-            alt="Aviation Background"
+            alt="Travel Background"
             className="w-full h-full object-cover"
           />
         </div>
@@ -717,13 +684,13 @@ const Packages = () => {
               size="lg"
               className="bg-violet-600 hover:bg-violet-700 text-white px-8 py-4 text-lg"
               onClick={() => {
-                const phoneNumber = "+919549134848";
+                const phoneNumber = "919549134848";
                 const message =
                   "Hello! I'm interested in exploring your travel packages.";
                 const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                   message
                 )}`;
-                window.open(whatsappUrl, "_blank");
+                window.location.href = whatsappUrl;
               }}
             >
               Explore Packages
@@ -733,9 +700,7 @@ const Packages = () => {
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-violet-600 px-8 py-4 text-lg"
               onClick={() => {
-                const phoneNumber = "+919549134848";
-                const whatsappUrl = `https://wa.me/${phoneNumber}`;
-                window.open(whatsappUrl, "_blank");
+                window.location.href = "tel:+919549134848";
               }}
             >
               <Phone className="w-5 h-5 mr-2" />
@@ -765,6 +730,139 @@ const Packages = () => {
           </div>
         </div>
       </section>
+
+      {/* Basic Packages Section */}
+      {(selectedCategory === "all" || selectedCategory === "basic") && (
+        <section className="py-20 bg-gradient-to-br from-violet-50 via-pink-50 to-orange-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                  Basic Packages
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Discover amazing travel experiences with our curated tour
+                  packages.{" "}
+                  <span className="font-semibold text-violet-600">
+                    From city tours to beach getaways and mountain adventures.
+                  </span>
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {basicPackages.map((pkg) => (
+                  <div
+                    key={pkg.id}
+                    className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-amber-200 flex flex-col"
+                  >
+                    <div className="relative">
+                      <img
+                        src={pkg.image}
+                        alt={pkg.title}
+                        className="w-full h-64 object-cover"
+                        onError={(e) => {
+                          e.target.src = "/slider1.webp";
+                        }}
+                      />
+                      {pkg.popular && (
+                        <Badge className="absolute top-4 right-4 bg-red-500 text-white">
+                          <Star className="w-3 h-3 mr-1" />
+                          Popular
+                        </Badge>
+                      )}
+                      {pkg.discount && (
+                        <Badge className="absolute top-4 left-4 bg-green-500 text-white">
+                          {pkg.discount} OFF
+                        </Badge>
+                      )}
+                    </div>
+                    <div className="p-6 flex flex-col flex-grow">
+                      <div className="mb-4">
+                        <div className="flex items-center justify-between mb-2">
+                          <Badge
+                            className={
+                              pkg.type === "City Tour"
+                                ? "bg-blue-500 text-white"
+                                : pkg.type === "Adventure"
+                                ? "bg-green-500 text-white"
+                                : "bg-cyan-500 text-white"
+                            }
+                          >
+                            {pkg.type === "City Tour" ? (
+                              <MapPin className="w-3 h-3 mr-1" />
+                            ) : pkg.type === "Adventure" ? (
+                              <Award className="w-3 h-3 mr-1" />
+                            ) : (
+                              <Camera className="w-3 h-3 mr-1" />
+                            )}
+                            {pkg.type}
+                          </Badge>
+                          <div className="flex items-center text-sm text-gray-600">
+                            <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
+                            {pkg.rating} ({pkg.reviews})
+                          </div>
+                        </div>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                          {pkg.title}
+                        </h3>
+                        <p className="text-gray-600 mb-4">{pkg.description}</p>
+                      </div>
+
+                      <div className="mb-4 flex-grow">
+                        <h4 className="font-semibold text-gray-900 mb-3">
+                          Features:
+                        </h4>
+                        <ul className="space-y-2">
+                          {pkg.features.map((feature, index) => (
+                            <li
+                              key={index}
+                              className="text-sm text-gray-600 flex items-center"
+                            >
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 shrink-0" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="mt-auto pt-4 border-t border-gray-200">
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="flex items-center gap-2 text-sm text-gray-600">
+                            <Clock className="w-4 h-4" />
+                            {pkg.duration}
+                          </div>
+                          <div className="text-right">
+                            <p className="text-sm text-gray-500 line-through">
+                              {formatPrice(pkg.originalPrice)}
+                            </p>
+                            <p className="text-2xl font-bold text-violet-600">
+                              {formatPrice(pkg.price)}
+                            </p>
+                          </div>
+                        </div>
+                        <Button
+                          className="w-full bg-violet-600 hover:bg-violet-700 text-white"
+                          onClick={() => {
+                            const phoneNumber = "919549134848";
+                            const message = `Hello! I'm interested in ${pkg.title}. Please provide more details.`;
+                            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                              message
+                            )}`;
+                            window.location.href = whatsappUrl;
+                          }}
+                        >
+                          Book Now
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Ready-made Itineraries Section */}
       {(selectedCategory === "all" || selectedCategory === "itineraries") && (
@@ -966,9 +1064,7 @@ const Packages = () => {
                 size="lg"
                 className="bg-white text-violet-600 hover:bg-gray-100"
                 onClick={() => {
-                  const phoneNumber = "+919549134848";
-                  const whatsappUrl = `https://wa.me/${phoneNumber}`;
-                  window.open(whatsappUrl, "_blank");
+                  window.location.href = "tel:+919549134848";
                 }}
               >
                 <Phone className="w-5 h-5 mr-2" />
@@ -979,13 +1075,13 @@ const Packages = () => {
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-violet-600"
                 onClick={() => {
-                  const phoneNumber = "+919549134848";
+                  const phoneNumber = "919549134848";
                   const message =
                     "Hello! I'm interested in your travel packages. Please provide more information.";
                   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                     message
                   )}`;
-                  window.open(whatsappUrl, "_blank");
+                  window.location.href = whatsappUrl;
                 }}
               >
                 Connect via WhatsApp
@@ -1165,12 +1261,12 @@ const Packages = () => {
                     className="flex-1 bg-green-500 hover:bg-green-600 text-white"
                     onClick={() => {
                       if (priceFormData.phoneNumber) {
-                        const phoneNumber = "+919549134848";
+                        const phoneNumber = "919549134848";
                         const message = `Hello! I'm interested in ${selectedPackage?.title}.\n\nDetails:\n- Departure City: ${priceFormData.departureCity}\n- Travel Date: ${priceFormData.travelDate}\n- Hotel Category: ${priceFormData.hotelCategory}\n- Phone: ${priceFormData.phoneNumber}\n\nPlease provide pricing and details.`;
                         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                           message
                         )}`;
-                        window.open(whatsappUrl, "_blank");
+                        window.location.href = whatsappUrl;
                         setShowPriceForm(false);
                         setFormStep(1);
                         setPriceFormData({

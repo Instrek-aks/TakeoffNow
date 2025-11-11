@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import HeroCarousel from "../components/HeroCarousel";
 import SearchTabs from "../components/SearchTabs";
 import TourPackages from "../components/TourPackages";
+import PopularPackages from "../components/PopularPackages";
 import DiscoverSection from "../components/DiscoverSection";
 import Destinations from "../components/Destinations";
 import Testimonials from "../components/Testimonials";
@@ -31,6 +32,7 @@ const Index = () => {
       <div className="">
         <DiscoverSection />
         <TourPackages />
+        <PopularPackages />
         <Testimonials />
       </div>
       <Footer />

@@ -80,11 +80,7 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6 text-blue-600" />,
       title: "Office Location",
-      details: [
-        "Shop No. 06, Dev Plaza",
-        "Bhiwadi - Alwar Bypass Road",
-        "301019",
-      ],
+      details: ["Shop No. 06, Dev Plaza", "Bhiwadi - Alwar Bypass Road-301019"],
       description: "Visit our main office",
     },
     {
@@ -379,9 +375,7 @@ const Contact = () => {
                         <p className="text-gray-600">
                           Shop No. 06, Dev Plaza
                           <br />
-                          Bhiwadi - Alwar Bypass Road
-                          <br />
-                          301019
+                          Bhiwadi - Alwar Bypass - 301019
                         </p>
                       </div>
                     </div>
