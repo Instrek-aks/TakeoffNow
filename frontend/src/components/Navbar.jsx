@@ -25,7 +25,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 100);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -81,10 +81,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-gradient-to-r from-cyan-50 via-blue-50 to-indigo-50 backdrop-blur-md shadow-md"
-          : "bg-white"
+          ? "bg-gradient-to-r from-emerald-50 via-teal-50 to-cyan-50 backdrop-blur-md shadow-lg"
+          : "bg-transparent "
       }`}
     >
       <div className="container mx-auto px-4 py-4">
@@ -95,7 +95,9 @@ const Navbar = () => {
               <img
                 src="/logoB.webp"
                 alt="TakeoffNow Logo"
-                className="w-full h-full object-contain"
+                className={`w-full h-full object-contain transition-all ${
+                  isScrolled ? "" : "drop-shadow-lg"
+                }`}
                 loading="eager"
               />
             </div>
@@ -109,8 +111,8 @@ const Navbar = () => {
                   <DropdownMenuTrigger
                     className={`flex items-center space-x-1 transition-colors cursor-pointer ${
                       isScrolled
-                        ? "text-foreground hover:text-blue-600"
-                        : "text-gray-800 hover:text-blue-600"
+                        ? "text-gray-800 hover:text-emerald-600"
+                        : "text-white hover:text-amber-300 drop-shadow-lg"
                     }`}
                   >
                     <span>{link.name}</span>
@@ -131,8 +133,8 @@ const Navbar = () => {
                   onClick={link.name === "Home" ? handleHomeClick : undefined}
                   className={`transition-colors ${
                     isScrolled
-                      ? "text-foreground hover:text-blue-600"
-                      : "text-gray-800 hover:text-blue-600"
+                      ? "text-gray-800 hover:text-emerald-600"
+                      : "text-white hover:text-amber-300 drop-shadow-lg"
                   }`}
                 >
                   {link.name}
@@ -146,18 +148,18 @@ const Navbar = () => {
             <div className="relative max-w-md mx-auto">
               <Search
                 className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 ${
-                  isScrolled ? "text-gray-400" : "text-gray-400"
+                  isScrolled ? "text-gray-400" : "text-gray-600"
                 }`}
               />
-              <Input
-                type="search"
-                placeholder="Search packages..."
-                className={`pl-10 pr-4 py-2 w-full ${
-                  isScrolled
-                    ? "bg-white border-gray-300 text-gray-900 placeholder-gray-400"
-                    : "bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-400"
-                } rounded-full focus:ring-2 focus:ring-blue-500`}
-              />
+                <Input
+                  type="search"
+                  placeholder="Search packages..."
+                  className={`pl-10 pr-4 py-2 w-full ${
+                    isScrolled
+                      ? "bg-white border-gray-300 text-gray-900 placeholder-gray-400"
+                      : "bg-white/90 backdrop-blur-sm border-white/30 text-gray-900 placeholder-gray-500"
+                  } rounded-full focus:ring-2 focus:ring-amber-500`}
+                />
             </div>
           </div>
 
@@ -177,8 +179,8 @@ const Navbar = () => {
                   className={`pl-10 pr-4 py-2 w-64 ${
                     isScrolled
                       ? "bg-white border-gray-300 text-gray-900 placeholder-gray-400"
-                      : "bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-400"
-                  } rounded-full focus:ring-2 focus:ring-blue-500`}
+                      : "bg-white/90 backdrop-blur-sm border-white/30 text-gray-900 placeholder-gray-500"
+                  } rounded-full focus:ring-2 focus:ring-amber-500`}
                 />
               </div>
             </div>
@@ -188,20 +190,20 @@ const Navbar = () => {
               href="tel:+919549134848"
               className={`hidden md:flex items-center space-x-2 transition-colors ${
                 isScrolled
-                  ? "text-foreground hover:text-blue-600"
-                  : "text-gray-800 hover:text-blue-600"
+                  ? "text-gray-800 hover:text-emerald-600"
+                  : "text-white hover:text-amber-300 drop-shadow-lg"
               }`}
             >
               <Phone className="w-5 h-5" />
               <div className="text-sm">
                 <div
                   className={`text-xs ${
-                    isScrolled ? "text-muted-foreground" : "text-gray-600"
+                    isScrolled ? "text-gray-600" : "text-white/80"
                   }`}
                 >
                   Call Us:
                 </div>
-                <div className="font-semibold">+91 9549134848</div>
+                <div className={`font-semibold ${isScrolled ? "text-gray-800" : "text-white"}`}>+91 9549134848</div>
               </div>
             </a>
 
