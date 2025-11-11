@@ -46,7 +46,10 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
+    // Form submission functionality:
+    // Currently simulates form submission with a 2-second delay
+    // After submission: shows success message, resets form fields, and allows user to send another message
+    // TODO: Integrate with backend API to actually send the form data
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -65,7 +68,7 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6 text-blue-600" />,
       title: "Phone",
-      details: ["+91 98765 43210", "+91 98765 43211"],
+      details: ["+91 9549134848"],
       description: "Call us for immediate assistance",
     },
     {
@@ -77,13 +80,13 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6 text-blue-600" />,
       title: "Office Location",
-      details: ["Aviation Plaza", "Near India Gate, New Delhi 110003", "India"],
+      details: ["Shop No. 06, Dev Plaza", "Bhiwadi - Alwar Bypass Road", "301019"],
       description: "Visit our main office",
     },
     {
       icon: <Clock className="w-6 h-6 text-blue-600" />,
       title: "Business Hours",
-      details: ["Mon - Sat: 8:00 AM - 8:00 PM", "Sunday: 10:00 AM - 6:00 PM"],
+      details: ["Mon – Sat: 10:00 AM – 7:00 PM", "Sunday: CLOSED"],
       description: "We're here to help you",
     },
   ];
@@ -121,6 +124,12 @@ const Contact = () => {
             <Button
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg"
+              onClick={() => {
+                const phoneNumber = "919549134848";
+                const message = "Hello! I'm interested in your travel services.";
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.location.href = whatsappUrl;
+              }}
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               WhatsApp Chat
@@ -129,6 +138,9 @@ const Contact = () => {
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg"
+              onClick={() => {
+                window.location.href = "tel:+919549134848";
+              }}
             >
               <Phone className="w-5 h-5 mr-2" />
               Call Now
@@ -358,13 +370,11 @@ const Contact = () => {
                           Main Office
                         </h4>
                         <p className="text-gray-600">
-                          Aviation Plaza
+                          Shop No. 06, Dev Plaza
                           <br />
-                          Near India Gate
+                          Bhiwadi - Alwar Bypass Road
                           <br />
-                          New Delhi, Delhi 110003
-                          <br />
-                          India
+                          301019
                         </p>
                       </div>
                     </div>
@@ -376,13 +386,9 @@ const Contact = () => {
                           Office Hours
                         </h4>
                         <p className="text-gray-600">
-                          Monday - Saturday: 8:00 AM - 8:00 PM
+                          Monday – Saturday: 10:00 AM – 7:00 PM
                           <br />
-                          Sunday: 10:00 AM - 6:00 PM
-                          <br />
-                          <span className="text-sm text-gray-500">
-                            (Emergency services available 24/7)
-                          </span>
+                          Sunday: <span className="font-bold">CLOSED</span>
                         </p>
                       </div>
                     </div>
@@ -394,31 +400,13 @@ const Contact = () => {
                           Direct Contact
                         </h4>
                         <p className="text-gray-600">
-                          +91 98765 43210
-                          <br />
-                          +91 98765 43211
+                          +91 9549134848
                           <br />
                           <span className="text-sm text-gray-500">
                             (Available for immediate assistance)
                           </span>
                         </p>
                       </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-8 pt-6 border-t border-gray-200">
-                    <h4 className="font-semibold text-gray-900 mb-4">
-                      Quick Actions
-                    </h4>
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <Button className="flex-1 bg-green-600 hover:bg-green-700 text-white">
-                        <MessageCircle className="w-4 h-4 mr-2" />
-                        WhatsApp
-                      </Button>
-                      <Button variant="outline" className="flex-1">
-                        <Phone className="w-4 h-4 mr-2" />
-                        Call Now
-                      </Button>
                     </div>
                   </div>
                 </div>
@@ -468,6 +456,12 @@ const Contact = () => {
               <Button
                 size="lg"
                 className="bg-amber-50 text-green-600 hover:bg-amber-100 border border-amber-300 px-8 py-4 text-lg"
+                onClick={() => {
+                  const phoneNumber = "919549134848";
+                  const message = "Hello! I'm interested in your travel services.";
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                  window.location.href = whatsappUrl;
+                }}
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Start WhatsApp Chat
@@ -476,9 +470,12 @@ const Contact = () => {
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg"
+                onClick={() => {
+                  window.location.href = "tel:+919549134848";
+                }}
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call +91 98765 43210
+                Call +91 9549134848
               </Button>
             </div>
           </div>

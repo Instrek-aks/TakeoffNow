@@ -8,7 +8,8 @@ const WhatsAppButton = () => {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`;
-    window.open(whatsappUrl, "_blank");
+    // Use window.location.href for better mobile compatibility
+    window.location.href = whatsappUrl;
   };
 
   return (
