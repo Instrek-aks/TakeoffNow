@@ -151,15 +151,15 @@ const Navbar = () => {
                   isScrolled ? "text-gray-400" : "text-gray-600"
                 }`}
               />
-                <Input
-                  type="search"
-                  placeholder="Search packages..."
-                  className={`pl-10 pr-4 py-2 w-full ${
-                    isScrolled
-                      ? "bg-white border-gray-300 text-gray-900 placeholder-gray-400"
-                      : "bg-white/90 backdrop-blur-sm border-white/30 text-gray-900 placeholder-gray-500"
-                  } rounded-full focus:ring-2 focus:ring-amber-500`}
-                />
+              <Input
+                type="search"
+                placeholder="Search packages..."
+                className={`pl-10 pr-4 py-2 w-full ${
+                  isScrolled
+                    ? "bg-white border-gray-300 text-gray-900 placeholder-gray-400"
+                    : "bg-white/90 backdrop-blur-sm border-white/30 text-gray-900 placeholder-gray-500"
+                } rounded-full focus:ring-2 focus:ring-amber-500`}
+              />
             </div>
           </div>
 
@@ -203,7 +203,13 @@ const Navbar = () => {
                 >
                   Call Us:
                 </div>
-                <div className={`font-semibold ${isScrolled ? "text-gray-800" : "text-white"}`}>+91 9549134848</div>
+                <div
+                  className={`font-semibold ${
+                    isScrolled ? "text-gray-800" : "text-white"
+                  }`}
+                >
+                  +91 9549134848
+                </div>
               </div>
             </a>
 
