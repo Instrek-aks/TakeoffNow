@@ -257,10 +257,6 @@ const Navbar = () => {
                       )}
                     </div>
                   ))}
-                  <Button className="w-full mt-4 bg-blue-600 hover:bg-blue-600/90">
-                    <User className="w-4 h-4 mr-2" />
-                    Login
-                  </Button>
                 </div>
               </SheetContent>
             </Sheet>
