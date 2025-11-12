@@ -130,7 +130,7 @@ const Contact = () => {
                 const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                   message
                 )}`;
-                window.location.href = whatsappUrl;
+                window.open(whatsappUrl, "_blank");
               }}
             >
               <MessageCircle className="w-5 h-5 mr-2" />
@@ -463,7 +463,7 @@ const Contact = () => {
                   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                     message
                   )}`;
-                  window.location.href = whatsappUrl;
+                  window.open(whatsappUrl, "_blank");
                 }}
               >
                 <MessageCircle className="w-5 h-5 mr-2" />

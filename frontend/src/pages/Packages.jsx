@@ -737,7 +737,7 @@ const Packages = () => {
                 const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                   message
                 )}`;
-                window.location.href = whatsappUrl;
+                window.open(whatsappUrl, "_blank");
               }}
             >
               Explore Packages
@@ -913,7 +913,7 @@ const Packages = () => {
                             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                               message
                             )}`;
-                            window.location.href = whatsappUrl;
+                            window.open(whatsappUrl, "_blank");
                           }}
                         >
                           Get Quote
@@ -1146,7 +1146,7 @@ const Packages = () => {
                   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                     message
                   )}`;
-                  window.location.href = whatsappUrl;
+                  window.open(whatsappUrl, "_blank");
                 }}
               >
                 Connect via WhatsApp
@@ -1331,7 +1331,7 @@ const Packages = () => {
                         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                           message
                         )}`;
-                        window.location.href = whatsappUrl;
+                        window.open(whatsappUrl, "_blank");
                         setShowPriceForm(false);
                         setFormStep(1);
                         setPriceFormData({

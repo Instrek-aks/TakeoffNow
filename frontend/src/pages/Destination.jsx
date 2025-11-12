@@ -25,7 +25,7 @@ const Destination = () => {
     const phoneNumber = "919549134848";
     const message = `Hello! I'm interested in ${packageTitle} for ${destination?.name}. Please provide more details and pricing.`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.location.href = whatsappUrl;
+    window.open(whatsappUrl, "_blank");
   };
 
   const handleCallClick = () => {

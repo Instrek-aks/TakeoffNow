@@ -334,7 +334,7 @@ const PopularPackages = () => {
                     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                       message
                     )}`;
-                    window.location.href = whatsappUrl;
+                    window.open(whatsappUrl, "_blank");
                   }}
                 >
                   Get Custom Quote
