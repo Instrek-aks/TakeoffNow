@@ -4,7 +4,14 @@ import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
 import { Button } from "../components/ui/Button";
 import { Badge } from "../components/ui/Badge";
-import { MapPin, Clock, Star, ArrowLeft, MessageCircle, Phone } from "lucide-react";
+import {
+  MapPin,
+  Clock,
+  Star,
+  ArrowLeft,
+  MessageCircle,
+  Phone,
+} from "lucide-react";
 import { getDestinationByName } from "../utils/searchData";
 
 const Destination = () => {
@@ -24,7 +31,9 @@ const Destination = () => {
   const handleWhatsAppClick = (packageTitle) => {
     const phoneNumber = "919549134848";
     const message = `Hello! I'm interested in ${packageTitle} for ${destination?.name}. Please provide more details and pricing.`;
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -34,7 +43,7 @@ const Destination = () => {
 
   if (!destination) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <Navbar />
         <div className="container mx-auto px-4 py-24 text-center">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">
@@ -43,7 +52,10 @@ const Destination = () => {
           <p className="text-gray-600 mb-6">
             The destination you're looking for doesn't exist.
           </p>
-          <Button onClick={() => navigate("/packages")} className="bg-amber-600 hover:bg-amber-700">
+          <Button
+            onClick={() => navigate("/packages")}
+            className="bg-amber-600 hover:bg-amber-700"
+          >
             View All Packages
           </Button>
         </div>
@@ -54,9 +66,9 @@ const Destination = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Navbar />
-      
+
       <div className="container mx-auto px-4 py-24">
         {/* Header */}
         <div className="mb-8">
@@ -74,7 +86,9 @@ const Destination = () => {
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
                 {destination.name}
               </h1>
-              <p className="text-lg text-gray-600 mt-1">{destination.country}</p>
+              <p className="text-lg text-gray-600 mt-1">
+                {destination.country}
+              </p>
             </div>
           </div>
           <p className="text-gray-700 text-lg">
@@ -87,7 +101,9 @@ const Destination = () => {
         {/* Contact Buttons */}
         <div className="flex flex-wrap gap-4 mb-8">
           <Button
-            onClick={() => handleWhatsAppClick(`Packages for ${destination.name}`)}
+            onClick={() =>
+              handleWhatsAppClick(`Packages for ${destination.name}`)
+            }
             className="bg-green-500 hover:bg-green-600 text-white"
           >
             <MessageCircle className="w-5 h-5 mr-2" />
@@ -96,7 +112,7 @@ const Destination = () => {
           <Button
             onClick={handleCallClick}
             variant="outline"
-            className="border-amber-300 text-gray-700 hover:bg-amber-50"
+            className="border-amber-300 text-white hover:bg-amber-50"
           >
             <Phone className="w-5 h-5 mr-2" />
             Call: +91 9549134848
@@ -108,7 +124,7 @@ const Destination = () => {
           {destination.packages.map((pkg) => (
             <div
               key={pkg.id}
-              className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-amber-200 overflow-hidden"
+              className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 overflow-hidden"
             >
               {/* Image */}
               <div className="relative h-48 overflow-hidden">
@@ -121,7 +137,7 @@ const Destination = () => {
                   }}
                 />
                 <div className="absolute top-4 right-4">
-                  <Badge className="bg-amber-600 text-white">
+                  <Badge className="bg-amber-600 text-white text-xs px-2 py-1">
                     {pkg.type}
                   </Badge>
                 </div>
@@ -129,34 +145,36 @@ const Destination = () => {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
                   {pkg.title}
                 </h3>
-                
-                <div className="flex items-center text-gray-600 text-sm mb-3">
-                  <Clock className="w-4 h-4 mr-1" />
+
+                <div className="flex items-center text-gray-600 text-xs mb-3">
+                  <Clock className="w-3 h-3 mr-1" />
                   <span>{pkg.duration}</span>
                 </div>
 
                 {pkg.locations && (
                   <div className="mb-3">
-                    <p className="text-sm text-gray-700">
-                      <span className="font-semibold">Locations:</span> {pkg.locations}
+                    <p className="text-xs text-gray-700">
+                      <span className="font-semibold">Locations:</span>{" "}
+                      {pkg.locations}
                     </p>
                   </div>
                 )}
 
                 <div className="mb-4">
-                  <p className="text-2xl font-bold text-amber-600">
+                  <p className="text-lg font-bold text-amber-600">
                     {formatPrice(pkg.price)}
                   </p>
                 </div>
 
                 <Button
                   onClick={() => handleWhatsAppClick(pkg.title)}
-                  className="w-full bg-green-500 hover:bg-green-600 text-white"
+                  className="w-full bg-green-500 hover:bg-green-600 text-white text-sm py-2"
+                  size="sm"
                 >
-                  <MessageCircle className="w-4 h-4 mr-2" />
+                  <MessageCircle className="w-3 h-3 mr-2" />
                   Get Details on WhatsApp
                 </Button>
               </div>
@@ -165,21 +183,24 @@ const Destination = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-12 bg-white rounded-lg shadow-md p-8 border border-amber-200">
+        <div className="mt-12 bg-white rounded-lg shadow-md p-8 border border-slate-200">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Why Choose {destination.name}?
           </h2>
           <p className="text-gray-700 mb-6">
-            Explore {destination.name} with our carefully curated packages. We offer
-            the best deals, expert guidance, and seamless travel experiences. All our
-            packages include detailed itineraries, accommodation options, and
-            professional support throughout your journey.
+            Explore {destination.name} with our carefully curated packages. We
+            offer the best deals, expert guidance, and seamless travel
+            experiences. All our packages include detailed itineraries,
+            accommodation options, and professional support throughout your
+            journey.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="flex items-start gap-3">
               <Star className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
               <div>
-                <h3 className="font-semibold text-gray-900 mb-1">Best Prices</h3>
+                <h3 className="font-semibold text-gray-900 mb-1">
+                  Best Prices
+                </h3>
                 <p className="text-sm text-gray-600">
                   Competitive pricing with no hidden charges
                 </p>
@@ -188,7 +209,9 @@ const Destination = () => {
             <div className="flex items-start gap-3">
               <MapPin className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
               <div>
-                <h3 className="font-semibold text-gray-900 mb-1">Expert Guidance</h3>
+                <h3 className="font-semibold text-gray-900 mb-1">
+                  Expert Guidance
+                </h3>
                 <p className="text-sm text-gray-600">
                   Professional tour managers and local guides
                 </p>
@@ -197,7 +220,9 @@ const Destination = () => {
             <div className="flex items-start gap-3">
               <MessageCircle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
               <div>
-                <h3 className="font-semibold text-gray-900 mb-1">24/7 Support</h3>
+                <h3 className="font-semibold text-gray-900 mb-1">
+                  24/7 Support
+                </h3>
                 <p className="text-sm text-gray-600">
                   Round-the-clock assistance via WhatsApp
                 </p>
@@ -214,4 +239,3 @@ const Destination = () => {
 };
 
 export default Destination;
-

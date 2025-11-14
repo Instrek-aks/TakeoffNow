@@ -12,6 +12,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "../components/ui/Dialogs";
+import { destinations } from "../utils/searchData";
 import {
   MapPin,
   Clock,
@@ -38,6 +39,15 @@ const Packages = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
   const [formStep, setFormStep] = useState(1); // 1: departure city, 2: dates, 3: hotel, 4: phone
   const [priceFormData, setPriceFormData] = useState({
+    departureCity: "",
+    travelDate: "",
+    hotelCategory: "",
+    phoneNumber: "",
+  });
+  const [showExploreForm, setShowExploreForm] = useState(false);
+  const [exploreFormStep, setExploreFormStep] = useState(1); // 1: destination, 2: city, 3: date, 4: hotel, 5: phone
+  const [exploreFormData, setExploreFormData] = useState({
+    destination: "",
     departureCity: "",
     travelDate: "",
     hotelCategory: "",
@@ -158,12 +168,202 @@ const Packages = () => {
       popular: true,
       withFlights: true,
     },
+    {
+      id: 5,
+      title: "Maldives Honeymoon",
+      type: "Beach",
+      duration: "5 Nights | 6 Days",
+      price: 125000,
+      originalPrice: 145000,
+      discount: "14%",
+      image:
+        "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&h=600&fit=crop",
+      description:
+        "Romantic beachfront experience with water activities, island hopping, and luxury resort stays",
+      features: [
+        "Arrival at Malé • Transfer by speedboat/seaplane • Check-in • Romantic beachfront dinner",
+        "Leisure & Spa Day • Water activities • Candlelight dinner by the beach",
+        "Island Hopping • Snorkeling • Sandbank picnic • Sunset cruise",
+        "Water Sports adventure • Jet Ski / Parasailing • Floating dinner setup",
+        "Relaxation & Resort exploration • Couple's massage • Farewell dinner",
+        "Breakfast • Transfer to airport • Depart with memories of paradise",
+      ],
+      rating: 4.9,
+      reviews: 156,
+      popular: true,
+    },
+    {
+      id: 6,
+      title: "Greece Getaway",
+      type: "City Tour",
+      duration: "5 Nights | 6 Days",
+      price: 80000,
+      originalPrice: 95000,
+      discount: "16%",
+      image:
+        "https://images.unsplash.com/photo-1505159940484-eb2b9f3c9b89?w=800&h=600&fit=crop",
+      description:
+        "Explore Athens, Santorini, and Mykonos with ancient history, stunning sunsets, and island charm",
+      features: [
+        "Athens Arrival • Check-in • Evening at leisure in Plaka • Dinner with Acropolis view",
+        "Athens Sightseeing • Explore Acropolis, Parthenon & Temple of Zeus • Stroll through Syntagma Square • Optional rooftop dinner",
+        "Athens → Santorini • Morning ferry/flight to Santorini • Check-in • Sunset at Oia • Romantic dinner by the caldera",
+        "Santorini Exploration • Volcano & Hot Springs Cruise • Red Beach & Wine tasting • Evening free for shopping or spa",
+        "Santorini → Mykonos • Transfer to Mykonos • Visit Little Venice & Windmills • Beach time & nightlife experience",
+        "Departure • Breakfast • Transfer to airport • Fly back with memories of the Aegean",
+      ],
+      rating: 4.8,
+      reviews: 134,
+      popular: true,
+    },
+    {
+      id: 7,
+      title: "Enchanting Edinburgh",
+      type: "City Tour",
+      duration: "4 Nights | 5 Days",
+      price: 130000,
+      originalPrice: 150000,
+      discount: "13%",
+      image:
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+      description:
+        "Discover Scotland's capital with historic castles, highlands excursions, and rich culture",
+      features: [
+        "Arrival in Edinburgh • Transfer to hotel • Evening stroll along Princes Street • Welcome dinner with castle views",
+        "Discover the Royal Mile • Visit Edinburgh Castle • St. Giles' Cathedral • Holyrood Palace • Explore local cafés & shops",
+        "Highlands Excursion • Full-day trip to the Scottish Highlands • Loch Ness cruise • Scenic photo stops along Glencoe",
+        "Culture & Charm • National Museum of Scotland • Arthur's Seat hike or whisky tasting tour • Evening ghost walk or fine dining",
+        "Departure • Breakfast • Free time for souvenirs • Transfer to airport with fond memories of Scotland",
+      ],
+      rating: 4.7,
+      reviews: 98,
+      popular: false,
+    },
+    {
+      id: 8,
+      title: "Mystical Egypt",
+      type: "Adventure",
+      duration: "5 Nights | 6 Days",
+      price: 62000,
+      originalPrice: 75000,
+      discount: "17%",
+      image:
+        "https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?w=800&h=600&fit=crop",
+      description:
+        "Journey through ancient wonders with Pyramids, Nile cruise, and historic temples",
+      features: [
+        "Arrival in Cairo • Transfer to hotel • Evening free or optional Nile dinner cruise",
+        "Cairo Sightseeing • Visit the Pyramids of Giza, Sphinx, and Egyptian Museum • Explore Khan el-Khalili Bazaar",
+        "Cairo → Aswan / Nile Cruise Begins • Fly to Aswan • Visit Philae Temple & High Dam • Check-in to cruise • Sail toward Kom Ombo",
+        "Kom Ombo → Edfu → Luxor • Visit Kom Ombo & Edfu Temples • Sail to Luxor • Enjoy evening on board",
+        "Luxor Sightseeing → Cairo • Explore Valley of the Kings, Hatshepsut Temple & Karnak Temple • Fly back to Cairo",
+        "Departure • Breakfast • Transfer to airport • Depart with timeless memories of Egypt",
+      ],
+      rating: 4.8,
+      reviews: 112,
+      popular: true,
+    },
+    {
+      id: 9,
+      title: "Andaman Escape",
+      type: "Beach",
+      duration: "5 Nights | 6 Days",
+      price: 30000,
+      originalPrice: 38000,
+      discount: "21%",
+      image:
+        "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop",
+      description:
+        "Tropical paradise with pristine beaches, water sports, and island hopping adventures",
+      features: [
+        "Arrival in Port Blair • Transfer to hotel • Visit Cellular Jail • Witness Light & Sound Show at evening",
+        "Havelock Island • Transfer by ferry • Visit Radhanagar Beach (Asia's best beach) • Leisure evening by the sea",
+        "Havelock Adventures • Optional Scuba Diving / Snorkeling • Relax at Kalapathar Beach • Candlelight dinner setup",
+        "Neil Island • Transfer to Neil • Visit Natural Bridge, Bharatpur & Laxmanpur Beaches • Overnight at Neil",
+        "Return to Port Blair • Morning ferry back • Free time for shopping at Aberdeen Bazaar • Evening at leisure",
+        "Departure • Breakfast • Transfer to airport with tropical memories",
+      ],
+      rating: 4.9,
+      reviews: 187,
+      popular: true,
+    },
+    {
+      id: 10,
+      title: "Gateway to the Northeast – Guwahati",
+      type: "Adventure",
+      duration: "4 Nights | 5 Days",
+      price: 18923,
+      originalPrice: 25000,
+      discount: "24%",
+      image:
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      description:
+        "Explore the misty hills of Northeast India with Shillong, Cherrapunji, and Brahmaputra experiences",
+      features: [
+        "Arrival in Guwahati • Transfer to hotel • Visit Kamakhya Temple • Sunset cruise on the Brahmaputra River",
+        "Excursion to Shillong (100 km / 3 hrs) • Drive to Shillong • En route stop at Umiam Lake • Explore Police Bazaar & Ward's Lake",
+        "Cherrapunji Excursion • Day trip to Nohkalikai Falls, Mawsmai Caves, and Seven Sisters Falls • Return to Shillong",
+        "Shillong → Guwahati • Drive back to Guwahati • Visit Assam State Museum or Navagraha Temple • Evening shopping at Fancy Bazaar",
+        "Departure • Breakfast • Airport transfer with memories of the misty hills",
+      ],
+      rating: 4.6,
+      reviews: 76,
+      popular: false,
+    },
+    {
+      id: 11,
+      title: "Kashmir Paradise",
+      type: "Adventure",
+      duration: "5 Nights | 6 Days",
+      price: 45000,
+      originalPrice: 55000,
+      discount: "18%",
+      image:
+        "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=800&h=600&fit=crop",
+      description:
+        "Experience the beauty of Kashmir with houseboats, snow activities, and scenic valleys",
+      features: [
+        "Arrival in Srinagar • Transfer to houseboat/hotel • Enjoy a Shikara ride on Dal Lake • Dinner & overnight stay",
+        "Srinagar → Sonmarg Excursion (80 km) • Day trip to Sonmarg – the Meadow of Gold • Optional pony ride to Thajiwas Glacier • Return to Srinagar",
+        "Srinagar → Gulmarg (50 km) • Drive to Gulmarg • Take the Gondola ride to Phase 1 or 2 • Enjoy snow activities • Overnight in Gulmarg",
+        "Gulmarg → Pahalgam (140 km) • Scenic drive to Pahalgam – Valley of Shepherds • En route visit Avantipur ruins & saffron fields • Leisure evening by the river",
+        "Pahalgam → Srinagar • Return to Srinagar • Visit Mughal Gardens (Nishat & Shalimar) and Shankaracharya Temple • Last-minute shopping",
+        "Departure • Breakfast • Transfer to airport with beautiful memories of Kashmir",
+      ],
+      rating: 4.8,
+      reviews: 145,
+      popular: true,
+    },
+    {
+      id: 12,
+      title: "Serene Sri Lanka",
+      type: "Adventure",
+      duration: "5 Nights | 6 Days",
+      price: 51000,
+      originalPrice: 62000,
+      discount: "18%",
+      image:
+        "https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?w=800&h=600&fit=crop",
+      description:
+        "Discover the pearl of the Indian Ocean with tea plantations, beaches, and cultural heritage",
+      features: [
+        "Arrival in Colombo → Kandy • Arrive in Colombo • Drive to Kandy via Pinnawala Elephant Orphanage • Visit Temple of the Tooth Relic • Overnight in Kandy",
+        "Kandy → Nuwara Eliya • Scenic drive through tea plantations • Visit a Tea Factory & Ramboda Falls • Explore Gregory Lake • Overnight in Nuwara Eliya",
+        "Nuwara Eliya → Bentota • Drive to Bentota • Relax on Bentota Beach • Optional Madu River boat ride • Overnight stay",
+        "Bentota → Galle → Colombo • Visit Galle Fort, Turtle Hatchery, and Hikkaduwa Beach • Drive to Colombo • Evening shopping",
+        "Colombo City Tour • Explore Independence Square, Gangaramaya Temple, and Galle Face Green • Enjoy local cuisine • Overnight in Colombo",
+        "Departure • Breakfast • Transfer to airport with island memories",
+      ],
+      rating: 4.7,
+      reviews: 128,
+      popular: true,
+    },
   ];
 
   const readyMadeItineraries = [
     {
       id: 1,
-      title: "Bali Honeymoon Itinerary",
+      title: "Bali Romance Getaway",
       duration: "6 Nights 7 Days",
       price: 145000,
       originalPrice: 165000,
@@ -924,6 +1124,28 @@ const Packages = () => {
                   </div>
                 ))}
               </div>
+
+              {/* Explore More Destinations Button */}
+              <div className="text-center mt-12">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-violet-600 via-pink-600 to-orange-600 hover:from-violet-700 hover:via-pink-700 hover:to-orange-700 text-white px-8 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                  onClick={() => {
+                    setShowExploreForm(true);
+                    setExploreFormStep(1);
+                    setExploreFormData({
+                      destination: "",
+                      departureCity: "",
+                      travelDate: "",
+                      hotelCategory: "",
+                      phoneNumber: "",
+                    });
+                  }}
+                >
+                  Explore More Destinations
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </div>
             </div>
           </div>
         </section>
@@ -1343,6 +1565,249 @@ const Packages = () => {
                       }
                     }}
                     disabled={!priceFormData.phoneNumber}
+                  >
+                    Connect via WhatsApp
+                  </Button>
+                </div>
+              </div>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Explore More Destinations Dialog */}
+      <Dialog open={showExploreForm} onOpenChange={setShowExploreForm}>
+        <DialogContent className="sm:max-w-md bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 border border-amber-200">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-gray-900">
+              Explore More Destinations
+            </DialogTitle>
+            <DialogDescription className="text-gray-600">
+              {exploreFormStep === 1 && "Select your destination"}
+              {exploreFormStep === 2 && "Select your departure city"}
+              {exploreFormStep === 3 && "Choose your travel dates"}
+              {exploreFormStep === 4 && "Select hotel category"}
+              {exploreFormStep === 5 &&
+                "Enter your phone number to connect via WhatsApp"}
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="space-y-4 mt-4">
+            {exploreFormStep === 1 && (
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Destination
+                </label>
+                <select
+                  value={exploreFormData.destination}
+                  onChange={(e) =>
+                    setExploreFormData({
+                      ...exploreFormData,
+                      destination: e.target.value,
+                    })
+                  }
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
+                >
+                  <option value="">Select destination</option>
+                  {destinations.map((dest) => (
+                    <option key={dest.name} value={dest.name}>
+                      {dest.name}, {dest.country}
+                    </option>
+                  ))}
+                </select>
+                <Button
+                  className="w-full mt-4 bg-violet-600 hover:bg-violet-700 text-white"
+                  onClick={() => {
+                    if (exploreFormData.destination) setExploreFormStep(2);
+                  }}
+                  disabled={!exploreFormData.destination}
+                >
+                  Next
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
+            )}
+
+            {exploreFormStep === 2 && (
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Departure City
+                </label>
+                <select
+                  value={exploreFormData.departureCity}
+                  onChange={(e) =>
+                    setExploreFormData({
+                      ...exploreFormData,
+                      departureCity: e.target.value,
+                    })
+                  }
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
+                >
+                  <option value="">Select departure city</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Bangalore">Bangalore</option>
+                  <option value="Chennai">Chennai</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Ahmedabad">Ahmedabad</option>
+                </select>
+                <div className="flex gap-2 mt-4 text-white">
+                  <Button
+                    variant="outline"
+                    className="flex-1"
+                    onClick={() => setExploreFormStep(1)}
+                  >
+                    Back
+                  </Button>
+                  <Button
+                    className="flex-1 bg-violet-600 hover:bg-violet-700 text-white"
+                    onClick={() => {
+                      if (exploreFormData.departureCity) setExploreFormStep(3);
+                    }}
+                    disabled={!exploreFormData.departureCity}
+                  >
+                    Next
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </div>
+              </div>
+            )}
+
+            {exploreFormStep === 3 && (
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Travel Dates
+                </label>
+                <Input
+                  type="date"
+                  value={exploreFormData.travelDate}
+                  onChange={(e) =>
+                    setExploreFormData({
+                      ...exploreFormData,
+                      travelDate: e.target.value,
+                    })
+                  }
+                  min={new Date().toISOString().split("T")[0]}
+                  className="w-full"
+                />
+                <div className="flex gap-2 mt-4 text-white">
+                  <Button
+                    variant="outline"
+                    className="flex-1"
+                    onClick={() => setExploreFormStep(2)}
+                  >
+                    Back
+                  </Button>
+                  <Button
+                    className="flex-1 bg-violet-600 hover:bg-violet-700 text-white"
+                    onClick={() => {
+                      if (exploreFormData.travelDate) setExploreFormStep(4);
+                    }}
+                    disabled={!exploreFormData.travelDate}
+                  >
+                    Next
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </div>
+              </div>
+            )}
+
+            {exploreFormStep === 4 && (
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Hotel Category
+                </label>
+                <div className="grid grid-cols-3 gap-3">
+                  {["3★", "4★", "5★"].map((star) => (
+                    <button
+                      key={star}
+                      onClick={() =>
+                        setExploreFormData({
+                          ...exploreFormData,
+                          hotelCategory: star,
+                        })
+                      }
+                      className={`px-4 py-3 rounded-lg border-2 transition-all ${
+                        exploreFormData.hotelCategory === star
+                          ? "border-violet-600 bg-violet-50 text-violet-600 font-bold"
+                          : "border-gray-300 hover:border-violet-300"
+                      }`}
+                    >
+                      {star}
+                    </button>
+                  ))}
+                </div>
+                <div className="flex gap-2 mt-4 text-white">
+                  <Button
+                    variant="outline"
+                    className="flex-1"
+                    onClick={() => setExploreFormStep(3)}
+                  >
+                    Back
+                  </Button>
+                  <Button
+                    className="flex-1 bg-violet-600 hover:bg-violet-700 text-white"
+                    onClick={() => {
+                      if (exploreFormData.hotelCategory) setExploreFormStep(5);
+                    }}
+                    disabled={!exploreFormData.hotelCategory}
+                  >
+                    Next
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </div>
+              </div>
+            )}
+
+            {exploreFormStep === 5 && (
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Phone Number
+                </label>
+                <Input
+                  type="tel"
+                  placeholder="Enter your phone number"
+                  value={exploreFormData.phoneNumber}
+                  onChange={(e) =>
+                    setExploreFormData({
+                      ...exploreFormData,
+                      phoneNumber: e.target.value,
+                    })
+                  }
+                  className="w-full"
+                />
+                <div className="flex gap-2 mt-4 text-white">
+                  <Button
+                    variant="outline"
+                    className="flex-1"
+                    onClick={() => setExploreFormStep(4)}
+                  >
+                    Back
+                  </Button>
+                  <Button
+                    className="flex-1 bg-green-500 hover:bg-green-600 text-white"
+                    onClick={() => {
+                      if (exploreFormData.phoneNumber) {
+                        const phoneNumber = "919549134848";
+                        const message = `Hello! I'm interested in exploring ${exploreFormData.destination}.\n\nDetails:\n- Destination: ${exploreFormData.destination}\n- Departure City: ${exploreFormData.departureCity}\n- Travel Date: ${exploreFormData.travelDate}\n- Hotel Category: ${exploreFormData.hotelCategory}\n- Phone: ${exploreFormData.phoneNumber}\n\nPlease provide pricing and package details.`;
+                        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                          message
+                        )}`;
+                        window.open(whatsappUrl, "_blank");
+                        setShowExploreForm(false);
+                        setExploreFormStep(1);
+                        setExploreFormData({
+                          destination: "",
+                          departureCity: "",
+                          travelDate: "",
+                          hotelCategory: "",
+                          phoneNumber: "",
+                        });
+                      }
+                    }}
+                    disabled={!exploreFormData.phoneNumber}
                   >
                     Connect via WhatsApp
                   </Button>

@@ -12,7 +12,8 @@ export const destinations = [
         type: "Basic Package",
         duration: "4 Nights | 5 Days",
         price: 0,
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop",
       },
       {
         id: "itinerary-2",
@@ -46,7 +47,7 @@ export const destinations = [
     packages: [
       {
         id: "itinerary-1",
-        title: "Bali Honeymoon Itinerary",
+        title: "Bali Romance Getaway",
         type: "Ready-made Itinerary",
         duration: "6 Nights 7 Days",
         price: 145000,
@@ -96,7 +97,8 @@ export const destinations = [
         type: "Basic Package",
         duration: "6 Nights | 7 Days",
         price: 0,
-        image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&h=600&fit=crop",
       },
       {
         id: "tour-3",
@@ -118,7 +120,8 @@ export const destinations = [
         type: "Basic Package",
         duration: "5 Nights | 6 Days",
         price: 51000,
-        image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
       },
       {
         id: "itinerary-4",
@@ -148,7 +151,8 @@ export const destinations = [
         type: "Basic Package",
         duration: "6 Nights | 7 Days",
         price: 45000,
-        image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&h=600&fit=crop",
       },
       {
         id: "itinerary-6",
@@ -218,7 +222,8 @@ export const destinations = [
         type: "Basic Package",
         duration: "6 Nights | 7 Days",
         price: 0,
-        image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&h=600&fit=crop",
       },
       {
         id: "tour-5",
@@ -240,7 +245,8 @@ export const destinations = [
         type: "Popular Package",
         duration: "7 Nights | 8 Days",
         price: 0,
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
         locations: "Melbourne 3N, Canberra 2N, Sydney 2N",
       },
     ],
@@ -255,7 +261,8 @@ export const destinations = [
         type: "Popular Package",
         duration: "6 Nights | 7 Days",
         price: 0,
-        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&h=600&fit=crop",
         locations: "Zurich 3N, Paris 3N",
       },
       {
@@ -264,7 +271,8 @@ export const destinations = [
         type: "Popular Package",
         duration: "8 Nights | 9 Days",
         price: 0,
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop",
         locations: "Paris 3N, Amsterdam 1N, Frankfurt 1N, Zurich 3N",
       },
     ],
@@ -279,7 +287,8 @@ export const destinations = [
         type: "Popular Package",
         duration: "6 Nights | 7 Days",
         price: 0,
-        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&h=600&fit=crop",
         locations: "Zurich 3N, Paris 3N",
       },
       {
@@ -288,7 +297,8 @@ export const destinations = [
         type: "Popular Package",
         duration: "8 Nights | 9 Days",
         price: 0,
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop",
         locations: "Paris 3N, Amsterdam 1N, Frankfurt 1N, Zurich 3N",
       },
     ],
@@ -303,7 +313,8 @@ export const destinations = [
         type: "Popular Package",
         duration: "9 Nights | 10 Days",
         price: 0,
-        image: "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800&h=600&fit=crop",
         locations: "2N Auckland, 2N Rotorua, 3N Queenstown and 2N Christchurch",
       },
     ],
@@ -318,7 +329,8 @@ export const destinations = [
         type: "Popular Package",
         duration: "8 Nights | 9 Days",
         price: 0,
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop",
         locations: "Paris 3N, Amsterdam 1N, Frankfurt 1N, Zurich 3N",
       },
     ],
@@ -355,7 +367,8 @@ export const destinations = [
         type: "Basic Package",
         duration: "5 Nights | 6 Days",
         price: 51000,
-        image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
       },
       {
         id: "itinerary-4",
@@ -377,7 +390,8 @@ export const destinations = [
         type: "Basic Package",
         duration: "5 Nights | 6 Days",
         price: 51000,
-        image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
       },
       {
         id: "itinerary-4",
@@ -429,7 +443,8 @@ export const destinations = [
         type: "Basic Package",
         duration: "6 Nights | 7 Days",
         price: 45000,
-        image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&h=600&fit=crop",
       },
       {
         id: "itinerary-7",
@@ -459,7 +474,8 @@ export const destinations = [
         type: "Basic Package",
         duration: "6 Nights | 7 Days",
         price: 45000,
-        image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&h=600&fit=crop",
       },
       {
         id: "itinerary-7",
@@ -527,7 +543,8 @@ export const destinations = [
         type: "Popular Package",
         duration: "7 Nights | 8 Days",
         price: 0,
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
         locations: "Melbourne 3N, Canberra 2N, Sydney 2N",
       },
     ],
@@ -542,7 +559,8 @@ export const destinations = [
         type: "Popular Package",
         duration: "7 Nights | 8 Days",
         price: 0,
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
         locations: "Melbourne 3N, Canberra 2N, Sydney 2N",
       },
     ],
@@ -557,7 +575,8 @@ export const destinations = [
         type: "Popular Package",
         duration: "6 Nights | 7 Days",
         price: 0,
-        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&h=600&fit=crop",
         locations: "Zurich 3N, Paris 3N",
       },
       {
@@ -566,7 +585,8 @@ export const destinations = [
         type: "Popular Package",
         duration: "8 Nights | 9 Days",
         price: 0,
-        image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop",
         locations: "Paris 3N, Amsterdam 1N, Frankfurt 1N, Zurich 3N",
       },
     ],
@@ -581,7 +601,8 @@ export const destinations = [
         type: "Popular Package",
         duration: "9 Nights | 10 Days",
         price: 0,
-        image: "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800&h=600&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800&h=600&fit=crop",
         locations: "2N Auckland, 2N Rotorua, 3N Queenstown and 2N Christchurch",
       },
     ],
@@ -591,7 +612,7 @@ export const destinations = [
 // Search function to find matching destinations
 export const searchDestinations = (query) => {
   if (!query || query.trim() === "") return [];
-  
+
   const searchTerm = query.toLowerCase().trim();
   return destinations.filter(
     (dest) =>
@@ -606,4 +627,3 @@ export const getDestinationByName = (name) => {
     (dest) => dest.name.toLowerCase() === name.toLowerCase()
   );
 };
-

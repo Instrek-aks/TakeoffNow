@@ -1,7 +1,6 @@
 import { useState } from "react";
 import {
   MapPin,
-  Clock,
   CheckCircle,
   Star,
   ArrowRight,
@@ -23,7 +22,6 @@ const popularPackages = [
   {
     id: 1,
     title: "Majestic AUSTRALIA ROAD TRIP",
-    duration: "7 Nights | 8 Days",
     locations: "Melbourne 3N, Canberra 2N, Sydney 2N",
     image:
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
@@ -45,7 +43,6 @@ const popularPackages = [
   {
     id: 2,
     title: "SWISS PARIS AT A GLANCE",
-    duration: "6 Nights | 7 Days",
     locations: "Zurich 3N, Paris 3N",
     image:
       "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&h=600&fit=crop",
@@ -65,7 +62,6 @@ const popularPackages = [
   {
     id: 3,
     title: "Magnificent NEW ZEALAND",
-    duration: "9 Nights | 10 Days",
     locations: "2N Auckland, 2N Rotorua, 3N Queenstown and 2N Christchurch",
     image:
       "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800&h=600&fit=crop",
@@ -90,7 +86,6 @@ const popularPackages = [
   {
     id: 4,
     title: "Glimpses of EUROPE",
-    duration: "8 Nights | 9 Days",
     locations: "Paris 3N, Amsterdam 1N, Frankfurt 1N, Zurich 3N",
     image:
       "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop",
@@ -113,6 +108,450 @@ const popularPackages = [
       "Meals",
       "Sightseeing",
       "Visa",
+    ],
+  },
+  {
+    id: 5,
+    title: "DUBAI 4 NIGHTS",
+    locations: "Dubai",
+    image:
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop",
+    gradient: "from-amber-500 to-orange-500",
+    highlights: [
+      "Evening Marina Dhow Cruise with buffet dinner & live entertainment",
+      "Half-Day Dubai City Tour – heritage sites, Gold & Spice Souks, Palm Jumeirah",
+      "Photo stops at Dubai Frame, Burj Al Arab & Museum of the Future",
+      "Top of Burj Khalifa (124th Floor) with Dubai Mall & Fountain show",
+      "Dubai Frame Visit – panoramic city views & cultural exhibits",
+      "Desert Safari Adventure – dune bashing, camel rides, sandboarding & BBQ dinner",
+      "Global Village Entry – cultural extravaganza with shopping & food from 70+ countries",
+      "Dubai Miracle Garden – the world's largest flower garden",
+      "Airport and Sightseeing transfers",
+    ],
+  },
+  {
+    id: 6,
+    title: "VIETNAM DISCOVERY",
+    locations: "Ho Chi Minh City, Da Nang, Hanoi",
+    image:
+      "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&h=600&fit=crop",
+    gradient: "from-emerald-500 to-teal-500",
+    highlights: [
+      "Ho Chi Minh City Tour & Cu Chi Tunnels Tour (Shared Basis)",
+      "Mekong Delta Tour with Vinh Trang Pagoda, boat rides, and local experiences",
+      "Ba Na Hills Tour with Golden Bridge, Linh Ung Pagoda, and 27m Buddha statue",
+      "Hoi An Ancient Town Tour with Phuc Kien Assembly Hall & Japanese Covered Bridge",
+      "Lantern Release Ceremony along the Hoai River",
+      "Hanoi City Tour with Temple of Literature & Hoa Lo Prison Museum",
+      "Halong Bay Day Cruise exploring Surprising Cave, Pelican Grotto, and grottos",
+      "Single Entry Vietnam E-Visa included",
+      "All airport and sightseeing transfers (Private/Shared as specified)",
+    ],
+  },
+  {
+    id: 7,
+    title: "THAILAND GETAWAY",
+    locations: "Pattaya & Bangkok",
+    image:
+      "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
+    gradient: "from-pink-500 to-rose-500",
+    withFlights: true,
+    highlights: [
+      "4-star hotels in Pattaya & Bangkok with daily breakfast",
+      "Private transfers throughout",
+      "Coral Island Tour with water activities",
+      "Nong Nooch Village Show with authentic Thai culture & lunch",
+      "Alcazar Show – dazzling performances of Thai culture, music, and dance",
+      "Chao Phraya Dinner Cruise with stunning river views and live entertainment",
+      "Safari World & Marine Park with wildlife shows and lunch",
+    ],
+  },
+  {
+    id: 8,
+    title: "SINGAPORE & MALAYSIA",
+    locations: "Singapore & Kuala Lumpur",
+    image:
+      "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&h=600&fit=crop",
+    gradient: "from-blue-500 to-indigo-500",
+    withFlights: true,
+    highlights: [
+      "Return Economy Class Airfare (up to 1 stopover)",
+      "06 nights' accommodation in Singapore and Malaysia",
+      "Daily Continental Breakfast",
+      "Singapore City Tour (Little India, Merlion, Chinatown, Sri Mariamman Temple)",
+      "Gardens by the Bay (Cloud Forest, Flower Dome, Light & Sound Show)",
+      "River Cruise (Bum Boat Ride along Singapore River)",
+      "Marina Bay Sands Sky Park Observation Deck",
+      "Sentosa Island Tour (Cable Car, Madame Tussauds 5-in-1, Wings of Time)",
+      "Full Day at Universal Studios Singapore (7 themed areas)",
+      "Putrajaya orientation tour with photo-stops",
+      "Kuala Lumpur City Tour (National Mosque, King's Palace, Menara KL Tower)",
+      "Batu Caves and Genting Highlands Tour (Cable Car, Skyway Ride)",
+      "Travel Insurance for passengers up to 69 years",
+      "All entry fees and attraction tickets included",
+    ],
+  },
+  {
+    id: 9,
+    title: "Bali Romance Getaway",
+    locations: "Bali",
+    image: "/bali.webp",
+    gradient: "from-rose-500 to-pink-500",
+    highlights: [
+      "Water sports - Banana Boat, Fly Fish, and Jet Ski",
+      "Magical sunset at Uluwatu Temple",
+      "Romantic candlelight dinner at Jimbaran Beach with Indian cuisine, roses, and wine",
+      "Nusa Penida West Island Tour (Private) - Kelingking Beach, Angel's Billabong, Broken Bay, and Bubu Beach",
+      "Complimentary snorkeling (time permitting) and local lunch",
+      "Ulun Danu Beratan Temple visit",
+      "Breathtaking sunset at Tanah Lot Temple",
+      "Kintamani and coffee plantation visit",
+      "Bali Jungle Swing - unlimited swings and iconic nests",
+      "Phinisi Sunset Dinner Cruise with live entertainment",
+      "Leisure day for local markets, spa, or pool relaxation",
+      "Private tours as per plan",
+      "Romantic setup @ Jimbaran",
+      "Local lunches where specified",
+      "All transfers",
+    ],
+  },
+  {
+    id: 10,
+    title: "Dubai 4 Nights – Ultimate Experience",
+    locations: "Dubai",
+    image: "/dubai.webp",
+    gradient: "from-amber-500 to-orange-500",
+    highlights: [
+      "Marina Dhow Cruise with buffet dinner and live entertainment",
+      "Half-day Dubai City Tour – heritage sites, Gold & Spice Souks, Palm Jumeirah",
+      "Photo stops at Dubai Frame, Burj Al Arab & Museum of the Future",
+      "Top of Burj Khalifa (124th Floor) for panoramic city views",
+      "Dubai Mall and mesmerizing Fountain show",
+      "Dubai Frame for cultural exhibits and stunning vistas",
+      "Desert Safari Adventure – dune bashing, camel rides, sandboarding",
+      "BBQ dinner under the stars with traditional shows",
+      "Global Village – cultural extravaganza with shopping and food from 70+ countries",
+      "Dubai Miracle Garden – the world's largest flower garden",
+      "All sightseeing transfers",
+      "Entry tickets to all attractions",
+      "Professional guides where applicable",
+    ],
+  },
+  {
+    id: 11,
+    title: "Dubai + Abu Dhabi Highlights",
+    locations: "Dubai & Abu Dhabi",
+    image: "/dubai.webp",
+    gradient: "from-amber-500 to-yellow-500",
+    highlights: [
+      "Desert Safari adventure with BBQ dinner and traditional entertainment",
+      "Top of Burj Khalifa (124th Floor) for stunning city views",
+      "Thrilling Glass Slide at Sky Views",
+      "Dubai Frame for panoramic vistas and cultural exhibits",
+      "Dubai Miracle Garden – world's largest flower garden",
+      "Global Village – cultural extravaganza with shopping and food",
+      "Abu Dhabi City Tour including magnificent BAPS Temple",
+      "Full day at Yas Island with access to 2 parks",
+      "Thrilling rides, water attractions, and endless entertainment",
+      "All tours/transfers PVT except Desert Safari (SIC)",
+    ],
+  },
+  {
+    id: 12,
+    title: "Singapore Essentials – Attractions Combo",
+    locations: "Singapore",
+    image: "/singapore.webp",
+    gradient: "from-blue-500 to-cyan-500",
+    highlights: [
+      "Night Safari with complimentary shows and tram rides",
+      "Bird Paradise – exotic birds in their natural habitat",
+      "Experiential Singapore Tour with licensed guide",
+      "Discover local neighborhoods, cultural sites, and authentic experiences",
+      "S.E.A. Aquarium – one of the world's largest aquariums",
+      "Wings of Time show – mesmerizing display of lights, water, and fire",
+      "Full day at Universal Studios Singapore",
+      "World-class rides, shows, and attractions across 7 themed areas",
+      "Sands SkyPark for panoramic views",
+      "Gardens by the Bay – Cloud Forest and Flower Dome",
+      "Stunning floral displays and climate-controlled environments",
+      "9 tour transfers per plan",
+      "Licensed guide where noted",
+    ],
+  },
+  {
+    id: 13,
+    title: "Singapore & Malaysia – 6 Nights 7 Days",
+    locations: "Singapore & Malaysia",
+    image: "/singapore.webp",
+    gradient: "from-indigo-500 to-purple-500",
+    withFlights: true,
+    highlights: [
+      "Return economy class airfare",
+      "06 nights' accommodation in Singapore and Malaysia",
+      "Daily Continental Breakfast",
+      "Singapore City Tour (Little India, Merlion, Chinatown, Sri Mariamman Temple)",
+      "Gardens by the Bay (Cloud Forest, Flower Dome, Light & Sound Show)",
+      "River Cruise (Bum Boat Ride along Singapore River)",
+      "Marina Bay Sands Sky Park Observation Deck",
+      "Sentosa Island Tour (Cable Car, Madame Tussauds 5-in-1, Wings of Time)",
+      "Full Day at Universal Studios Singapore",
+      "Putrajaya orientation tour with photo-stop",
+      "Kuala Lumpur City Tour (National Mosque, King's Palace, Menara KL Tower)",
+      "Batu Caves and Genting Highlands Tour (Cable Car, Skyway Ride)",
+      "Travel Insurance for passengers up to 69 years",
+      "All entry fees and attraction tickets",
+      "All sightseeing and transfers on shared transport",
+    ],
+  },
+  {
+    id: 14,
+    title: "Thailand – Bangkok & Pattaya",
+    locations: "Bangkok & Pattaya",
+    image: "/thieland.webp",
+    gradient: "from-pink-500 to-rose-500",
+    highlights: [
+      "4-star hotel accommodation in Pattaya & Bangkok with daily breakfast",
+      "Private transfers as per itinerary",
+      "Coral Island Tour with water activities",
+      "Nong Nooch Village Show with authentic Thai culture & lunch",
+      "Alcazar Show – dazzling performances of Thai culture, music, and dance",
+      "Chao Phraya Dinner Cruise with stunning river views and live entertainment",
+      "Safari World & Marine Park entry with lunch",
+      "Wildlife shows and marine life exploration",
+    ],
+  },
+  {
+    id: 15,
+    title: "Malaysia – KL & Genting Highlights",
+    locations: "Kuala Lumpur & Genting",
+    image: "/mal.webp",
+    gradient: "from-green-500 to-emerald-500",
+    highlights: [
+      "Kuala Lumpur City Tour with KL Tower Observation Deck",
+      "Panoramic city views",
+      "Genting Highlands via cable car with stunning mountain views",
+      "Batu Caves with colorful steps and temple",
+      "Cool mountain resort exploration",
+      "Putrajaya Cruise – sharing cruise through stunning architecture",
+      "Modern administrative capital with impressive buildings",
+      "Full day at Legoland Malaysia",
+      "Thrilling rides, themed areas, and endless fun",
+      "Theme Park, Water Park, and Sealife combo",
+      "Perfect for families seeking adventure",
+      "Private transfers where noted",
+      "Attraction tickets as listed",
+    ],
+  },
+  {
+    id: 16,
+    title: "Vietnam – Phu Quoc Island Plan",
+    locations: "Phu Quoc",
+    image: "/vietnam.webp",
+    gradient: "from-cyan-500 to-blue-500",
+    highlights: [
+      "Grandworld Phu Quoc – vibrant entertainment complex",
+      "Cultural shows, shopping, and dining experiences",
+      "VinWonders theme park and VinSafari combo",
+      "Thrilling rides, wildlife exploration, and world-class entertainment",
+      "4 Island Hopping Adventure by speedboat",
+      "Snorkeling, stunning beaches, cable car ride",
+      "Aquatopia exploration",
+      "Delicious lunch on board",
+      "Shopping & Leisure time",
+      "Flexible time for local markets and dining",
+      "Private transfers as listed",
+      "SIC tour where noted",
+    ],
+  },
+  {
+    id: 17,
+    title: "Vietnam – Multi-City Discovery",
+    locations: "Ho Chi Minh, Phu Quoc, Danang, Hoi An, Hanoi, Halong Bay",
+    image: "/veietnam2.webp",
+    gradient: "from-teal-500 to-cyan-500",
+    highlights: [
+      "Ho Chi Minh City exploration",
+      "Cu Chi Tunnels – incredible network of underground tunnels",
+      "Phu Quoc Island – Grand World Phu Quoc",
+      "VinWonders theme park and VinSafari",
+      "4 Island Hopping by speedboat with snorkeling",
+      "Cable car, Aquatopia, and delicious lunch",
+      "Danang & Hoi An Ancient Town",
+      "Coconut Forest Basket Boat ride",
+      "Magical Lantern Boat cruise along the river",
+      "Ba Na Hills via cable car",
+      "Iconic Golden Bridge supported by colossal hands",
+      "Fantasy Park, French Village, and stunning mountain views",
+      "Hanoi City – half-day city tour",
+      "Rich history, ancient temples, and vibrant local culture",
+      "Halong Bay Deluxe Day Cruise",
+      "Kayaking through limestone karsts",
+      "Delicious lunch and stunning sunset party",
+      "Private transfers where noted",
+      "SIC tours as specified",
+      "Entry tickets per plan",
+    ],
+  },
+  {
+    id: 18,
+    title: "Vietnam – 6 Nights 7 Days Discovery",
+    locations:
+      "Ho Chi Minh, Cu Chi, Mekong Delta, Da Nang, Ba Na Hills, Hoi An, Hanoi, Halong Bay",
+    image: "/vietnam.webp",
+    gradient: "from-emerald-500 to-teal-500",
+    highlights: [
+      "Ho Chi Minh City Tour",
+      "Cu Chi Tunnels – incredible underground network",
+      "Mekong Delta Adventure with Vinh Trang Pagoda",
+      "Boat ride to Unicorn Island",
+      "Local bee farms and fruit orchards",
+      "Peaceful rowboat ride through water coconut trees",
+      "Local lunch included",
+      "Ba Na Hills & Golden Bridge via cable car",
+      "Linh Ung Pagoda with 27m Buddha statue",
+      "Le Jardin gardens exploration",
+      "Hoi An Ancient Town – UNESCO World Heritage site",
+      "Phuc Kien Assembly Hall, Tan Ky Ancient House, Japanese Covered Bridge",
+      "Magical Lantern Release Ceremony along Hoai River",
+      "Hanoi City Discovery",
+      "Temple of Literature, Hoa Lo Prison Museum (Hanoi Hilton)",
+      "Guided tour with lunch included",
+      "Halong Bay Scenic Day Cruise",
+      "Surprising Cave, Pelican Grotto, and stunning grottos",
+      "Swimming or relaxing on sundeck",
+      "Delicious lunch included",
+      "Single Entry Vietnam E-Visa",
+      "All transfers (Private Basis)",
+      "All sightseeing tours on shared basis as mentioned",
+      "Professional guides where applicable",
+      "Lunch where specified",
+      "Entry tickets to all attractions",
+    ],
+  },
+  {
+    id: 19,
+    title: "Maldives Honeymoon",
+    locations: "Malé",
+    image:
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&h=600&fit=crop",
+    gradient: "from-cyan-500 to-blue-500",
+    highlights: [
+      "Arrival at Malé • Transfer by speedboat/seaplane • Check-in • Romantic beachfront dinner",
+      "Leisure & Spa Day • Water activities • Candlelight dinner by the beach",
+      "Island Hopping • Snorkeling • Sandbank picnic • Sunset cruise",
+      "Water Sports adventure • Jet Ski / Parasailing • Floating dinner setup",
+      "Relaxation & Resort exploration • Couple's massage • Farewell dinner",
+      "Breakfast • Transfer to airport • Depart with memories of paradise",
+    ],
+  },
+  {
+    id: 20,
+    title: "Greece Getaway",
+    locations: "Athens, Santorini, Mykonos",
+    image:
+      "https://images.unsplash.com/photo-1505159940484-eb2b9f3c9b89?w=800&h=600&fit=crop",
+    gradient: "from-blue-500 to-indigo-500",
+    highlights: [
+      "Athens Arrival • Check-in • Evening at leisure in Plaka • Dinner with Acropolis view",
+      "Athens Sightseeing • Explore Acropolis, Parthenon & Temple of Zeus • Stroll through Syntagma Square • Optional rooftop dinner",
+      "Athens → Santorini • Morning ferry/flight to Santorini • Check-in • Sunset at Oia • Romantic dinner by the caldera",
+      "Santorini Exploration • Volcano & Hot Springs Cruise • Red Beach & Wine tasting • Evening free for shopping or spa",
+      "Santorini → Mykonos • Transfer to Mykonos • Visit Little Venice & Windmills • Beach time & nightlife experience",
+      "Departure • Breakfast • Transfer to airport • Fly back with memories of the Aegean",
+    ],
+  },
+  {
+    id: 21,
+    title: "Enchanting Edinburgh",
+    locations: "Edinburgh, Scottish Highlands",
+    image:
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+    gradient: "from-slate-500 to-gray-500",
+    highlights: [
+      "Arrival in Edinburgh • Transfer to hotel • Evening stroll along Princes Street • Welcome dinner with castle views",
+      "Discover the Royal Mile • Visit Edinburgh Castle • St. Giles' Cathedral • Holyrood Palace • Explore local cafés & shops",
+      "Highlands Excursion • Full-day trip to the Scottish Highlands • Loch Ness cruise • Scenic photo stops along Glencoe",
+      "Culture & Charm • National Museum of Scotland • Arthur's Seat hike or whisky tasting tour • Evening ghost walk or fine dining",
+      "Departure • Breakfast • Free time for souvenirs • Transfer to airport with fond memories of Scotland",
+    ],
+  },
+  {
+    id: 22,
+    title: "Mystical Egypt",
+    locations: "Cairo, Aswan, Luxor",
+    image:
+      "https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?w=800&h=600&fit=crop",
+    gradient: "from-amber-500 to-yellow-500",
+    highlights: [
+      "Arrival in Cairo • Transfer to hotel • Evening free or optional Nile dinner cruise",
+      "Cairo Sightseeing • Visit the Pyramids of Giza, Sphinx, and Egyptian Museum • Explore Khan el-Khalili Bazaar",
+      "Cairo → Aswan / Nile Cruise Begins • Fly to Aswan • Visit Philae Temple & High Dam • Check-in to cruise • Sail toward Kom Ombo",
+      "Kom Ombo → Edfu → Luxor • Visit Kom Ombo & Edfu Temples • Sail to Luxor • Enjoy evening on board",
+      "Luxor Sightseeing → Cairo • Explore Valley of the Kings, Hatshepsut Temple & Karnak Temple • Fly back to Cairo",
+      "Departure • Breakfast • Transfer to airport • Depart with timeless memories of Egypt",
+    ],
+  },
+  {
+    id: 23,
+    title: "Andaman Escape",
+    locations: "Port Blair, Havelock, Neil Island",
+    image:
+      "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop",
+    gradient: "from-teal-500 to-cyan-500",
+    highlights: [
+      "Arrival in Port Blair • Transfer to hotel • Visit Cellular Jail • Witness Light & Sound Show at evening",
+      "Havelock Island • Transfer by ferry • Visit Radhanagar Beach (Asia's best beach) • Leisure evening by the sea",
+      "Havelock Adventures • Optional Scuba Diving / Snorkeling • Relax at Kalapathar Beach • Candlelight dinner setup",
+      "Neil Island • Transfer to Neil • Visit Natural Bridge, Bharatpur & Laxmanpur Beaches • Overnight at Neil",
+      "Return to Port Blair • Morning ferry back • Free time for shopping at Aberdeen Bazaar • Evening at leisure",
+      "Departure • Breakfast • Transfer to airport with tropical memories",
+    ],
+  },
+  {
+    id: 24,
+    title: "Gateway to the Northeast – Guwahati",
+    locations: "Guwahati, Shillong, Cherrapunji",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    gradient: "from-green-500 to-emerald-500",
+    highlights: [
+      "Arrival in Guwahati • Transfer to hotel • Visit Kamakhya Temple • Sunset cruise on the Brahmaputra River",
+      "Excursion to Shillong (100 km / 3 hrs) • Drive to Shillong • En route stop at Umiam Lake • Explore Police Bazaar & Ward's Lake",
+      "Cherrapunji Excursion • Day trip to Nohkalikai Falls, Mawsmai Caves, and Seven Sisters Falls • Return to Shillong",
+      "Shillong → Guwahati • Drive back to Guwahati • Visit Assam State Museum or Navagraha Temple • Evening shopping at Fancy Bazaar",
+      "Departure • Breakfast • Airport transfer with memories of the misty hills",
+    ],
+  },
+  {
+    id: 25,
+    title: "Kashmir Paradise",
+    locations: "Srinagar, Sonmarg, Gulmarg, Pahalgam",
+    image:
+      "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=800&h=600&fit=crop",
+    gradient: "from-blue-500 to-cyan-500",
+    highlights: [
+      "Arrival in Srinagar • Transfer to houseboat/hotel • Enjoy a Shikara ride on Dal Lake • Dinner & overnight stay",
+      "Srinagar → Sonmarg Excursion (80 km) • Day trip to Sonmarg – the Meadow of Gold • Optional pony ride to Thajiwas Glacier • Return to Srinagar",
+      "Srinagar → Gulmarg (50 km) • Drive to Gulmarg • Take the Gondola ride to Phase 1 or 2 • Enjoy snow activities • Overnight in Gulmarg",
+      "Gulmarg → Pahalgam (140 km) • Scenic drive to Pahalgam – Valley of Shepherds • En route visit Avantipur ruins & saffron fields • Leisure evening by the river",
+      "Pahalgam → Srinagar • Return to Srinagar • Visit Mughal Gardens (Nishat & Shalimar) and Shankaracharya Temple • Last-minute shopping",
+      "Departure • Breakfast • Transfer to airport with beautiful memories of Kashmir",
+    ],
+  },
+  {
+    id: 26,
+    title: "Serene Sri Lanka",
+    locations: "Colombo, Kandy, Nuwara Eliya, Bentota, Galle",
+    image:
+      "https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?w=800&h=600&fit=crop",
+    gradient: "from-emerald-500 to-teal-500",
+    highlights: [
+      "Arrival in Colombo → Kandy • Arrive in Colombo • Drive to Kandy via Pinnawala Elephant Orphanage • Visit Temple of the Tooth Relic • Overnight in Kandy",
+      "Kandy → Nuwara Eliya • Scenic drive through tea plantations • Visit a Tea Factory & Ramboda Falls • Explore Gregory Lake • Overnight in Nuwara Eliya",
+      "Nuwara Eliya → Bentota • Drive to Bentota • Relax on Bentota Beach • Optional Madu River boat ride • Overnight stay",
+      "Bentota → Galle → Colombo • Visit Galle Fort, Turtle Hatchery, and Hikkaduwa Beach • Drive to Colombo • Evening shopping",
+      "Colombo City Tour • Explore Independence Square, Gangaramaya Temple, and Galle Face Green • Enjoy local cuisine • Overnight in Colombo",
+      "Departure • Breakfast • Transfer to airport with island memories",
     ],
   },
 ];
@@ -139,14 +578,14 @@ const PopularPackages = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 overflow-visible">
             <div className="inline-flex items-center gap-2 mb-4">
               <Sparkles className="w-6 h-6 text-violet-600" />
               <span className="text-violet-600 font-semibold text-lg">
                 Featured Destinations
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-relaxed pb-2 overflow-visible">
               Popular Packages
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -205,10 +644,6 @@ const PopularPackages = () => {
 
                       <div className="flex items-center gap-3 text-sm text-gray-600 mb-3">
                         <div className="flex items-center">
-                          <Clock className="w-3.5 h-3.5 mr-1 text-amber-600" />
-                          <span className="font-medium">{pkg.duration}</span>
-                        </div>
-                        <div className="flex items-center">
                           <MapPin className="w-3.5 h-3.5 mr-1 text-blue-600" />
                           <span className="truncate max-w-[120px] text-xs">
                             {pkg.locations.split(",")[0]}
@@ -243,10 +678,6 @@ const PopularPackages = () => {
                 <DialogDescription className="text-gray-600">
                   <div className="flex items-center gap-4 mt-2">
                     <div className="flex items-center">
-                      <Clock className="w-4 h-4 mr-1 text-amber-600" />
-                      {selectedPackage.duration}
-                    </div>
-                    <div className="flex items-center">
                       <MapPin className="w-4 h-4 mr-1 text-blue-600" />
                       {selectedPackage.locations}
                     </div>
@@ -254,7 +685,7 @@ const PopularPackages = () => {
                 </DialogDescription>
               </DialogHeader>
 
-              <div className="mt-6 space-y-6">
+              <div className="mt-6 space-y-6 pb-6">
                 {/* Package Image */}
                 <div className="relative h-64 rounded-lg overflow-hidden">
                   <img

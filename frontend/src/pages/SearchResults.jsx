@@ -39,7 +39,7 @@ const SearchResults = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50">
       <Navbar />
-      
+
       <div className="container mx-auto px-4 py-24">
         {/* Search Bar */}
         <div className="max-w-3xl mx-auto mb-12">
@@ -66,9 +66,6 @@ const SearchResults = () => {
           <div className="max-w-6xl mx-auto">
             {results.length > 0 ? (
               <>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Found {results.length} {results.length === 1 ? "destination" : "destinations"} for "{searchQuery}"
-                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {results.map((destination) => (
                     <div
@@ -90,8 +87,13 @@ const SearchResults = () => {
                         </div>
                         <div className="mb-4">
                           <p className="text-sm text-gray-700">
-                            <span className="font-semibold">{destination.packages.length}</span>{" "}
-                            {destination.packages.length === 1 ? "package" : "packages"} available
+                            <span className="font-semibold">
+                              {destination.packages.length}
+                            </span>{" "}
+                            {destination.packages.length === 1
+                              ? "package"
+                              : "packages"}{" "}
+                            available
                           </p>
                         </div>
                         <div className="flex items-center text-amber-600 font-semibold group-hover:text-amber-700">
@@ -113,7 +115,8 @@ const SearchResults = () => {
                   We couldn't find any destinations matching "{searchQuery}"
                 </p>
                 <p className="text-sm text-gray-500">
-                  Try searching for: Dubai, Bali, Singapore, Thailand, Vietnam, Malaysia, Australia, Europe, Paris, Switzerland, New Zealand
+                  Try searching for: Dubai, Bali, Singapore, Thailand, Vietnam,
+                  Malaysia, Australia, Europe, Paris, Switzerland, New Zealand
                 </p>
               </div>
             )}
@@ -130,7 +133,18 @@ const SearchResults = () => {
               Enter a destination name to find available packages
             </p>
             <div className="flex flex-wrap justify-center gap-2 max-w-2xl mx-auto">
-              {["Dubai", "Bali", "Singapore", "Thailand", "Vietnam", "Malaysia", "Australia", "Europe", "Paris", "Switzerland"].map((dest) => (
+              {[
+                "Dubai",
+                "Bali",
+                "Singapore",
+                "Thailand",
+                "Vietnam",
+                "Malaysia",
+                "Australia",
+                "Europe",
+                "Paris",
+                "Switzerland",
+              ].map((dest) => (
                 <Button
                   key={dest}
                   variant="outline"
@@ -155,4 +169,3 @@ const SearchResults = () => {
 };
 
 export default SearchResults;
-

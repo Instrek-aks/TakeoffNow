@@ -138,18 +138,15 @@ const DiscoverSection = () => {
               <span className="text-[#11224E]">Book</span>
               <span className="text-[#11224E]">|</span>
               <img
-                src="/logoB.webp"
+                src="/takeoffnow_linear1.png"
                 alt="TakeoffNow"
-                className="inline-block h-10 md:h-14 w-auto object-contain"
+                className="inline-block h-16 md:h-24 w-auto object-contain"
               />
-              <svg
-                className="w-8 h-8 md:w-10 md:h-10 text-blue-500"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
-              </svg>
+              <img
+                src="/aeroplane1.png"
+                alt="Airplane"
+                className="inline-block w-12 h-12 md:w-16 md:h-16 object-contain"
+              />
             </h2>
             <p className="text-[#11224E]/70 text-lg max-w-2xl mx-auto">
               Four simple steps to your perfect journey
