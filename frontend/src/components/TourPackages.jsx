@@ -152,40 +152,27 @@ const TravelStories = () => {
     <section className="py-24 bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="text-orange-500">Explore.</span>{" "}
+            <span className="text-blue-900">Experience.</span>{" "}
+            <span className="text-black">Enjoy.</span>
+          </h2>
           <p
             className="text-primary font-semibold text-lg mb-2"
             style={{ fontStyle: "italic" }}
           >
-            Recent Travel Stories
+            Premium travel packages created for comfort, excitement, and
+            discovery
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            See What Travelers Are Experiencing
-          </h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-stretch">
           {packages.map((pkg, index) => {
-            const user = generateUserData(index);
             return (
               <div
                 key={pkg.id}
                 className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-amber-200 flex flex-col h-full"
               >
-                {/* User Header - Yellow Bar */}
-                <div className="bg-yellow-400 px-3 py-2 flex items-center gap-2 shrink-0">
-                  <div className="w-6 h-6 rounded-full bg-yellow-400 border-2 border-white flex items-center justify-center font-bold text-white text-xs shrink-0">
-                    {user.avatar}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-xs font-semibold text-gray-800 truncate">
-                      {user.name} from {user.location}
-                    </p>
-                  </div>
-                  <span className="text-xs text-gray-700 whitespace-nowrap shrink-0">
-                    • {user.time}
-                  </span>
-                </div>
-
                 {/* Image */}
                 <div className="relative overflow-hidden shrink-0">
                   <img
@@ -317,7 +304,7 @@ const TravelStories = () => {
                   min={new Date().toISOString().split("T")[0]}
                   className="w-full"
                 />
-                <div className="flex gap-2 mt-4">
+                <div className="flex gap-2 mt-4 text-white">
                   <Button
                     variant="outline"
                     className="flex-1"
@@ -364,7 +351,7 @@ const TravelStories = () => {
                     </button>
                   ))}
                 </div>
-                <div className="flex gap-2 mt-4">
+                <div className="flex gap-2 mt-4 text-white">
                   <Button
                     variant="outline"
                     className="flex-1"
@@ -403,7 +390,7 @@ const TravelStories = () => {
                   }
                   className="w-full"
                 />
-                <div className="flex gap-2 mt-4">
+                <div className="flex gap-2 mt-4 text-white">
                   <Button
                     variant="outline"
                     className="flex-1"

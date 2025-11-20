@@ -126,12 +126,18 @@ const Navbar = () => {
     },
   ];
 
+  const isHomePage = ["/", "/about", "/contact", "/packages"].includes(
+    location.pathname
+  );
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-gradient-to-r from-emerald-50 via-teal-50 to-cyan-50 backdrop-blur-md shadow-lg"
-          : "bg-transparent "
+        isHomePage
+          ? isScrolled
+            ? "bg-gradient-to-r from-emerald-50 via-teal-50 to-cyan-50 backdrop-blur-md shadow-lg"
+            : "bg-transparent"
+          : "bg-gradient-to-r from-emerald-50 via-teal-50 to-cyan-50 backdrop-blur-md shadow-lg"
       }`}
     >
       <div className="container mx-auto px-4 py-4">
@@ -157,9 +163,11 @@ const Navbar = () => {
                 <DropdownMenu key={link.name}>
                   <DropdownMenuTrigger
                     className={`flex items-center space-x-1 transition-colors cursor-pointer ${
-                      isScrolled
-                        ? "text-gray-800 hover:text-emerald-600"
-                        : "text-white hover:text-amber-300 drop-shadow-lg"
+                      isHomePage
+                        ? isScrolled
+                          ? "text-gray-800 hover:text-emerald-600"
+                          : "text-white hover:text-amber-300 drop-shadow-lg"
+                        : "text-gray-900 hover:text-emerald-600"
                     }`}
                   >
                     <span>{link.name}</span>
@@ -179,9 +187,11 @@ const Navbar = () => {
                   to={link.href}
                   onClick={link.name === "Home" ? handleHomeClick : undefined}
                   className={`transition-colors ${
-                    isScrolled
-                      ? "text-gray-800 hover:text-emerald-600"
-                      : "text-white hover:text-amber-300 drop-shadow-lg"
+                    isHomePage
+                      ? isScrolled
+                        ? "text-gray-800 hover:text-emerald-600"
+                        : "text-white hover:text-amber-300 drop-shadow-lg"
+                      : "text-gray-900 hover:text-emerald-600"
                   }`}
                 >
                   {link.name}
@@ -196,7 +206,9 @@ const Navbar = () => {
               <form onSubmit={handleSearchSubmit}>
                 <Search
                   className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 ${
-                    isScrolled ? "text-gray-400" : "text-gray-600"
+                    isHomePage && !isScrolled
+                      ? "text-gray-600"
+                      : "text-gray-400"
                   }`}
                 />
                 <Input
@@ -250,9 +262,7 @@ const Navbar = () => {
               <div className="relative" ref={searchRef}>
                 <form onSubmit={handleSearchSubmit}>
                   <Search
-                    className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 ${
-                      isScrolled ? "text-gray-400" : "text-gray-400"
-                    }`}
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"
                   />
                   <Input
                     type="search"
@@ -302,23 +312,33 @@ const Navbar = () => {
             <a
               href="tel:+919549134848"
               className={`hidden md:flex items-center space-x-2 transition-colors ${
-                isScrolled
-                  ? "text-gray-800 hover:text-emerald-600"
-                  : "text-white hover:text-amber-300 drop-shadow-lg"
+                isHomePage
+                  ? isScrolled
+                    ? "text-gray-800 hover:text-emerald-600"
+                    : "text-white hover:text-amber-300 drop-shadow-lg"
+                  : "text-gray-900 hover:text-emerald-600"
               }`}
             >
               <Phone className="w-5 h-5" />
               <div className="text-sm">
                 <div
                   className={`text-xs ${
-                    isScrolled ? "text-gray-600" : "text-white/80"
+                    isHomePage
+                      ? isScrolled
+                        ? "text-gray-600"
+                        : "text-white/80"
+                      : "text-gray-600"
                   }`}
                 >
                   Call Us:
                 </div>
                 <div
                   className={`font-semibold ${
-                    isScrolled ? "text-gray-800" : "text-white"
+                    isHomePage
+                      ? isScrolled
+                        ? "text-gray-800"
+                        : "text-white"
+                      : "text-gray-900"
                   }`}
                 >
                   +91 9549134848
@@ -343,7 +363,15 @@ const Navbar = () => {
             {/* Mobile Menu */}
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="lg:hidden">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className={`lg:hidden ${
+                    isHomePage && !isScrolled
+                      ? "text-white"
+                      : "text-gray-900"
+                  }`}
+                >
                   <Menu className="w-6 h-6" />
                 </Button>
               </SheetTrigger>

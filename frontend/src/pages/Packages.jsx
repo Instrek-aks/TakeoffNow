@@ -63,8 +63,7 @@ const Packages = () => {
       price: 0,
       originalPrice: 0,
       discount: null,
-      image:
-        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop",
+      image: "/Dubai.webp",
       description:
         "Experience the best of Dubai with iconic landmarks, desert adventures, and cultural attractions",
       features: [
@@ -90,8 +89,7 @@ const Packages = () => {
       price: 45000,
       originalPrice: 55000,
       discount: "18%",
-      image:
-        "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&h=600&fit=crop",
+      image: "/Vietnam.png",
       description:
         "Explore Ho Chi Minh City, Da Nang, and Hanoi with cultural tours, ancient towns, and Halong Bay cruise",
       features: [
@@ -117,8 +115,7 @@ const Packages = () => {
       price: 51000,
       originalPrice: 60000,
       discount: "15%",
-      image:
-        "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
+      image: "/Thailand.png",
       description:
         "Relax in 4-star hotels in Pattaya & Bangkok with exciting tours, shows, and cultural experiences",
       features: [
@@ -143,8 +140,7 @@ const Packages = () => {
       price: 0,
       originalPrice: 0,
       discount: null,
-      image:
-        "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&h=600&fit=crop",
+      image: "Singapore & Malaysia.png",
       description:
         "Return Economy Class Airfare with comprehensive tours of Singapore and Malaysia's best attractions",
       features: [
@@ -430,7 +426,7 @@ const Packages = () => {
       price: 125000,
       originalPrice: 145000,
       discount: "14%",
-      image: "/dubai.webp",
+      image: "/Dubai.png",
       description:
         "Marina Dhow Cruise, Dubai City Tour, Burj Khalifa, Dubai Frame, Desert Safari, Global Village, and Miracle Garden.",
       itinerary: [
@@ -567,7 +563,7 @@ const Packages = () => {
       price: 95000,
       originalPrice: 115000,
       discount: "17%",
-      image: "/singapore.webp",
+      image: "/Singapore & Malaysia.png",
       description:
         "Return economy class airfare, 06 nights' accommodation, daily breakfast, city tours, Gardens by the Bay, Universal Studios, Sentosa Island, Kuala Lumpur, Genting Highlands, and more.",
       itinerary: [

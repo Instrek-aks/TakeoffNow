@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   MapPin,
   CheckCircle,
@@ -7,6 +7,8 @@ import {
   Plane,
   Sparkles,
   X,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { Button } from "./ui/Button";
 import { Badge } from "./ui/Badge";
@@ -559,6 +561,7 @@ const popularPackages = [
 const PopularPackages = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const scrollContainerRef = useRef(null);
 
   // Duplicate packages for seamless infinite scroll
   const duplicatedPackages = [...popularPackages, ...popularPackages];
@@ -566,6 +569,32 @@ const PopularPackages = () => {
   const handleCardClick = (pkg) => {
     setSelectedPackage(pkg);
     setIsModalOpen(true);
+  };
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      const isMobile = window.innerWidth < 768;
+      const cardWidth = isMobile ? 280 : 320; // w-[280px] on mobile, w-[320px] on md+
+      const gap = 16; // gap-4 = 1rem = 16px
+      const scrollAmount = cardWidth + gap;
+      scrollContainerRef.current.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      const isMobile = window.innerWidth < 768;
+      const cardWidth = isMobile ? 280 : 320; // w-[280px] on mobile, w-[320px] on md+
+      const gap = 16; // gap-4 = 1rem = 16px
+      const scrollAmount = cardWidth + gap;
+      scrollContainerRef.current.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
@@ -595,11 +624,30 @@ const PopularPackages = () => {
 
           {/* Infinite Scrolling Container */}
           <div className="relative overflow-hidden">
+            {/* Scroll Buttons */}
+            <button
+              onClick={scrollLeft}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg border border-amber-200 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-amber-500"
+              aria-label="Scroll left"
+            >
+              <ChevronLeft className="w-6 h-6 text-amber-600" />
+            </button>
+            <button
+              onClick={scrollRight}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg border border-amber-200 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-amber-500"
+              aria-label="Scroll right"
+            >
+              <ChevronRight className="w-6 h-6 text-amber-600" />
+            </button>
+
             {/* Subtle fade on left and right */}
             <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-amber-50/80 to-transparent z-20 pointer-events-none"></div>
             <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-orange-50/80 to-transparent z-20 pointer-events-none"></div>
 
-            <div className="overflow-hidden">
+            <div
+              className="overflow-x-auto overflow-y-hidden scrollbar-hide"
+              ref={scrollContainerRef}
+            >
               <div
                 className="flex gap-4 animate-scroll"
                 style={{
@@ -797,6 +845,13 @@ const PopularPackages = () => {
           .animate-scroll {
             animation: scroll 50s linear infinite;
           }
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
     </section>
