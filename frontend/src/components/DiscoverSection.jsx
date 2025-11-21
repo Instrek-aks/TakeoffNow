@@ -33,7 +33,7 @@ const DiscoverSection = () => {
               we ensure every moment truly counts.
             </p>
             <p className="text-[#11224E] font-semibold italic text-lg mb-8">
-              ✨ Your journey, designed just for you
+              Your journey, designed just for you
             </p>
 
             <div className="space-y-4 mb-8">
@@ -131,22 +131,13 @@ const DiscoverSection = () => {
         <div className="mt-24">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3 flex-wrap">
-              <span className="bg-gradient-to-r from-orange-400 via-orange-400 to-orange-400 bg-clip-text text-transparent">
+              <span className="bg-[#ffde59] bg-clip-text text-transparent">
                 Plan
               </span>
               <span className="text-[#11224E]">|</span>
-              <span className="text-[#11224E]">Book</span>
+              <span className="text-[#2c3892]">Book</span>
               <span className="text-[#11224E]">|</span>
-              <img
-                src="/takeoffnow_linear1.png"
-                alt="TakeoffNow"
-                className="inline-block h-16 md:h-24 w-auto object-contain"
-              />
-              <img
-                src="/aeroplane1.png"
-                alt="Airplane"
-                className="inline-block w-12 h-12 md:w-16 md:h-16 object-contain"
-              />
+              <span className="text-[#0cc0df]">TakeoffNow</span>
             </h2>
             <p className="text-[#11224E]/70 text-lg max-w-2xl mx-auto">
               Four simple steps to your perfect journey

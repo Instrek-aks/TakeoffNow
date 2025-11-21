@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   MapPin,
   CheckCircle,
@@ -561,40 +561,135 @@ const popularPackages = [
 const PopularPackages = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAnimationPaused, setIsAnimationPaused] = useState(false);
   const scrollContainerRef = useRef(null);
+  const innerContainerRef = useRef(null);
+  const animationTimeoutRef = useRef(null);
 
   // Duplicate packages for seamless infinite scroll
   const duplicatedPackages = [...popularPackages, ...popularPackages];
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (animationTimeoutRef.current) {
+        clearTimeout(animationTimeoutRef.current);
+      }
+    };
+  }, []);
 
   const handleCardClick = (pkg) => {
     setSelectedPackage(pkg);
     setIsModalOpen(true);
   };
 
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      const isMobile = window.innerWidth < 768;
-      const cardWidth = isMobile ? 280 : 320; // w-[280px] on mobile, w-[320px] on md+
-      const gap = 16; // gap-4 = 1rem = 16px
-      const scrollAmount = cardWidth + gap;
-      scrollContainerRef.current.scrollBy({
-        left: -scrollAmount,
-        behavior: "smooth",
-      });
+  const pauseAnimation = () => {
+    setIsAnimationPaused(true);
+    // Reset transform immediately to sync scroll position with visual position
+    if (innerContainerRef.current && scrollContainerRef.current) {
+      // Get current transform value
+      const computedStyle = window.getComputedStyle(innerContainerRef.current);
+      const transform = computedStyle.transform;
+      
+      if (transform && transform !== 'none') {
+        try {
+          const matrix = new DOMMatrix(transform);
+          const translateX = matrix.e;
+          
+          // Adjust scroll position to account for the transform offset
+          if (translateX < 0) {
+            const currentScroll = scrollContainerRef.current.scrollLeft;
+            scrollContainerRef.current.scrollLeft = Math.max(0, currentScroll + Math.abs(translateX));
+          }
+        } catch (e) {
+          // Fallback if DOMMatrix is not available
+          console.warn('Could not parse transform:', e);
+        }
+      }
+      
+      // Remove transform
+      innerContainerRef.current.style.transform = 'none';
+      innerContainerRef.current.style.animation = 'none';
     }
+    
+    // Clear any existing timeout
+    if (animationTimeoutRef.current) {
+      clearTimeout(animationTimeoutRef.current);
+    }
+    
+    // Resume animation after 5 seconds
+    animationTimeoutRef.current = setTimeout(() => {
+      setIsAnimationPaused(false);
+      if (innerContainerRef.current) {
+        innerContainerRef.current.style.transform = '';
+        innerContainerRef.current.style.animation = '';
+      }
+    }, 5000);
   };
 
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
+  const scrollLeft = (e) => {
+    e?.preventDefault();
+    e?.stopPropagation();
+    
+    if (!scrollContainerRef.current) return;
+    
+    // Pause animation first
+    pauseAnimation();
+    
+    // Wait a tiny bit for transform to reset
+    setTimeout(() => {
+      if (!scrollContainerRef.current) return;
+      
       const isMobile = window.innerWidth < 768;
-      const cardWidth = isMobile ? 280 : 320; // w-[280px] on mobile, w-[320px] on md+
-      const gap = 16; // gap-4 = 1rem = 16px
+      const cardWidth = isMobile ? 280 : 320;
+      const gap = 16;
       const scrollAmount = cardWidth + gap;
-      scrollContainerRef.current.scrollBy({
-        left: scrollAmount,
+      
+      // Get current scroll position
+      const currentScroll = scrollContainerRef.current.scrollLeft;
+      
+      // Calculate new scroll position
+      const newScroll = Math.max(0, currentScroll - scrollAmount);
+      
+      // Perform the scroll
+      scrollContainerRef.current.scrollTo({
+        left: newScroll,
         behavior: "smooth",
       });
-    }
+    }, 50);
+  };
+
+  const scrollRight = (e) => {
+    e?.preventDefault();
+    e?.stopPropagation();
+    
+    if (!scrollContainerRef.current) return;
+    
+    // Pause animation first
+    pauseAnimation();
+    
+    // Wait a tiny bit for transform to reset
+    setTimeout(() => {
+      if (!scrollContainerRef.current) return;
+      
+      const isMobile = window.innerWidth < 768;
+      const cardWidth = isMobile ? 280 : 320;
+      const gap = 16;
+      const scrollAmount = cardWidth + gap;
+      
+      // Get current scroll position
+      const currentScroll = scrollContainerRef.current.scrollLeft;
+      const maxScroll = scrollContainerRef.current.scrollWidth - scrollContainerRef.current.clientWidth;
+      
+      // Calculate new scroll position
+      const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+      
+      // Perform the scroll
+      scrollContainerRef.current.scrollTo({
+        left: newScroll,
+        behavior: "smooth",
+      });
+    }, 50);
   };
 
   return (
@@ -649,7 +744,8 @@ const PopularPackages = () => {
               ref={scrollContainerRef}
             >
               <div
-                className="flex gap-4 animate-scroll"
+                ref={innerContainerRef}
+                className={`flex gap-4 ${isAnimationPaused ? '' : 'animate-scroll'}`}
                 style={{
                   width: "fit-content",
                 }}
@@ -836,14 +932,17 @@ const PopularPackages = () => {
           }
         }
         .animate-scroll {
-          animation: scroll 40s linear infinite;
+          animation: scroll 80s linear infinite;
         }
         .animate-scroll:hover {
           animation-play-state: paused;
         }
+        .animate-scroll.animation-paused {
+          animation-play-state: paused;
+        }
         @media (max-width: 768px) {
           .animate-scroll {
-            animation: scroll 50s linear infinite;
+            animation: scroll 100s linear infinite;
           }
         }
         .scrollbar-hide {
