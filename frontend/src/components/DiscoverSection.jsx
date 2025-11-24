@@ -14,7 +14,7 @@ const DiscoverSection = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="py-24 bg-[#fff9ee]">
+    <section className="py-12 bg-[#fff9ee]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
