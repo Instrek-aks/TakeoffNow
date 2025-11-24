@@ -17,6 +17,7 @@ import {
   Camera,
   Compass,
 } from "lucide-react";
+import { openWhatsApp } from "../utils/whatsapp";
 
 const About = () => {
   const teamMember = {
@@ -234,10 +235,7 @@ const About = () => {
                     const phoneNumber = "+919549134848";
                     const message =
                       "Hello! I'm ready to start my adventure. Please help me plan my perfect trip.";
-                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                      message
-                    )}`;
-                    window.open(whatsappUrl, "_blank");
+                    openWhatsApp(phoneNumber, message);
                   }}
                 >
                   Get Free Quote

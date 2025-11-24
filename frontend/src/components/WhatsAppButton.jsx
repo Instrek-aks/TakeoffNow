@@ -1,14 +1,12 @@
 import { Button } from "../components/ui/Button";
+import { openWhatsApp } from "../utils/whatsapp";
 
 const WhatsAppButton = () => {
   const phoneNumber = "+919549134848";
   const message = "Hello! I'm interested in your travel services.";
 
   const handleWhatsAppClick = () => {
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
-    )}`;
-    window.open(whatsappUrl, "_blank");
+    openWhatsApp(phoneNumber, message);
   };
 
   return (

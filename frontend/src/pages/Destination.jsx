@@ -13,6 +13,7 @@ import {
   Phone,
 } from "lucide-react";
 import { getDestinationByName } from "../utils/searchData";
+import { openWhatsApp } from "../utils/whatsapp";
 
 const Destination = () => {
   const { name } = useParams();
@@ -31,10 +32,7 @@ const Destination = () => {
   const handleWhatsAppClick = (packageTitle) => {
     const phoneNumber = "919549134848";
     const message = `Hello! I'm interested in ${packageTitle} for ${destination?.name}. Please provide more details and pricing.`;
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
-    )}`;
-    window.open(whatsappUrl, "_blank");
+    openWhatsApp(phoneNumber, message);
   };
 
   const handleCallClick = () => {

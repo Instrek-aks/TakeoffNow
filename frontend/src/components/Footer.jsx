@@ -11,6 +11,7 @@ import {
   Phone,
   Clock,
 } from "lucide-react";
+import { openWhatsApp } from "../utils/whatsapp";
 
 const Footer = () => {
   return (
@@ -74,6 +75,13 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="bg-white/10 hover:bg-green-500 rounded-full p-2 transition-colors"
                 title="WhatsApp"
+                onClick={(e) => {
+                  e.preventDefault();
+                  openWhatsApp(
+                    "919549134848",
+                    "Hello! I'm interested in your travel services."
+                  );
+                }}
               >
                 <svg
                   className="w-5 h-5"

@@ -13,6 +13,7 @@ import {
   DialogDescription,
 } from "../components/ui/Dialogs";
 import { destinations } from "../utils/searchData";
+import { openWhatsApp } from "../utils/whatsapp";
 import {
   MapPin,
   Clock,
@@ -923,10 +924,7 @@ const Packages = () => {
                 const phoneNumber = "919549134848";
                 const message =
                   "Hello! I'm interested in exploring your travel packages.";
-                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                  message
-                )}`;
-                window.open(whatsappUrl, "_blank");
+                openWhatsApp(phoneNumber, message);
               }}
             >
               Explore Packages
@@ -1099,10 +1097,7 @@ const Packages = () => {
                           onClick={() => {
                             const phoneNumber = "919549134848";
                             const message = `Hello! I'm interested in ${pkg.title}. Please provide pricing and more details.`;
-                            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                              message
-                            )}`;
-                            window.open(whatsappUrl, "_blank");
+                            openWhatsApp(phoneNumber, message);
                           }}
                         >
                           Get Quote
@@ -1354,10 +1349,7 @@ const Packages = () => {
                   const phoneNumber = "919549134848";
                   const message =
                     "Hello! I'm interested in your travel packages. Please provide more information.";
-                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                    message
-                  )}`;
-                  window.open(whatsappUrl, "_blank");
+                  openWhatsApp(phoneNumber, message);
                 }}
               >
                 Connect via WhatsApp
@@ -1539,10 +1531,7 @@ const Packages = () => {
                       if (priceFormData.phoneNumber) {
                         const phoneNumber = "919549134848";
                         const message = `Hello! I'm interested in ${selectedPackage?.title}.\n\nDetails:\n- Departure City: ${priceFormData.departureCity}\n- Travel Date: ${priceFormData.travelDate}\n- Hotel Category: ${priceFormData.hotelCategory}\n- Phone: ${priceFormData.phoneNumber}\n\nPlease provide pricing and details.`;
-                        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                          message
-                        )}`;
-                        window.open(whatsappUrl, "_blank");
+                        openWhatsApp(phoneNumber, message);
                         setShowPriceForm(false);
                         setFormStep(1);
                         setPriceFormData({
@@ -1781,10 +1770,7 @@ const Packages = () => {
                       if (exploreFormData.phoneNumber) {
                         const phoneNumber = "919549134848";
                         const message = `Hello! I'm interested in exploring ${exploreFormData.destination}.\n\nDetails:\n- Destination: ${exploreFormData.destination}\n- Departure City: ${exploreFormData.departureCity}\n- Travel Date: ${exploreFormData.travelDate}\n- Hotel Category: ${exploreFormData.hotelCategory}\n- Phone: ${exploreFormData.phoneNumber}\n\nPlease provide pricing and package details.`;
-                        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                          message
-                        )}`;
-                        window.open(whatsappUrl, "_blank");
+                        openWhatsApp(phoneNumber, message);
                         setShowExploreForm(false);
                         setExploreFormStep(1);
                         setExploreFormData({

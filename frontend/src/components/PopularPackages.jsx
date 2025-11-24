@@ -19,6 +19,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "./ui/Dialogs";
+import { openWhatsApp } from "../utils/whatsapp";
 
 const popularPackages = [
   {
@@ -590,39 +591,42 @@ const PopularPackages = () => {
       // Get current transform value
       const computedStyle = window.getComputedStyle(innerContainerRef.current);
       const transform = computedStyle.transform;
-      
-      if (transform && transform !== 'none') {
+
+      if (transform && transform !== "none") {
         try {
           const matrix = new DOMMatrix(transform);
           const translateX = matrix.e;
-          
+
           // Adjust scroll position to account for the transform offset
           if (translateX < 0) {
             const currentScroll = scrollContainerRef.current.scrollLeft;
-            scrollContainerRef.current.scrollLeft = Math.max(0, currentScroll + Math.abs(translateX));
+            scrollContainerRef.current.scrollLeft = Math.max(
+              0,
+              currentScroll + Math.abs(translateX)
+            );
           }
         } catch (e) {
           // Fallback if DOMMatrix is not available
-          console.warn('Could not parse transform:', e);
+          console.warn("Could not parse transform:", e);
         }
       }
-      
+
       // Remove transform
-      innerContainerRef.current.style.transform = 'none';
-      innerContainerRef.current.style.animation = 'none';
+      innerContainerRef.current.style.transform = "none";
+      innerContainerRef.current.style.animation = "none";
     }
-    
+
     // Clear any existing timeout
     if (animationTimeoutRef.current) {
       clearTimeout(animationTimeoutRef.current);
     }
-    
+
     // Resume animation after 5 seconds
     animationTimeoutRef.current = setTimeout(() => {
       setIsAnimationPaused(false);
       if (innerContainerRef.current) {
-        innerContainerRef.current.style.transform = '';
-        innerContainerRef.current.style.animation = '';
+        innerContainerRef.current.style.transform = "";
+        innerContainerRef.current.style.animation = "";
       }
     }, 5000);
   };
@@ -630,27 +634,27 @@ const PopularPackages = () => {
   const scrollLeft = (e) => {
     e?.preventDefault();
     e?.stopPropagation();
-    
+
     if (!scrollContainerRef.current) return;
-    
+
     // Pause animation first
     pauseAnimation();
-    
+
     // Wait a tiny bit for transform to reset
     setTimeout(() => {
       if (!scrollContainerRef.current) return;
-      
+
       const isMobile = window.innerWidth < 768;
       const cardWidth = isMobile ? 280 : 320;
       const gap = 16;
       const scrollAmount = cardWidth + gap;
-      
+
       // Get current scroll position
       const currentScroll = scrollContainerRef.current.scrollLeft;
-      
+
       // Calculate new scroll position
       const newScroll = Math.max(0, currentScroll - scrollAmount);
-      
+
       // Perform the scroll
       scrollContainerRef.current.scrollTo({
         left: newScroll,
@@ -662,28 +666,30 @@ const PopularPackages = () => {
   const scrollRight = (e) => {
     e?.preventDefault();
     e?.stopPropagation();
-    
+
     if (!scrollContainerRef.current) return;
-    
+
     // Pause animation first
     pauseAnimation();
-    
+
     // Wait a tiny bit for transform to reset
     setTimeout(() => {
       if (!scrollContainerRef.current) return;
-      
+
       const isMobile = window.innerWidth < 768;
       const cardWidth = isMobile ? 280 : 320;
       const gap = 16;
       const scrollAmount = cardWidth + gap;
-      
+
       // Get current scroll position
       const currentScroll = scrollContainerRef.current.scrollLeft;
-      const maxScroll = scrollContainerRef.current.scrollWidth - scrollContainerRef.current.clientWidth;
-      
+      const maxScroll =
+        scrollContainerRef.current.scrollWidth -
+        scrollContainerRef.current.clientWidth;
+
       // Calculate new scroll position
       const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
-      
+
       // Perform the scroll
       scrollContainerRef.current.scrollTo({
         left: newScroll,
@@ -745,7 +751,9 @@ const PopularPackages = () => {
             >
               <div
                 ref={innerContainerRef}
-                className={`flex gap-4 ${isAnimationPaused ? '' : 'animate-scroll'}`}
+                className={`flex gap-4 ${
+                  isAnimationPaused ? "" : "animate-scroll"
+                }`}
                 style={{
                   width: "fit-content",
                 }}
@@ -906,10 +914,7 @@ const PopularPackages = () => {
                   onClick={() => {
                     const phoneNumber = "919549134848";
                     const message = `Hello! I'm interested in ${selectedPackage.title}. Please provide pricing and more details.`;
-                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                      message
-                    )}`;
-                    window.open(whatsappUrl, "_blank");
+                    openWhatsApp(phoneNumber, message);
                   }}
                 >
                   Get Custom Quote

@@ -19,6 +19,7 @@ import {
   Zap,
   Award,
 } from "lucide-react";
+import { openWhatsApp } from "../utils/whatsapp";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -127,10 +128,7 @@ const Contact = () => {
                 const phoneNumber = "919549134848";
                 const message =
                   "Hello! I'm interested in your travel services.";
-                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                  message
-                )}`;
-                window.open(whatsappUrl, "_blank");
+                openWhatsApp(phoneNumber, message);
               }}
             >
               <MessageCircle className="w-5 h-5 mr-2" />
@@ -460,10 +458,7 @@ const Contact = () => {
                   const phoneNumber = "919549134848";
                   const message =
                     "Hello! I'm interested in your travel services.";
-                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                    message
-                  )}`;
-                  window.open(whatsappUrl, "_blank");
+                  openWhatsApp(phoneNumber, message);
                 }}
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
