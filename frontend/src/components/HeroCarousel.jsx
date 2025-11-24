@@ -17,7 +17,7 @@ const slides = [
   {
     title: "Let's Take Off to Your Dream Destination",
     subtitle: "We turn your travel goals into seamless experiences.",
-    image: "/banner3.webp",
+    image: "/banner2.webp",
   },
 ];
 
