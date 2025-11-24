@@ -10,7 +10,7 @@ const testimonials = [
     avatar:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
     rating: 5,
-    text: "TakeoffNow made our Bali honeymoon absolutely magical! Every detail was perfectly planned, from the romantic dinners to the private island tours. Highly recommend their personalized service!",
+    text: "TakeoffNow made our Bali honeymoon feel truly magical. Every little detail was beautifully planned from the romantic dinners to the peaceful private island tours. We felt so cared for throughout the trip. I'd definitely recommend their personalized service to anyone looking for a special getaway!",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const testimonials = [
     avatar:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
     rating: 5,
-    text: "The Dubai package exceeded all expectations! The team was responsive, professional, and created an itinerary that perfectly matched our interests. Will definitely book with them again!",
+    text: "The Dubai package completely exceeded my expectations. The team was extremely responsive and professional, and they put together an itinerary that fit my interests perfectly. I'm genuinely impressed with their service and will definitely book with them again!",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const testimonials = [
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
     rating: 5,
-    text: "Our Singapore & Malaysia trip was seamless! The kids loved Universal Studios, and we appreciated the well-organized transfers and excellent hotel choices. TakeoffNow knows how to create memorable family vacations!",
+    text: "Our Singapore & Malaysia trip was completely hassle-free! The kids had the best time at Universal Studios, and we really appreciated how smooth the transfers and hotel arrangements were. TakeoffNow truly knows how to create memorable and stress-free family vacations.",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const testimonials = [
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
     rating: 5,
-    text: "Vietnam Discovery was an incredible experience! The Cu Chi Tunnels, Halong Bay cruise, and Ba Na Hills were highlights. The tour guides were knowledgeable and friendly. Exceptional service throughout!",
+    text: "Vietnam Discovery was honestly one of the best travel experiences I've had. Exploring the Cu Chi Tunnels, cruising through the breathtaking Halong Bay, and spending time at Ba Na Hills were absolute highlights. The tour guides were not only knowledgeable but genuinely friendly, which made the whole journey even better. Everything was smooth, well-organized, and handled with great care. Truly exceptional service from start to finish!",
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ const testimonials = [
     avatar:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop",
     rating: 5,
-    text: "As a solo traveler, I was nervous, but TakeoffNow made me feel safe and supported throughout my Thailand journey. The 24/7 WhatsApp support was a lifesaver! Highly professional team!",
+    text: "As a solo traveler, I was a bit nervous at first, but TakeoffNow made me feel safe and supported the entire time during my Thailand trip. Their 24/7 WhatsApp support was a real lifesaver. Truly impressed by their professionalism and care!",
   },
   {
     id: 6,
@@ -55,7 +55,7 @@ const testimonials = [
     avatar:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
     rating: 5,
-    text: "Our Europe trip was a dream come true! From the Swiss Alps to Paris, every moment was perfectly curated. The hotel selections were excellent, and the tour manager was incredibly helpful. Worth every penny!",
+    text: "Our Europe trip honestly felt like a dream. From standing amidst the stunning Swiss Alps to soaking in the charm of Paris, every moment was beautifully planned. The hotels were amazing, and our tour manager went out of the way to help us throughout the journey. It was truly worth every penny!",
   },
   {
     id: 7,
@@ -64,7 +64,7 @@ const testimonials = [
     avatar:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop",
     rating: 5,
-    text: "Organized a group trip to Australia with TakeoffNow, and it was flawless! The Great Ocean Road tour and Sydney Opera House visit were unforgettable. Their attention to detail and customer service is outstanding!",
+    text: "We planned a group trip to Australia with TakeoffNow, and everything was absolutely seamless. The Great Ocean Road drive and our visit to the Sydney Opera House were truly unforgettable moments. What impressed us most was their attention to every little detail and the way they handled our group with such genuine care. Exceptional service all the way!",
   },
 ];
 

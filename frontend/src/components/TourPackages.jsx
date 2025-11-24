@@ -28,7 +28,7 @@ const packages = [
     title: "Dazzling Dubai & Abu Dhabi",
     location: "UAE, Emirates",
     duration: "6 Days",
-    image: "/thieland.webp",
+    image: "/Dazzling.webp",
     originalPrice: 299,
     price: 299,
     reviews: 5,
@@ -39,7 +39,7 @@ const packages = [
     title: "Sensational Singapore Discovery",
     location: "Singapore City",
     duration: "5 Days",
-    image: "/singapore.webp",
+    image: "/Sensational.webp",
     originalPrice: 349,
     price: 349,
     reviews: 5,
@@ -50,7 +50,7 @@ const packages = [
     title: "Thrilling Thailand Getaway",
     location: "Pattaya & Bangkok, Thailand",
     duration: "5 Days",
-    image: "/vietnam.webp",
+    image: "/Thrilling.webp",
     originalPrice: 280,
     price: 280,
     reviews: 4,
@@ -72,7 +72,7 @@ const packages = [
     title: "Vibrant Vietnam Experience",
     location: "Hanoi, Danang & Phu Quoc",
     duration: "7 Days",
-    image: "/dubai.webp",
+    image: "/Vibrant.webp",
     originalPrice: 290,
     price: 290,
     reviews: 5,
@@ -171,7 +171,7 @@ const TravelStories = () => {
             return (
               <div
                 key={pkg.id}
-                className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-amber-200 flex flex-col h-full"
+                className="bg-[#0cc0df] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-amber-200 flex flex-col h-full"
               >
                 {/* Image */}
                 <div className="relative overflow-hidden shrink-0">
@@ -191,7 +191,7 @@ const TravelStories = () => {
                     {pkg.title}
                   </h3>
 
-                  <div className="flex items-center text-gray-500 text-xs mb-2 shrink-0">
+                  <div className="flex items-center text-white text-xs mb-2 shrink-0">
                     <MapPin className="w-3 h-3 mr-1 shrink-0" />
                     <span className="truncate">{pkg.location}</span>
                   </div>

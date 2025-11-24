@@ -144,7 +144,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-20 h-12 flex items-center justify-center">
+            <div className="w-20 h-12 flex items-center justify-center bg-white rounded-xl shadow-md p-1">
               <img
                 src="/logoB.webp"
                 alt="TakeoffNow Logo"

@@ -63,7 +63,7 @@ const Packages = () => {
       price: 0,
       originalPrice: 0,
       discount: null,
-      image: "/Dubai.webp",
+      image: "/DUBAI 4 NIGHTS.jpg",
       description:
         "Experience the best of Dubai with iconic landmarks, desert adventures, and cultural attractions",
       features: [
@@ -140,7 +140,7 @@ const Packages = () => {
       price: 0,
       originalPrice: 0,
       discount: null,
-      image: "Singapore & Malaysia.png",
+      image: "/Singapore & Malaysia.png",
       description:
         "Return Economy Class Airfare with comprehensive tours of Singapore and Malaysia's best attractions",
       features: [
@@ -172,8 +172,7 @@ const Packages = () => {
       price: 125000,
       originalPrice: 145000,
       discount: "14%",
-      image:
-        "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&h=600&fit=crop",
+      image: "/Maldives Honeymoon.jpg",
       description:
         "Romantic beachfront experience with water activities, island hopping, and luxury resort stays",
       features: [
@@ -196,8 +195,7 @@ const Packages = () => {
       price: 80000,
       originalPrice: 95000,
       discount: "16%",
-      image:
-        "https://images.unsplash.com/photo-1505159940484-eb2b9f3c9b89?w=800&h=600&fit=crop",
+      image: "/Greece Getaway.jpg",
       description:
         "Explore Athens, Santorini, and Mykonos with ancient history, stunning sunsets, and island charm",
       features: [
@@ -220,8 +218,7 @@ const Packages = () => {
       price: 130000,
       originalPrice: 150000,
       discount: "13%",
-      image:
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+      image: "/Enchanting Edinburgh.jpg",
       description:
         "Discover Scotland's capital with historic castles, highlands excursions, and rich culture",
       features: [
@@ -243,8 +240,7 @@ const Packages = () => {
       price: 62000,
       originalPrice: 75000,
       discount: "17%",
-      image:
-        "https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?w=800&h=600&fit=crop",
+      image: "/Mystical Egypt.jpg",
       description:
         "Journey through ancient wonders with Pyramids, Nile cruise, and historic temples",
       features: [
@@ -291,8 +287,7 @@ const Packages = () => {
       price: 18923,
       originalPrice: 25000,
       discount: "24%",
-      image:
-        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      image: "/Gateway to the Northeast – Guwahati.jpg",
       description:
         "Explore the misty hills of Northeast India with Shillong, Cherrapunji, and Brahmaputra experiences",
       features: [
@@ -314,8 +309,7 @@ const Packages = () => {
       price: 45000,
       originalPrice: 55000,
       discount: "18%",
-      image:
-        "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=800&h=600&fit=crop",
+      image: "/Kashmir Paradise.jpg",
       description:
         "Experience the beauty of Kashmir with houseboats, snow activities, and scenic valleys",
       features: [
@@ -338,8 +332,7 @@ const Packages = () => {
       price: 51000,
       originalPrice: 62000,
       discount: "18%",
-      image:
-        "https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?w=800&h=600&fit=crop",
+      image: "/Serene Sri Lanka.jpg",
       description:
         "Discover the pearl of the Indian Ocean with tea plantations, beaches, and cultural heritage",
       features: [
@@ -364,7 +357,7 @@ const Packages = () => {
       price: 145000,
       originalPrice: 165000,
       discount: "12%",
-      image: "/bali.webp",
+      image: "/bali1.webp",
       description:
         "Water sports, Nusa Penida West, temple sunsets, jungle swing, Phinisi dinner cruise and more.",
       itinerary: [
@@ -426,7 +419,7 @@ const Packages = () => {
       price: 125000,
       originalPrice: 145000,
       discount: "14%",
-      image: "/Dubai.png",
+      image: "/DUBAI 4 NIGHTS.jpg",
       description:
         "Marina Dhow Cruise, Dubai City Tour, Burj Khalifa, Dubai Frame, Desert Safari, Global Village, and Miracle Garden.",
       itinerary: [
@@ -474,7 +467,7 @@ const Packages = () => {
       price: 175000,
       originalPrice: 199000,
       discount: "12%",
-      image: "/dubai.webp",
+      image: "/Dubai + Abu Dhabi Highlights.jpg",
       description:
         "Desert Safari, Burj Khalifa, Sky Views, Dubai Frame, Miracle Garden, Global Village, Abu Dhabi city tour.",
       itinerary: [
@@ -516,7 +509,7 @@ const Packages = () => {
       price: 160000,
       originalPrice: 185000,
       discount: "14%",
-      image: "/singapore.webp",
+      image: "/Singapore Essentials – Attractions Combo.jpg",
       description:
         "Night Safari, Bird Paradise, S.E.A. Aquarium, Wings of Time, Universal Studios, Sands SkyPark & Gardens by the Bay.",
       itinerary: [
@@ -563,7 +556,7 @@ const Packages = () => {
       price: 95000,
       originalPrice: 115000,
       discount: "17%",
-      image: "/Singapore & Malaysia.png",
+      image: "/Singapore & Malaysia – 6 Nights 7 Days.jpg",
       description:
         "Return economy class airfare, 06 nights' accommodation, daily breakfast, city tours, Gardens by the Bay, Universal Studios, Sentosa Island, Kuala Lumpur, Genting Highlands, and more.",
       itinerary: [
@@ -625,7 +618,7 @@ const Packages = () => {
       price: 51000,
       originalPrice: 60000,
       discount: "15%",
-      image: "/thieland.webp",
+      image: "/Thailand – Bangkok & Pattaya.jpg",
       description:
         "Relax in 4-star hotels in Pattaya & Bangkok with daily breakfast. Coral Island tour, Nong Nooch Village, Alcazar Show, Chao Phraya Dinner Cruise, and Safari World & Marine Park.",
       itinerary: [
@@ -766,7 +759,7 @@ const Packages = () => {
       price: 215000,
       originalPrice: 249000,
       discount: "14%",
-      image: "/veietnam2.webp",
+      image: "/Vietnam – Multi-City Discovery.jpg",
       description:
         "HCMC + Cu Chi, Phu Quoc highlights, Danang & Hoi An, Ba Na Hills, Hanoi city & Halong Bay day cruise.",
       itinerary: [
@@ -832,7 +825,7 @@ const Packages = () => {
       price: 45000,
       originalPrice: 55000,
       discount: "18%",
-      image: "/vietnam.webp",
+      image: "/Vietnam – 6 Nights 7 Days Discovery.jpg",
       description:
         "Explore Ho Chi Minh City, Cu Chi Tunnels, Mekong Delta, Da Nang, Ba Na Hills, Hoi An Ancient Town, Hanoi, and Halong Bay.",
       itinerary: [

@@ -96,8 +96,14 @@ const DiscoverSection = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <img
-                  src="/slider1.webp"
+                  src="/slider7.webp"
                   alt="Beach boats"
+                  className="w-full h-80 object-cover rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2 border-[#11224E]/20"
+                  loading="lazy"
+                />
+                <img
+                  src="/slider8.webp"
+                  alt="Travel destination"
                   className="w-full h-80 object-cover rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2 border-[#11224E]/20"
                   loading="lazy"
                 />
