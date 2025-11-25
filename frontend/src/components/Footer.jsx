@@ -14,13 +14,13 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#000000] text-white">
+    <footer className="bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 text-gray-900">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand Column */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-16 h-10 flex items-center justify-center bg-white rounded-lg p-1 shadow-lg">
+              <div className="w-28 h-16 flex items-center justify-center ">
                 <img
                   src="/logoB.webp"
                   alt="TakeoffNow Logo"
@@ -28,19 +28,19 @@ const Footer = () => {
                   loading="lazy"
                 />
               </div>
-              <div>
+              {/* <div>
                 <div className="text-xl font-bold">TakeoffNow</div>
                 <div className="text-xs text-blue-600/70 -mt-1">
                   A Travel Agency
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="flex space-x-2">
               <Input
                 type="email"
                 placeholder="Enter your mail"
-                className="bg-white/10 border-0 text-white placeholder:text-white/50"
+                className="bg-white border border-gray-200 text-gray-800 placeholder:text-gray-500"
               />
               <Button size="icon" className="bg-blue-600 hover:bg-blue-600/90">
                 <ArrowRight className="w-5 h-5" />
@@ -49,14 +49,14 @@ const Footer = () => {
             <div className="flex space-x-3 mt-6">
               <a
                 href="#"
-                className="bg-white/10 hover:bg-primary rounded-full p-2 transition-colors"
+                className="bg-white/80 hover:bg-white rounded-full p-2 transition-colors text-emerald-600 shadow"
                 title="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="bg-white/10 hover:bg-primary rounded-full p-2 transition-colors"
+                className="bg-white/80 hover:bg-white rounded-full p-2 transition-colors text-blue-600 shadow"
                 title="Facebook"
               >
                 <Facebook className="w-5 h-5" />
@@ -65,7 +65,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/akshat-goel-2b650b2aa?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/10 hover:bg-primary rounded-full p-2 transition-colors"
+                className="bg-white/80 hover:bg-white rounded-full p-2 transition-colors text-sky-700 shadow"
                 title="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
@@ -74,7 +74,7 @@ const Footer = () => {
                 href="https://wa.me/919549134848?text=Hello!%20I'm%20interested%20in%20your%20travel%20services."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/10 hover:bg-green-500 rounded-full p-2 transition-colors"
+                className="bg-white/80 hover:bg-white rounded-full p-2 transition-colors text-green-600 shadow"
                 title="WhatsApp"
               >
                 <svg
@@ -102,7 +102,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-white/70 hover:text-primary transition-colors"
+                    className="text-gray-600 hover:text-primary transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -117,7 +117,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary mt-1 shrink-0" />
-                <div className="text-white/70 text-sm">
+                <div className="text-gray-600 text-sm">
                   Shop No. 06, Dev Plaza, Bhiwadi - Alwar Bypass Road,
                   <br />
                   301019
@@ -125,14 +125,15 @@ const Footer = () => {
               </div>
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-primary mt-1 shrink-0" />
-                <div className="text-white/70 text-sm">+91 9549134848</div>
+                <div className="text-gray-600 text-sm">+91 9549134848</div>
               </div>
               <div className="flex items-start space-x-3">
                 <Clock className="w-5 h-5 text-primary mt-1 shrink-0" />
-                <div className="text-white/70 text-sm">
+                <div className="text-gray-600 text-sm">
                   Mon – Sat: 10:00 AM – 7:00 PM
                   <br />
-                  Sunday: <span className="font-bold text-white">CLOSED</span>
+                  Sunday:{" "}
+                  <span className="font-bold text-gray-900">CLOSED</span>
                 </div>
               </div>
             </div>
@@ -146,7 +147,7 @@ const Footer = () => {
                 <li key={link}>
                   <a
                     href="#"
-                    className="text-white/70 hover:text-primary transition-colors"
+                    className="text-gray-600 hover:text-primary transition-colors"
                   >
                     {link}
                   </a>
@@ -156,8 +157,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8">
-          <p className="text-center text-white/70 text-sm">
+        <div className="border-t border-gray-200 pt-8">
+          <p className="text-center text-gray-600 text-sm">
             Copyright ©TakeoffNow | All Right Reserved
           </p>
         </div>
