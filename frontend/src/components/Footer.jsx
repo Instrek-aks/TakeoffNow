@@ -4,8 +4,8 @@ import { Input } from "../components/ui/Input";
 import {
   ArrowRight,
   Facebook,
-  Twitter,
   Instagram,
+  Linkedin,
   Youtube,
   MapPin,
   Phone,
@@ -62,11 +62,13 @@ const Footer = () => {
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/akshat-goel-2b650b2aa?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white/10 hover:bg-primary rounded-full p-2 transition-colors"
-                title="Twitter"
+                title="LinkedIn"
               >
-                <Twitter className="w-5 h-5" />
+                <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href="https://wa.me/919549134848?text=Hello!%20I'm%20interested%20in%20your%20travel%20services."

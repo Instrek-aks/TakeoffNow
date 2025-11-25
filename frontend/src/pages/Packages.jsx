@@ -717,7 +717,7 @@ const Packages = () => {
       price: 125000,
       originalPrice: 145000,
       discount: "14%",
-      image: "/vietnam.webp",
+      image: "/Vietnam - 6 Nights 7 Days Discovery.jpg",
       description:
         "Grandworld, VinWonders + VinSafari, 4-Island Hopping with lunch + cable car + Aquatopia.",
       itinerary: [
