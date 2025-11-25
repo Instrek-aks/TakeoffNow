@@ -24,7 +24,7 @@ const Footer = () => {
                 <img
                   src="/logoB.webp"
                   alt="TakeoffNow Logo"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain bg-white"
                   loading="lazy"
                 />
               </div>
