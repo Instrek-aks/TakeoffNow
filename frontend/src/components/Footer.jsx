@@ -20,11 +20,11 @@ const Footer = () => {
           {/* Brand Column */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-16 h-10 flex items-center justify-center">
+              <div className="w-16 h-10 flex items-center justify-center bg-white rounded-lg p-1 shadow-lg">
                 <img
                   src="/logoB.webp"
                   alt="TakeoffNow Logo"
-                  className="w-full h-full object-contain bg-white"
+                  className="w-full h-full object-contain"
                   loading="lazy"
                 />
               </div>
