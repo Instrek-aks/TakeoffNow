@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "../components/ui/Button";
 import { ArrowRight, Globe, CheckCircle, PlaneTakeoff } from "lucide-react";
-import { openWhatsApp } from "../utils/whatsapp";
 
 const DiscoverSection = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -81,7 +80,10 @@ const DiscoverSection = () => {
                 const phoneNumber = "+919549134848";
                 const message =
                   "Hello! I'm ready to book my trip. Please help me plan my perfect journey.";
-                openWhatsApp(phoneNumber, message);
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                  message
+                )}`;
+                window.open(whatsappUrl, "_blank");
               }}
             >
               BOOK YOUR TRIP

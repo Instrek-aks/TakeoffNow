@@ -13,7 +13,6 @@ import {
   DialogDescription,
 } from "../components/ui/Dialogs";
 import { destinations } from "../utils/searchData";
-import { openWhatsApp } from "../utils/whatsapp";
 import {
   MapPin,
   Clock,
@@ -358,7 +357,7 @@ const Packages = () => {
       price: 145000,
       originalPrice: 165000,
       discount: "12%",
-      image: "/bali1.webp",
+      image: "/bali.webp",
       description:
         "Water sports, Nusa Penida West, temple sunsets, jungle swing, Phinisi dinner cruise and more.",
       itinerary: [
@@ -420,7 +419,7 @@ const Packages = () => {
       price: 125000,
       originalPrice: 145000,
       discount: "14%",
-      image: "/DUBAI 4 NIGHTS.jpg",
+      image: "/Dubai.png",
       description:
         "Marina Dhow Cruise, Dubai City Tour, Burj Khalifa, Dubai Frame, Desert Safari, Global Village, and Miracle Garden.",
       itinerary: [
@@ -468,7 +467,7 @@ const Packages = () => {
       price: 175000,
       originalPrice: 199000,
       discount: "12%",
-      image: "/Dubai + Abu Dhabi Highlights.jpg",
+      image: "/dubai.webp",
       description:
         "Desert Safari, Burj Khalifa, Sky Views, Dubai Frame, Miracle Garden, Global Village, Abu Dhabi city tour.",
       itinerary: [
@@ -510,7 +509,7 @@ const Packages = () => {
       price: 160000,
       originalPrice: 185000,
       discount: "14%",
-      image: "/Singapore Essentials – Attractions Combo.jpg",
+      image: "/singapore.webp",
       description:
         "Night Safari, Bird Paradise, S.E.A. Aquarium, Wings of Time, Universal Studios, Sands SkyPark & Gardens by the Bay.",
       itinerary: [
@@ -557,7 +556,7 @@ const Packages = () => {
       price: 95000,
       originalPrice: 115000,
       discount: "17%",
-      image: "/Singapore & Malaysia – 6 Nights 7 Days.jpg",
+      image: "/Singapore & Malaysia.png",
       description:
         "Return economy class airfare, 06 nights' accommodation, daily breakfast, city tours, Gardens by the Bay, Universal Studios, Sentosa Island, Kuala Lumpur, Genting Highlands, and more.",
       itinerary: [
@@ -619,7 +618,7 @@ const Packages = () => {
       price: 51000,
       originalPrice: 60000,
       discount: "15%",
-      image: "/Thailand – Bangkok & Pattaya.jpg",
+      image: "/thieland.webp",
       description:
         "Relax in 4-star hotels in Pattaya & Bangkok with daily breakfast. Coral Island tour, Nong Nooch Village, Alcazar Show, Chao Phraya Dinner Cruise, and Safari World & Marine Park.",
       itinerary: [
@@ -760,7 +759,7 @@ const Packages = () => {
       price: 215000,
       originalPrice: 249000,
       discount: "14%",
-      image: "/Vietnam – Multi-City Discovery.jpg",
+      image: "/veietnam2.webp",
       description:
         "HCMC + Cu Chi, Phu Quoc highlights, Danang & Hoi An, Ba Na Hills, Hanoi city & Halong Bay day cruise.",
       itinerary: [
@@ -826,7 +825,7 @@ const Packages = () => {
       price: 45000,
       originalPrice: 55000,
       discount: "18%",
-      image: "/Vietnam – 6 Nights 7 Days Discovery.jpg",
+      image: "/vietnam.webp",
       description:
         "Explore Ho Chi Minh City, Cu Chi Tunnels, Mekong Delta, Da Nang, Ba Na Hills, Hoi An Ancient Town, Hanoi, and Halong Bay.",
       itinerary: [
@@ -924,7 +923,10 @@ const Packages = () => {
                 const phoneNumber = "919549134848";
                 const message =
                   "Hello! I'm interested in exploring your travel packages.";
-                openWhatsApp(phoneNumber, message);
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                  message
+                )}`;
+                window.open(whatsappUrl, "_blank");
               }}
             >
               Explore Packages
@@ -1097,7 +1099,10 @@ const Packages = () => {
                           onClick={() => {
                             const phoneNumber = "919549134848";
                             const message = `Hello! I'm interested in ${pkg.title}. Please provide pricing and more details.`;
-                            openWhatsApp(phoneNumber, message);
+                            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                              message
+                            )}`;
+                            window.open(whatsappUrl, "_blank");
                           }}
                         >
                           Get Quote
@@ -1349,7 +1354,10 @@ const Packages = () => {
                   const phoneNumber = "919549134848";
                   const message =
                     "Hello! I'm interested in your travel packages. Please provide more information.";
-                  openWhatsApp(phoneNumber, message);
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                    message
+                  )}`;
+                  window.open(whatsappUrl, "_blank");
                 }}
               >
                 Connect via WhatsApp
@@ -1531,7 +1539,10 @@ const Packages = () => {
                       if (priceFormData.phoneNumber) {
                         const phoneNumber = "919549134848";
                         const message = `Hello! I'm interested in ${selectedPackage?.title}.\n\nDetails:\n- Departure City: ${priceFormData.departureCity}\n- Travel Date: ${priceFormData.travelDate}\n- Hotel Category: ${priceFormData.hotelCategory}\n- Phone: ${priceFormData.phoneNumber}\n\nPlease provide pricing and details.`;
-                        openWhatsApp(phoneNumber, message);
+                        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                          message
+                        )}`;
+                        window.open(whatsappUrl, "_blank");
                         setShowPriceForm(false);
                         setFormStep(1);
                         setPriceFormData({
@@ -1770,7 +1781,10 @@ const Packages = () => {
                       if (exploreFormData.phoneNumber) {
                         const phoneNumber = "919549134848";
                         const message = `Hello! I'm interested in exploring ${exploreFormData.destination}.\n\nDetails:\n- Destination: ${exploreFormData.destination}\n- Departure City: ${exploreFormData.departureCity}\n- Travel Date: ${exploreFormData.travelDate}\n- Hotel Category: ${exploreFormData.hotelCategory}\n- Phone: ${exploreFormData.phoneNumber}\n\nPlease provide pricing and package details.`;
-                        openWhatsApp(phoneNumber, message);
+                        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                          message
+                        )}`;
+                        window.open(whatsappUrl, "_blank");
                         setShowExploreForm(false);
                         setExploreFormStep(1);
                         setExploreFormData({

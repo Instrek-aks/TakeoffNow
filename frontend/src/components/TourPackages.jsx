@@ -10,7 +10,6 @@ import {
   DialogTitle,
   DialogDescription,
 } from "../components/ui/Dialogs";
-import { openWhatsApp } from "../utils/whatsapp";
 
 const packages = [
   {
@@ -405,7 +404,10 @@ const TravelStories = () => {
                       if (priceFormData.phoneNumber) {
                         const phoneNumber = "919549134848";
                         const message = `Hello! I'm interested in ${selectedPackage?.title}.\n\nDetails:\n- Departure City: ${priceFormData.departureCity}\n- Travel Date: ${priceFormData.travelDate}\n- Hotel Category: ${priceFormData.hotelCategory}\n- Phone: ${priceFormData.phoneNumber}\n\nPlease provide pricing and details.`;
-                        openWhatsApp(phoneNumber, message);
+                        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                          message
+                        )}`;
+                        window.open(whatsappUrl, "_blank");
                         setShowPriceForm(false);
                         setFormStep(1);
                         setPriceFormData({

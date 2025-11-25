@@ -144,7 +144,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-22 h-12 flex items-center justify-center bg-white shadow-md p-1">
+            <div className="w-20 h-12 flex items-center justify-center">
               <img
                 src="/logoB.webp"
                 alt="TakeoffNow Logo"
@@ -261,7 +261,9 @@ const Navbar = () => {
             <div className="hidden lg:block">
               <div className="relative" ref={searchRef}>
                 <form onSubmit={handleSearchSubmit}>
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <Search
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"
+                  />
                   <Input
                     type="search"
                     placeholder="Search Countries, Cities..."
@@ -365,7 +367,9 @@ const Navbar = () => {
                   variant="ghost"
                   size="icon"
                   className={`lg:hidden ${
-                    isHomePage && !isScrolled ? "text-white" : "text-gray-900"
+                    isHomePage && !isScrolled
+                      ? "text-white"
+                      : "text-gray-900"
                   }`}
                 >
                   <Menu className="w-6 h-6" />

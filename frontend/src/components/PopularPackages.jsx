@@ -19,14 +19,14 @@ import {
   DialogTitle,
   DialogDescription,
 } from "./ui/Dialogs";
-import { openWhatsApp } from "../utils/whatsapp";
 
 const popularPackages = [
   {
     id: 1,
     title: "Majestic AUSTRALIA ROAD TRIP",
     locations: "Melbourne 3N, Canberra 2N, Sydney 2N",
-    image: "/slider1.webp",
+    image:
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
     gradient: "from-blue-500 to-cyan-500",
     highlights: [
       "Accommodation at 3N Melbourne, 2N Canberra, 2N Sydney",
@@ -46,7 +46,8 @@ const popularPackages = [
     id: 2,
     title: "SWISS PARIS AT A GLANCE",
     locations: "Zurich 3N, Paris 3N",
-    image: "/slider2.webp",
+    image:
+      "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&h=600&fit=crop",
     gradient: "from-purple-500 to-pink-500",
     highlights: [
       "Stay in good 4-star hotels in Europe",
@@ -64,7 +65,8 @@ const popularPackages = [
     id: 3,
     title: "Magnificent NEW ZEALAND",
     locations: "2N Auckland, 2N Rotorua, 3N Queenstown and 2N Christchurch",
-    image: "/slider7.webp",
+    image:
+      "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800&h=600&fit=crop",
     gradient: "from-emerald-500 to-teal-500",
     departureCities: ["Delhi", "Mumbai", "Bangalore"],
     withFlights: true,
@@ -87,7 +89,8 @@ const popularPackages = [
     id: 4,
     title: "Glimpses of EUROPE",
     locations: "Paris 3N, Amsterdam 1N, Frankfurt 1N, Zurich 3N",
-    image: "/slider8.webp",
+    image:
+      "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop",
     gradient: "from-amber-500 to-orange-500",
     departureCities: ["Delhi", "Mumbai", "Bangalore", "Hyderabad", "Ahmedabad"],
     withFlights: true,
@@ -113,7 +116,8 @@ const popularPackages = [
     id: 5,
     title: "DUBAI 4 NIGHTS",
     locations: "Dubai",
-    image: "/DUBAI 4 NIGHTS.jpg",
+    image:
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop",
     gradient: "from-amber-500 to-orange-500",
     highlights: [
       "Evening Marina Dhow Cruise with buffet dinner & live entertainment",
@@ -131,7 +135,8 @@ const popularPackages = [
     id: 6,
     title: "VIETNAM DISCOVERY",
     locations: "Ho Chi Minh City, Da Nang, Hanoi",
-    image: "/Vietnam – 6 Nights 7 Days Discovery.jpg",
+    image:
+      "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&h=600&fit=crop",
     gradient: "from-emerald-500 to-teal-500",
     highlights: [
       "Ho Chi Minh City Tour & Cu Chi Tunnels Tour (Shared Basis)",
@@ -149,7 +154,8 @@ const popularPackages = [
     id: 7,
     title: "THAILAND GETAWAY",
     locations: "Pattaya & Bangkok",
-    image: "/Thailand – Bangkok & Pattaya.jpg",
+    image:
+      "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
     gradient: "from-pink-500 to-rose-500",
     withFlights: true,
     highlights: [
@@ -166,7 +172,8 @@ const popularPackages = [
     id: 8,
     title: "SINGAPORE & MALAYSIA",
     locations: "Singapore & Kuala Lumpur",
-    image: "/Singapore & Malaysia – 6 Nights 7 Days.jpg",
+    image:
+      "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&h=600&fit=crop",
     gradient: "from-blue-500 to-indigo-500",
     withFlights: true,
     highlights: [
@@ -190,7 +197,7 @@ const popularPackages = [
     id: 9,
     title: "Bali Romance Getaway",
     locations: "Bali",
-    image: "/bali1.webp",
+    image: "/bali.webp",
     gradient: "from-rose-500 to-pink-500",
     highlights: [
       "Water sports - Banana Boat, Fly Fish, and Jet Ski",
@@ -214,7 +221,7 @@ const popularPackages = [
     id: 10,
     title: "Dubai 4 Nights – Ultimate Experience",
     locations: "Dubai",
-    image: "/Dazzling.webp",
+    image: "/dubai.webp",
     gradient: "from-amber-500 to-orange-500",
     highlights: [
       "Marina Dhow Cruise with buffet dinner and live entertainment",
@@ -236,7 +243,7 @@ const popularPackages = [
     id: 11,
     title: "Dubai + Abu Dhabi Highlights",
     locations: "Dubai & Abu Dhabi",
-    image: "/Dubai + Abu Dhabi Highlights.jpg",
+    image: "/dubai.webp",
     gradient: "from-amber-500 to-yellow-500",
     highlights: [
       "Desert Safari adventure with BBQ dinner and traditional entertainment",
@@ -427,7 +434,8 @@ const popularPackages = [
     id: 19,
     title: "Maldives Honeymoon",
     locations: "Malé",
-    image: "/Maldives Honeymoon.jpg",
+    image:
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&h=600&fit=crop",
     gradient: "from-cyan-500 to-blue-500",
     highlights: [
       "Arrival at Malé • Transfer by speedboat/seaplane • Check-in • Romantic beachfront dinner",
@@ -442,7 +450,8 @@ const popularPackages = [
     id: 20,
     title: "Greece Getaway",
     locations: "Athens, Santorini, Mykonos",
-    image: "/Greece Getaway.jpg",
+    image:
+      "https://images.unsplash.com/photo-1505159940484-eb2b9f3c9b89?w=800&h=600&fit=crop",
     gradient: "from-blue-500 to-indigo-500",
     highlights: [
       "Athens Arrival • Check-in • Evening at leisure in Plaka • Dinner with Acropolis view",
@@ -457,7 +466,8 @@ const popularPackages = [
     id: 21,
     title: "Enchanting Edinburgh",
     locations: "Edinburgh, Scottish Highlands",
-    image: "/Enchanting Edinburgh.jpg",
+    image:
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
     gradient: "from-slate-500 to-gray-500",
     highlights: [
       "Arrival in Edinburgh • Transfer to hotel • Evening stroll along Princes Street • Welcome dinner with castle views",
@@ -471,7 +481,8 @@ const popularPackages = [
     id: 22,
     title: "Mystical Egypt",
     locations: "Cairo, Aswan, Luxor",
-    image: "/Mystical Egypt.jpg",
+    image:
+      "https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?w=800&h=600&fit=crop",
     gradient: "from-amber-500 to-yellow-500",
     highlights: [
       "Arrival in Cairo • Transfer to hotel • Evening free or optional Nile dinner cruise",
@@ -486,7 +497,8 @@ const popularPackages = [
     id: 23,
     title: "Andaman Escape",
     locations: "Port Blair, Havelock, Neil Island",
-    image: "/slider2.jpg",
+    image:
+      "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop",
     gradient: "from-teal-500 to-cyan-500",
     highlights: [
       "Arrival in Port Blair • Transfer to hotel • Visit Cellular Jail • Witness Light & Sound Show at evening",
@@ -501,7 +513,8 @@ const popularPackages = [
     id: 24,
     title: "Gateway to the Northeast – Guwahati",
     locations: "Guwahati, Shillong, Cherrapunji",
-    image: "/Gateway to the Northeast – Guwahati.jpg",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
     gradient: "from-green-500 to-emerald-500",
     highlights: [
       "Arrival in Guwahati • Transfer to hotel • Visit Kamakhya Temple • Sunset cruise on the Brahmaputra River",
@@ -515,7 +528,8 @@ const popularPackages = [
     id: 25,
     title: "Kashmir Paradise",
     locations: "Srinagar, Sonmarg, Gulmarg, Pahalgam",
-    image: "/Kashmir Paradise.jpg",
+    image:
+      "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=800&h=600&fit=crop",
     gradient: "from-blue-500 to-cyan-500",
     highlights: [
       "Arrival in Srinagar • Transfer to houseboat/hotel • Enjoy a Shikara ride on Dal Lake • Dinner & overnight stay",
@@ -530,7 +544,8 @@ const popularPackages = [
     id: 26,
     title: "Serene Sri Lanka",
     locations: "Colombo, Kandy, Nuwara Eliya, Bentota, Galle",
-    image: "/Serene Sri Lanka.jpg",
+    image:
+      "https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?w=800&h=600&fit=crop",
     gradient: "from-emerald-500 to-teal-500",
     highlights: [
       "Arrival in Colombo → Kandy • Arrive in Colombo • Drive to Kandy via Pinnawala Elephant Orphanage • Visit Temple of the Tooth Relic • Overnight in Kandy",
@@ -575,42 +590,39 @@ const PopularPackages = () => {
       // Get current transform value
       const computedStyle = window.getComputedStyle(innerContainerRef.current);
       const transform = computedStyle.transform;
-
-      if (transform && transform !== "none") {
+      
+      if (transform && transform !== 'none') {
         try {
           const matrix = new DOMMatrix(transform);
           const translateX = matrix.e;
-
+          
           // Adjust scroll position to account for the transform offset
           if (translateX < 0) {
             const currentScroll = scrollContainerRef.current.scrollLeft;
-            scrollContainerRef.current.scrollLeft = Math.max(
-              0,
-              currentScroll + Math.abs(translateX)
-            );
+            scrollContainerRef.current.scrollLeft = Math.max(0, currentScroll + Math.abs(translateX));
           }
         } catch (e) {
           // Fallback if DOMMatrix is not available
-          console.warn("Could not parse transform:", e);
+          console.warn('Could not parse transform:', e);
         }
       }
-
+      
       // Remove transform
-      innerContainerRef.current.style.transform = "none";
-      innerContainerRef.current.style.animation = "none";
+      innerContainerRef.current.style.transform = 'none';
+      innerContainerRef.current.style.animation = 'none';
     }
-
+    
     // Clear any existing timeout
     if (animationTimeoutRef.current) {
       clearTimeout(animationTimeoutRef.current);
     }
-
+    
     // Resume animation after 5 seconds
     animationTimeoutRef.current = setTimeout(() => {
       setIsAnimationPaused(false);
       if (innerContainerRef.current) {
-        innerContainerRef.current.style.transform = "";
-        innerContainerRef.current.style.animation = "";
+        innerContainerRef.current.style.transform = '';
+        innerContainerRef.current.style.animation = '';
       }
     }, 5000);
   };
@@ -618,27 +630,27 @@ const PopularPackages = () => {
   const scrollLeft = (e) => {
     e?.preventDefault();
     e?.stopPropagation();
-
+    
     if (!scrollContainerRef.current) return;
-
+    
     // Pause animation first
     pauseAnimation();
-
+    
     // Wait a tiny bit for transform to reset
     setTimeout(() => {
       if (!scrollContainerRef.current) return;
-
+      
       const isMobile = window.innerWidth < 768;
       const cardWidth = isMobile ? 280 : 320;
       const gap = 16;
       const scrollAmount = cardWidth + gap;
-
+      
       // Get current scroll position
       const currentScroll = scrollContainerRef.current.scrollLeft;
-
+      
       // Calculate new scroll position
       const newScroll = Math.max(0, currentScroll - scrollAmount);
-
+      
       // Perform the scroll
       scrollContainerRef.current.scrollTo({
         left: newScroll,
@@ -650,30 +662,28 @@ const PopularPackages = () => {
   const scrollRight = (e) => {
     e?.preventDefault();
     e?.stopPropagation();
-
+    
     if (!scrollContainerRef.current) return;
-
+    
     // Pause animation first
     pauseAnimation();
-
+    
     // Wait a tiny bit for transform to reset
     setTimeout(() => {
       if (!scrollContainerRef.current) return;
-
+      
       const isMobile = window.innerWidth < 768;
       const cardWidth = isMobile ? 280 : 320;
       const gap = 16;
       const scrollAmount = cardWidth + gap;
-
+      
       // Get current scroll position
       const currentScroll = scrollContainerRef.current.scrollLeft;
-      const maxScroll =
-        scrollContainerRef.current.scrollWidth -
-        scrollContainerRef.current.clientWidth;
-
+      const maxScroll = scrollContainerRef.current.scrollWidth - scrollContainerRef.current.clientWidth;
+      
       // Calculate new scroll position
       const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
-
+      
       // Perform the scroll
       scrollContainerRef.current.scrollTo({
         left: newScroll,
@@ -735,9 +745,7 @@ const PopularPackages = () => {
             >
               <div
                 ref={innerContainerRef}
-                className={`flex gap-4 ${
-                  isAnimationPaused ? "" : "animate-scroll"
-                }`}
+                className={`flex gap-4 ${isAnimationPaused ? '' : 'animate-scroll'}`}
                 style={{
                   width: "fit-content",
                 }}
@@ -898,7 +906,10 @@ const PopularPackages = () => {
                   onClick={() => {
                     const phoneNumber = "919549134848";
                     const message = `Hello! I'm interested in ${selectedPackage.title}. Please provide pricing and more details.`;
-                    openWhatsApp(phoneNumber, message);
+                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                      message
+                    )}`;
+                    window.open(whatsappUrl, "_blank");
                   }}
                 >
                   Get Custom Quote
