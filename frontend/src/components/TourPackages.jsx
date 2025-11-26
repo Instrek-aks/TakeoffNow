@@ -171,7 +171,7 @@ const TravelStories = () => {
             return (
               <div
                 key={pkg.id}
-                className="bg-[#0cc0df] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-amber-200 flex flex-col h-full"
+                className="bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-cyan-50 flex flex-col h-full"
               >
                 {/* Image */}
                 <div className="relative overflow-hidden shrink-0">
