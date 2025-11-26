@@ -214,13 +214,11 @@ const TravelStories = () => {
                           / person
                         </span>
                       </p>
-                      <p className="text-xs text-gray-500 mt-0.5">
-                        Approx. ± ₹500 variance
-                      </p>
+
                       <div className="flex items-center gap-1 mt-1">
                         <Star className="w-3 h-3 text-yellow-400 fill-yellow-400 shrink-0" />
                         <span className="text-xs text-gray-500">
-                          {pkg.reviews} • {pkg.duration}
+                          {pkg.reviews} | {pkg.duration}
                         </span>
                       </div>
                     </div>

@@ -68,24 +68,26 @@ const About = () => {
 
       {/* Hero Section */}
       <section className="relative h-[60vh] bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-transparent"></div>
         <div className="absolute inset-0">
           <img
-            src="/about us 1.webp"
+            src="/about6.jpg"
             alt="About TakeoffNow"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-violet-400 via-pink-400 to-orange-400 bg-clip-text text-transparent drop-shadow-2xl">
-            About TakeoffNow
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
+            <span className="text-white">About</span>{" "}
+            <span className="text-white">TakeoffNow</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-[#11224E] font-bold">
+          <p className="text-xl md:text-2xl mb-8 text-blue-600 font-bold drop-shadow-2xl">
             Your trusted partner in creating unforgettable travel experiences
           </p>
           <Button
             size="lg"
-            className="bg-orange-400 hover:bg-blue-500 text-white px-8 py-4 text-lg"
+            className="bg-orange-400 hover:bg-orange-500 text-white px-8 py-4 text-lg shadow-xl"
           >
             Start Your Journey
           </Button>
@@ -118,7 +120,7 @@ const About = () => {
                   {stats.map((stat, index) => (
                     <div
                       key={index}
-                      className="text-center p-6 bg-blue-50 rounded-lg"
+                      className="text-center p-6 bg-white rounded-lg"
                     >
                       <div className="text-3xl font-bold text-blue-600 mb-2">
                         {stat.number}
@@ -207,7 +209,7 @@ const About = () => {
               ].map((service, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-amber-200"
+                  className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-amber-200"
                 >
                   <div className="mb-4">{service.icon}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -295,7 +297,7 @@ const About = () => {
                       {teamMember.role}
                     </div>
                   </div>
-                  <div className="bg-white/60 rounded-xl p-6 border-2 border-amber-200/50 shadow-md">
+                  <div className="bg-white rounded-xl p-6 border-2 border-amber-200/50 shadow-md">
                     <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                       {teamMember.description}
                     </p>
