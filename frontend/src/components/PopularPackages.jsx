@@ -24,7 +24,7 @@ const popularPackages = [
   {
     id: 1,
     title: "Majestic AUSTRALIA ROAD TRIP",
-    locations: "Melbourne 3N, Canberra 2N, Sydney 2N",
+    locations: "Melbourne, Canberra, Sydney",
     image: "/slider7.webp",
     gradient: "from-blue-500 to-cyan-500",
     highlights: [
@@ -574,12 +574,12 @@ const PopularPackages = () => {
       // Get current transform value
       const computedStyle = window.getComputedStyle(innerContainerRef.current);
       const transform = computedStyle.transform;
-      
+
       if (transform && transform !== "none") {
         try {
           const matrix = new DOMMatrix(transform);
           const translateX = matrix.e;
-          
+
           // Adjust scroll position to account for the transform offset
           if (translateX < 0) {
             const currentScroll = scrollContainerRef.current.scrollLeft;
@@ -593,17 +593,17 @@ const PopularPackages = () => {
           console.warn("Could not parse transform:", e);
         }
       }
-      
+
       // Remove transform
       innerContainerRef.current.style.transform = "none";
       innerContainerRef.current.style.animation = "none";
     }
-    
+
     // Clear any existing timeout
     if (animationTimeoutRef.current) {
       clearTimeout(animationTimeoutRef.current);
     }
-    
+
     // Resume animation after 5 seconds
     animationTimeoutRef.current = setTimeout(() => {
       setIsAnimationPaused(false);
@@ -617,27 +617,27 @@ const PopularPackages = () => {
   const scrollLeft = (e) => {
     e?.preventDefault();
     e?.stopPropagation();
-    
+
     if (!scrollContainerRef.current) return;
-    
+
     // Pause animation first
     pauseAnimation();
-    
+
     // Wait a tiny bit for transform to reset
     setTimeout(() => {
       if (!scrollContainerRef.current) return;
-      
+
       const isMobile = window.innerWidth < 768;
       const cardWidth = isMobile ? 280 : 320;
       const gap = 16;
       const scrollAmount = cardWidth + gap;
-      
+
       // Get current scroll position
       const currentScroll = scrollContainerRef.current.scrollLeft;
-      
+
       // Calculate new scroll position
       const newScroll = Math.max(0, currentScroll - scrollAmount);
-      
+
       // Perform the scroll
       scrollContainerRef.current.scrollTo({
         left: newScroll,
@@ -649,30 +649,30 @@ const PopularPackages = () => {
   const scrollRight = (e) => {
     e?.preventDefault();
     e?.stopPropagation();
-    
+
     if (!scrollContainerRef.current) return;
-    
+
     // Pause animation first
     pauseAnimation();
-    
+
     // Wait a tiny bit for transform to reset
     setTimeout(() => {
       if (!scrollContainerRef.current) return;
-      
+
       const isMobile = window.innerWidth < 768;
       const cardWidth = isMobile ? 280 : 320;
       const gap = 16;
       const scrollAmount = cardWidth + gap;
-      
+
       // Get current scroll position
       const currentScroll = scrollContainerRef.current.scrollLeft;
       const maxScroll =
         scrollContainerRef.current.scrollWidth -
         scrollContainerRef.current.clientWidth;
-      
+
       // Calculate new scroll position
       const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
-      
+
       // Perform the scroll
       scrollContainerRef.current.scrollTo({
         left: newScroll,
