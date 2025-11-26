@@ -85,7 +85,7 @@ const Contact = () => {
     {
       icon: <Clock className="w-6 h-6 text-blue-600" />,
       title: "Business Hours",
-      details: ["Mon – Sat: 10:00 AM – 7:00 PM", "Sunday: CLOSED"],
+      details: ["Mon – Sun: 10:00 AM – 7:00 PM"],
       description: "We're here to help you",
     },
   ];

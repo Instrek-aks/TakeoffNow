@@ -137,7 +137,7 @@ const DiscoverSection = () => {
         <div className="mt-24">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3 flex-wrap">
-              <span className="bg-[#ffde59] bg-clip-text text-transparent">
+              <span className="bg-[#ffd739] bg-clip-text text-transparent">
                 Plan
               </span>
               <span className="text-[#11224E]">|</span>
