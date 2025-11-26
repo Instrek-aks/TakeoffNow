@@ -18,8 +18,8 @@ const packages = [
     location: "Bali, Indonesia",
     duration: "7 Days",
     image: "/bali.webp",
-    originalPrice: 320,
-    price: 320,
+    originalPrice: 31,
+    price: 30.5,
     reviews: 5,
     badge: { type: "new", label: "New" },
   },
@@ -29,8 +29,8 @@ const packages = [
     location: "UAE, Emirates",
     duration: "6 Days",
     image: "/Dazzling.webp",
-    originalPrice: 299,
-    price: 299,
+    originalPrice: 62,
+    price: 60.4,
     reviews: 5,
     badge: { type: "offer", label: "% Offer" },
   },
@@ -40,8 +40,8 @@ const packages = [
     location: "Singapore City",
     duration: "5 Days",
     image: "/Sensational.webp",
-    originalPrice: 349,
-    price: 349,
+    originalPrice: 51,
+    price: 50.6,
     reviews: 5,
     badge: { type: "new", label: "New" },
   },
@@ -51,8 +51,8 @@ const packages = [
     location: "Pattaya & Bangkok, Thailand",
     duration: "5 Days",
     image: "/Thrilling.webp",
-    originalPrice: 280,
-    price: 280,
+    originalPrice: 25.5,
+    price: 24.8,
     reviews: 4,
     badge: { type: "featured", label: "Featured" },
   },
@@ -62,8 +62,8 @@ const packages = [
     location: "Kuala Lumpur, Malaysia",
     duration: "6 Days",
     image: "/mal.webp",
-    originalPrice: 280,
-    price: 280,
+    originalPrice: 46,
+    price: 45.3,
     reviews: 4,
     badge: null,
   },
@@ -73,8 +73,8 @@ const packages = [
     location: "Hanoi, Danang & Phu Quoc",
     duration: "7 Days",
     image: "/Vibrant.webp",
-    originalPrice: 290,
-    price: 290,
+    originalPrice: 61.2,
+    price: 60.2,
     reviews: 5,
     badge: { type: "featured", label: "Featured" },
   },
@@ -84,8 +84,8 @@ const packages = [
     location: "Ubud & Seminyak, Indonesia",
     duration: "6 Days",
     image: "/bali1.webp",
-    originalPrice: 340,
-    price: 340,
+    originalPrice: 52.3,
+    price: 50.4,
     reviews: 5,
     badge: { type: "offer", label: "Special" },
   },
@@ -95,8 +95,8 @@ const packages = [
     location: "Ho Chi Minh to Hanoi",
     duration: "8 Days",
     image: "/veietnam2.webp",
-    originalPrice: 360,
-    price: 360,
+    originalPrice: 46.2,
+    price: 45.1,
     reviews: 5,
     badge: { type: "new", label: "New" },
   },
@@ -209,7 +209,13 @@ const TravelStories = () => {
                   <div className="mt-auto flex items-end justify-between gap-2">
                     <div className="flex-1 min-w-0">
                       <p className="text-lg font-bold text-gray-900">
-                        {formatPrice(pkg.price)}
+                        {formatPrice(pkg.price)}{" "}
+                        <span className="text-sm font-medium text-gray-600">
+                          / person
+                        </span>
+                      </p>
+                      <p className="text-xs text-gray-500 mt-0.5">
+                        Approx. ± ₹500 variance
                       </p>
                       <div className="flex items-center gap-1 mt-1">
                         <Star className="w-3 h-3 text-yellow-400 fill-yellow-400 shrink-0" />
