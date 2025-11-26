@@ -44,7 +44,7 @@ const popularPackages = [
   {
     id: 2,
     title: "SWISS PARIS AT A GLANCE",
-    locations: "Zurich 3N, Paris 3N",
+    locations: "Zurich, Paris",
     image: "/slider8.webp",
     gradient: "from-purple-500 to-pink-500",
     highlights: [
@@ -85,7 +85,7 @@ const popularPackages = [
   {
     id: 4,
     title: "Glimpses of EUROPE",
-    locations: "Paris 3N, Amsterdam 1N, Frankfurt 1N, Zurich 3N",
+    locations: "Paris, Amsterdam, Frankfurt, Zurich",
     image: "/golden-triangle-tour2.webp",
     gradient: "from-amber-500 to-orange-500",
     departureCities: ["Delhi", "Mumbai", "Bangalore", "Hyderabad", "Ahmedabad"],
