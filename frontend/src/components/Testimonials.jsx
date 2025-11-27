@@ -5,66 +5,31 @@ import { Button } from "./ui/Button";
 const testimonials = [
   {
     id: 1,
-    name: "Priya Sharma",
-    role: "Travel Enthusiast, Mumbai",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+    name: "Anish Gupta",
+    role: "Vietnam Explorer",
+    avatar: "/anish.jpeg",
     rating: 5,
-    text: "TakeoffNow made our Bali honeymoon feel truly magical. Every little detail was beautifully planned from the romantic dinners to the peaceful private island tours. We felt so cared for throughout the trip. I'd definitely recommend their personalized service to anyone looking for a special getaway!",
+    text: "Vietnam was honestly one of the best trips I’ve ever taken. From the Cu Chi Tunnels to the calm beauty of Halong Bay and the cozy streets of Hoi An, everything felt special. The guides were warm and fun, and the whole trip ran so smoothly. I loved every moment.",
+    badge: "Vietnam",
   },
+
   {
     id: 2,
-    name: "Rajesh Kumar",
-    role: "Business Executive, Delhi",
-    avatar:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+    name: "Anil Wadhwa",
+    role: "Singapore Explorer",
+    avatar: "/anil.jpeg",
     rating: 5,
-    text: "The Dubai package completely exceeded my expectations. The team was extremely responsive and professional, and they put together an itinerary that fit my interests perfectly. I'm genuinely impressed with their service and will definitely book with them again!",
+    text: "Singapore amazed me in ways I didn’t expect. The Supertrees at night, Marina Bay Sands, Sentosa—everything was beautiful. Exploring Chinatown and Little India was so much fun too. The trip was super easy and the people guiding us were genuinely helpful. I loved it.",
+    badge: "Singapore",
   },
   {
     id: 3,
-    name: "Anjali Patel",
-    role: "Family Traveler, Bangalore",
-    avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
+    name: "Diwanshi Gupta",
+    role: "Dubai Dreamer",
+    avatar: "/diwanshi.jpeg",
     rating: 5,
-    text: "Our Singapore & Malaysia trip was completely hassle-free! The kids had the best time at Universal Studios, and we really appreciated how smooth the transfers and hotel arrangements were. TakeoffNow truly knows how to create memorable and stress-free family vacations.",
-  },
-  {
-    id: 4,
-    name: "Vikram Singh",
-    role: "Adventure Seeker, Pune",
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
-    rating: 5,
-    text: "Vietnam Discovery was honestly one of the best travel experiences I've had. Exploring the Cu Chi Tunnels, cruising through the breathtaking Halong Bay, and spending time at Ba Na Hills were absolute highlights. The tour guides were not only knowledgeable but genuinely friendly, which made the whole journey even better. Everything was smooth, well-organized, and handled with great care. Truly exceptional service from start to finish!",
-  },
-  {
-    id: 5,
-    name: "Meera Nair",
-    role: "Solo Traveler, Chennai",
-    avatar:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop",
-    rating: 5,
-    text: "As a solo traveler, I was a bit nervous at first, but TakeoffNow made me feel safe and supported the entire time during my Thailand trip. Their 24/7 WhatsApp support was a real lifesaver. Truly impressed by their professionalism and care!",
-  },
-  {
-    id: 6,
-    name: "Arjun Reddy",
-    role: "Couple Traveler, Hyderabad",
-    avatar:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
-    rating: 5,
-    text: "Our Europe trip honestly felt like a dream. From standing amidst the stunning Swiss Alps to soaking in the charm of Paris, every moment was beautifully planned. The hotels were amazing, and our tour manager went out of the way to help us throughout the journey. It was truly worth every penny!",
-  },
-  {
-    id: 7,
-    name: "Sneha Desai",
-    role: "Group Traveler, Ahmedabad",
-    avatar:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop",
-    rating: 5,
-    text: "We planned a group trip to Australia with TakeoffNow, and everything was absolutely seamless. The Great Ocean Road drive and our visit to the Sydney Opera House were truly unforgettable moments. What impressed us most was their attention to every little detail and the way they handled our group with such genuine care. Exceptional service all the way!",
+    text: "Dubai was such an unforgettable experience. The desert safari was thrilling, the view from Burj Khalifa was surreal, and exploring Old Dubai was really special. Everything was well-organized and comfortable, and the guides were so friendly. I’d happily do it all over again.",
+    badge: "Dubai",
   },
 ];
 
