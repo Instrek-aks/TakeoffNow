@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 
 const Contact = () => {
-  const whatsappNumber = "919045102484";
+  const whatsappNumber = "919549134848";
   const openWhatsAppChat = (message) => {
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       message
