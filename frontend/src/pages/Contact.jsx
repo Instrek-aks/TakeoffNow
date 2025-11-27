@@ -134,7 +134,7 @@ Please reach out with more details.`;
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute inset-0">
           <img
-            src="/contact1.jpg"
+            src="/contact1.webp"
             alt="Contact Background"
             className="w-full h-full object-cover"
           />

@@ -63,7 +63,7 @@ const Packages = () => {
       price: 35400,
       originalPrice: 0,
       discount: null,
-      image: "/DUBAI 4 NIGHTS.jpg",
+      image: "/DUBAI 4 NIGHTS.webp",
       description:
         "Experience the best of Dubai with iconic landmarks, desert adventures, and cultural attractions",
       features: [
@@ -89,7 +89,7 @@ const Packages = () => {
       price: 45000,
       originalPrice: 55000,
       discount: "18%",
-      image: "/Vietnam.png",
+      image: "/Vietnam.webp",
       description:
         "Explore Ho Chi Minh City, Da Nang, and Hanoi with cultural tours, ancient towns, and Halong Bay cruise",
       features: [
@@ -115,7 +115,7 @@ const Packages = () => {
       price: 51000,
       originalPrice: 60000,
       discount: "15%",
-      image: "/Thailand.png",
+      image: "/Thailand.webp",
       description:
         "Relax in 4-star hotels in Pattaya & Bangkok with exciting tours, shows, and cultural experiences",
       features: [
@@ -140,7 +140,7 @@ const Packages = () => {
       price: 54800,
       originalPrice: 0,
       discount: null,
-      image: "/Singapore & Malaysia.png",
+      image: "/Singapore & Malaysia.webp",
       description:
         "Return Economy Class Airfare with comprehensive tours of Singapore and Malaysia's best attractions",
       features: [
@@ -172,7 +172,7 @@ const Packages = () => {
       price: 125000,
       originalPrice: 145000,
       discount: "14%",
-      image: "/Maldives Honeymoon.jpg",
+      image: "/Maldives Honeymoon.webp",
       description:
         "Romantic beachfront experience with water activities, island hopping, and luxury resort stays",
       features: [
@@ -195,7 +195,7 @@ const Packages = () => {
       price: 80000,
       originalPrice: 95000,
       discount: "16%",
-      image: "/Greece Getaway.jpg",
+      image: "/Greece Getaway.webp",
       description:
         "Explore Athens, Santorini, and Mykonos with ancient history, stunning sunsets, and island charm",
       features: [
@@ -218,7 +218,7 @@ const Packages = () => {
       price: 130000,
       originalPrice: 150000,
       discount: "13%",
-      image: "/Enchanting Edinburgh.jpg",
+      image: "/Enchanting Edinburgh.webp",
       description:
         "Discover Scotland's capital with historic castles, highlands excursions, and rich culture",
       features: [
@@ -240,7 +240,7 @@ const Packages = () => {
       price: 62000,
       originalPrice: 75000,
       discount: "17%",
-      image: "/Mystical Egypt.jpg",
+      image: "/Mystical Egypt.webp",
       description:
         "Journey through ancient wonders with Pyramids, Nile cruise, and historic temples",
       features: [
@@ -287,7 +287,7 @@ const Packages = () => {
       price: 18923,
       originalPrice: 25000,
       discount: "24%",
-      image: "/Gateway to the Northeast – Guwahati.jpg",
+      image: "/Gateway to the Northeast – Guwahati.webp",
       description:
         "Explore the misty hills of Northeast India with Shillong, Cherrapunji, and Brahmaputra experiences",
       features: [
@@ -309,7 +309,7 @@ const Packages = () => {
       price: 45000,
       originalPrice: 55000,
       discount: "18%",
-      image: "/Kashmir Paradise.jpg",
+      image: "/Kashmir Paradise.webp",
       description:
         "Experience the beauty of Kashmir with houseboats, snow activities, and scenic valleys",
       features: [
@@ -332,7 +332,7 @@ const Packages = () => {
       price: 51000,
       originalPrice: 62000,
       discount: "18%",
-      image: "/Serene Sri Lanka.jpg",
+      image: "/Serene Sri Lanka.webp",
       description:
         "Discover the pearl of the Indian Ocean with tea plantations, beaches, and cultural heritage",
       features: [
@@ -419,7 +419,7 @@ const Packages = () => {
       price: 125000,
       originalPrice: 145000,
       discount: "14%",
-      image: "/Dubai.png",
+      image: "/dubai.webp",
       description:
         "Marina Dhow Cruise, Dubai City Tour, Burj Khalifa, Dubai Frame, Desert Safari, Global Village, and Miracle Garden.",
       itinerary: [
@@ -556,7 +556,7 @@ const Packages = () => {
       price: 95000,
       originalPrice: 115000,
       discount: "17%",
-      image: "/Singapore & Malaysia.png",
+      image: "/Singapore & Malaysia.webp",
       description:
         "Return economy class airfare, 06 nights' accommodation, daily breakfast, city tours, Gardens by the Bay, Universal Studios, Sentosa Island, Kuala Lumpur, Genting Highlands, and more.",
       itinerary: [
@@ -717,7 +717,7 @@ const Packages = () => {
       price: 125000,
       originalPrice: 145000,
       discount: "14%",
-      image: "/Vietnam - 6 Nights 7 Days Discovery.jpg",
+      image: "/Vietnam – 6 Nights 7 Days Discovery.webp",
       description:
         "Grandworld, VinWonders + VinSafari, 4-Island Hopping with lunch + cable car + Aquatopia.",
       itinerary: [
@@ -902,7 +902,7 @@ const Packages = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-transparent"></div>
         <div className="absolute inset-0">
           <img
-            src="/about8.png"
+            src="/about8.webp"
             alt="Travel Background"
             className="w-full h-full object-cover scale-105"
           />

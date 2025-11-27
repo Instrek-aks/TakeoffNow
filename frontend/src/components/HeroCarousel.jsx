@@ -7,12 +7,12 @@ const slides = [
   {
     title: "Your Journey, Perfectly Planned",
     subtitle: "From flights to stays, we design trips that fit you perfectly.",
-    image: "/newSlide1.jpg",
+    image: "/newSlide1.webp",
   },
   {
     title: "Travel Smarter, Experience More",
     subtitle: "Discover handcrafted itineraries that make every moment count.",
-    image: "/newSlide2.jpg",
+    image: "/newSlide2.webp",
   },
   {
     title: "Let's Take Off to Your Dream Destination",

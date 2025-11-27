@@ -23,7 +23,7 @@ const About = () => {
   const teamMember = {
     name: "Akshat Goel",
     role: "Founder & Travel Expert",
-    image: "/akshat.JPG",
+    image: "/akshat.webp",
     description:
       "Passionate traveler with extensive experience in creating personalized travel experiences. Dedicated to crafting unique journeys tailored to each traveler's dreams.",
   };
@@ -73,7 +73,7 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-transparent"></div>
         <div className="absolute inset-0">
           <img
-            src="/about9.jpg"
+            src="/about9.webp"
             alt="About TakeoffNow"
             className="w-full h-full object-cover"
           />

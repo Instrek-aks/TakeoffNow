@@ -112,7 +112,7 @@ const popularPackages = [
     id: 5,
     title: "DUBAI 4 NIGHTS",
     locations: "Dubai",
-    image: "/DUBAI 4 NIGHTS.jpg",
+    image: "/DUBAI 4 NIGHTS.webp",
     gradient: "from-amber-500 to-orange-500",
     highlights: [
       "Evening Marina Dhow Cruise with buffet dinner & live entertainment",
@@ -130,7 +130,7 @@ const popularPackages = [
     id: 6,
     title: "VIETNAM DISCOVERY",
     locations: "Ho Chi Minh City, Da Nang, Hanoi",
-    image: "/Vietnam – 6 Nights 7 Days Discovery.jpg",
+    image: "/Vietnam – 6 Nights 7 Days Discovery.webp",
     gradient: "from-emerald-500 to-teal-500",
     highlights: [
       "Ho Chi Minh City Tour & Cu Chi Tunnels Tour (Shared Basis)",
@@ -148,7 +148,7 @@ const popularPackages = [
     id: 7,
     title: "THAILAND GETAWAY",
     locations: "Pattaya & Bangkok",
-    image: "/Thailand – Bangkok & Pattaya.jpg",
+    image: "/Thailand – Bangkok & Pattaya.webp",
     gradient: "from-pink-500 to-rose-500",
     withFlights: true,
     highlights: [
@@ -165,7 +165,7 @@ const popularPackages = [
     id: 8,
     title: "SINGAPORE & MALAYSIA",
     locations: "Singapore & Kuala Lumpur",
-    image: "/Singapore & Malaysia.png",
+    image: "/Singapore & Malaysia.webp",
     gradient: "from-blue-500 to-indigo-500",
     withFlights: true,
     highlights: [
@@ -213,7 +213,7 @@ const popularPackages = [
     id: 10,
     title: "Dubai 4 Nights – Ultimate Experience",
     locations: "Dubai",
-    image: "/DUBAI 4 NIGHTS.jpg",
+    image: "/DUBAI 4 NIGHTS.webp",
     gradient: "from-amber-500 to-orange-500",
     highlights: [
       "Marina Dhow Cruise with buffet dinner and live entertainment",
@@ -254,7 +254,7 @@ const popularPackages = [
     id: 12,
     title: "Singapore Essentials – Attractions Combo",
     locations: "Singapore",
-    image: "/Singapore & Malaysia.png",
+    image: "/Singapore & Malaysia.webp",
     gradient: "from-blue-500 to-cyan-500",
     highlights: [
       "Night Safari with complimentary shows and tram rides",
@@ -340,7 +340,7 @@ const popularPackages = [
     id: 16,
     title: "Vietnam – Phu Quoc Island Plan",
     locations: "Phu Quoc",
-    image: "/Vietnam – 6 Nights 7 Days Discovery.jpg",
+    image: "/Vietnam – 6 Nights 7 Days Discovery.webp",
     gradient: "from-cyan-500 to-blue-500",
     highlights: [
       "Grandworld Phu Quoc – vibrant entertainment complex",
@@ -426,7 +426,7 @@ const popularPackages = [
     id: 19,
     title: "Maldives Honeymoon",
     locations: "Malé",
-    image: "/Maldives Honeymoon.jpg",
+    image: "/Maldives Honeymoon.webp",
     gradient: "from-cyan-500 to-blue-500",
     highlights: [
       "Arrival at Malé • Transfer by speedboat/seaplane • Check-in • Romantic beachfront dinner",
@@ -441,7 +441,7 @@ const popularPackages = [
     id: 20,
     title: "Greece Getaway",
     locations: "Athens, Santorini, Mykonos",
-    image: "/Greece Getaway.jpg",
+    image: "/Greece Getaway.webp",
     gradient: "from-blue-500 to-indigo-500",
     highlights: [
       "Athens Arrival • Check-in • Evening at leisure in Plaka • Dinner with Acropolis view",
@@ -456,7 +456,7 @@ const popularPackages = [
     id: 21,
     title: "Enchanting Edinburgh",
     locations: "Edinburgh, Scottish Highlands",
-    image: "/Enchanting Edinburgh.jpg",
+    image: "/Enchanting Edinburgh.webp",
     gradient: "from-slate-500 to-gray-500",
     highlights: [
       "Arrival in Edinburgh • Transfer to hotel • Evening stroll along Princes Street • Welcome dinner with castle views",
@@ -470,7 +470,7 @@ const popularPackages = [
     id: 22,
     title: "Mystical Egypt",
     locations: "Cairo, Aswan, Luxor",
-    image: "/Mystical Egypt.jpg",
+    image: "/Mystical Egypt.webp",
     gradient: "from-amber-500 to-yellow-500",
     highlights: [
       "Arrival in Cairo • Transfer to hotel • Evening free or optional Nile dinner cruise",
@@ -500,7 +500,7 @@ const popularPackages = [
     id: 24,
     title: "Gateway to the Northeast – Guwahati",
     locations: "Guwahati, Shillong, Cherrapunji",
-    image: "/Gateway to the Northeast – Guwahati.jpg",
+    image: "/Gateway to the Northeast – Guwahati.webp",
     gradient: "from-green-500 to-emerald-500",
     highlights: [
       "Arrival in Guwahati • Transfer to hotel • Visit Kamakhya Temple • Sunset cruise on the Brahmaputra River",
@@ -514,7 +514,7 @@ const popularPackages = [
     id: 25,
     title: "Kashmir Paradise",
     locations: "Srinagar, Sonmarg, Gulmarg, Pahalgam",
-    image: "/Kashmir Paradise.jpg",
+    image: "/Kashmir Paradise.webp",
     gradient: "from-blue-500 to-cyan-500",
     highlights: [
       "Arrival in Srinagar • Transfer to houseboat/hotel • Enjoy a Shikara ride on Dal Lake • Dinner & overnight stay",
@@ -529,7 +529,7 @@ const popularPackages = [
     id: 26,
     title: "Serene Sri Lanka",
     locations: "Colombo, Kandy, Nuwara Eliya, Bentota, Galle",
-    image: "/Serene Sri Lanka.jpg",
+    image: "/Serene Sri Lanka.webp",
     gradient: "from-emerald-500 to-teal-500",
     highlights: [
       "Arrival in Colombo → Kandy • Arrive in Colombo • Drive to Kandy via Pinnawala Elephant Orphanage • Visit Temple of the Tooth Relic • Overnight in Kandy",

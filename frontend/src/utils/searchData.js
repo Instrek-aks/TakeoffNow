@@ -81,7 +81,7 @@ export const destinations = [
         type: "Ready-made Itinerary",
         duration: "6 Days",
         price: 160000,
-        image: "/singapore & Malaysia.png",
+        image: "/Singapore & Malaysia.webp",
       },
       {
         id: "itinerary-10",
@@ -97,7 +97,7 @@ export const destinations = [
         type: "Basic Package",
         duration: "6 Nights | 7 Days",
         price: 0,
-        image: "singapore & Malaysia.png",
+        image: "/Singapore & Malaysia.webp",
       },
       {
         id: "tour-3",
@@ -159,7 +159,7 @@ export const destinations = [
         type: "Ready-made Itinerary",
         duration: "6 Days",
         price: 125000,
-        image: "/Vietnam - 6 Nights 7 Days Discovery.jpg",
+        image: "/Vietnam – 6 Nights 7 Days Discovery.webp",
       },
       {
         id: "itinerary-7",
