@@ -22,10 +22,10 @@ import {
 const About = () => {
   const teamMember = {
     name: "Akshat Goel",
-    role: "Founder & Travel Expert",
+    role: "Founder & CEO, TakeOffNow",
     image: "/akshat.webp",
     description:
-      "Passionate traveler with extensive experience in creating personalized travel experiences. Dedicated to crafting unique journeys tailored to each traveler's dreams.",
+      "At TakeOffNow, our goal is to make travel feel easy, friendly, and enjoyable. Whether you're planning your first trip or your hundredth, my team and I are here to support you like family.\n\nThank you for trusting us. Your journey matters to us.",
   };
 
   const testimonials = [
@@ -313,7 +313,7 @@ const About = () => {
                     </div>
                   </div>
                   <div className="bg-white rounded-xl p-6 border-2 border-amber-200/50 shadow-md">
-                    <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                    <p className="text-gray-700 text-base md:text-lg leading-relaxed whitespace-pre-line">
                       {teamMember.description}
                     </p>
                   </div>
