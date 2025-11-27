@@ -377,27 +377,27 @@ const Navbar = () => {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-80 bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 border border-amber-200 h-auto max-h-screen overflow-y-auto"
+                className="w-80 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 border border-emerald-200 h-auto max-h-screen overflow-y-auto"
               >
-                <div className="flex flex-col space-y-4 mt-8 pb-8">
-                  {navLinks.map((link) => (
-                    <div key={link.name} className="space-y-2">
+                <div className="flex flex-col mt-8 pb-8">
+                  {navLinks.map((link, index) => (
+                    <div key={link.name}>
                       <Link
                         to={link.href}
                         onClick={
                           link.name === "Home" ? handleHomeClick : undefined
                         }
-                        className="text-lg text-gray-800 hover:text-blue-600 transition-colors py-2 block font-semibold"
+                        className="text-lg text-gray-900 hover:text-emerald-600 transition-colors py-4 block font-semibold border-b-2 border-emerald-300 last:border-b-0"
                       >
                         {link.name}
                       </Link>
                       {link.hasDropdown && (
-                        <div className="ml-4 space-y-1">
+                        <div className="ml-4 space-y-1 pb-2">
                           {link.dropdownItems.map((item, index) => (
                             <Link
                               key={index}
                               to={link.href}
-                              className="text-sm text-gray-600 hover:text-blue-600 transition-colors py-1 block"
+                              className="text-sm text-gray-700 hover:text-emerald-600 transition-colors py-1 block"
                             >
                               • {item}
                             </Link>
