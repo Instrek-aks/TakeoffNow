@@ -208,14 +208,11 @@ const TravelStories = () => {
 
                   <div className="mt-auto flex items-end justify-between gap-2">
                     <div className="flex-1 min-w-0">
-                      <p className="text-lg font-bold text-gray-900">
-                        <span className="text-sm font-medium text-gray-600 mr-1">
+                      <p className="text-lg font-bold text-gray-900 flex flex-wrap items-baseline gap-x-1 gap-y-0.5">
+                        <span className="text-sm font-medium text-gray-600">
                           Starting from
                         </span>
-                        {formatPrice(pkg.price)}{" "}
-                        <span className="text-sm font-medium text-gray-600">
-                          /person
-                        </span>
+                        <span>{formatPrice(pkg.price)} /person</span>
                       </p>
 
                       <div className="flex items-center gap-1 mt-1">
