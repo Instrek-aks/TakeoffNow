@@ -125,11 +125,7 @@ const DiscoverSection = () => {
             </div>
 
             {/* Floating Text */}
-            <div className="absolute -right-8 top-1/2 -translate-y-1/2 -rotate-90 origin-center hidden xl:block">
-              <span className="text-8xl font-bold text-[#11224E]/20 whitespace-nowrap">
-                TRAVEL
-              </span>
-            </div>
+            <div className="absolute -right-8 top-1/2 -translate-y-1/2 -rotate-90 origin-center hidden xl:block"></div>
           </div>
         </div>
 

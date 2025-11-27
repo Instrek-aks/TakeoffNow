@@ -1587,7 +1587,8 @@ const Packages = () => {
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                   Destination
                 </label>
-                <select
+                <Input
+                  type="text"
                   value={exploreFormData.destination}
                   onChange={(e) =>
                     setExploreFormData({
@@ -1595,21 +1596,16 @@ const Packages = () => {
                       destination: e.target.value,
                     })
                   }
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
-                >
-                  <option value="">Select destination</option>
-                  {destinations.map((dest) => (
-                    <option key={dest.name} value={dest.name}>
-                      {dest.name}, {dest.country}
-                    </option>
-                  ))}
-                </select>
+                  placeholder="Where would you like to go?"
+                  className="w-full"
+                />
                 <Button
                   className="w-full mt-4 bg-violet-600 hover:bg-violet-700 text-white"
                   onClick={() => {
-                    if (exploreFormData.destination) setExploreFormStep(2);
+                    if (exploreFormData.destination?.trim())
+                      setExploreFormStep(2);
                   }}
-                  disabled={!exploreFormData.destination}
+                  disabled={!exploreFormData.destination?.trim()}
                 >
                   Next
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -1622,7 +1618,8 @@ const Packages = () => {
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                   Departure City
                 </label>
-                <select
+                <Input
+                  type="text"
                   value={exploreFormData.departureCity}
                   onChange={(e) =>
                     setExploreFormData({
@@ -1630,18 +1627,9 @@ const Packages = () => {
                       departureCity: e.target.value,
                     })
                   }
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
-                >
-                  <option value="">Select departure city</option>
-                  <option value="Delhi">Delhi</option>
-                  <option value="Mumbai">Mumbai</option>
-                  <option value="Bangalore">Bangalore</option>
-                  <option value="Chennai">Chennai</option>
-                  <option value="Kolkata">Kolkata</option>
-                  <option value="Hyderabad">Hyderabad</option>
-                  <option value="Pune">Pune</option>
-                  <option value="Ahmedabad">Ahmedabad</option>
-                </select>
+                  placeholder="Enter your departure city"
+                  className="w-full"
+                />
                 <div className="flex gap-2 mt-4 text-white">
                   <Button
                     variant="outline"
@@ -1653,9 +1641,10 @@ const Packages = () => {
                   <Button
                     className="flex-1 bg-violet-600 hover:bg-violet-700 text-white"
                     onClick={() => {
-                      if (exploreFormData.departureCity) setExploreFormStep(3);
+                      if (exploreFormData.departureCity?.trim())
+                        setExploreFormStep(3);
                     }}
-                    disabled={!exploreFormData.departureCity}
+                    disabled={!exploreFormData.departureCity?.trim()}
                   >
                     Next
                     <ArrowRight className="w-4 h-4 ml-2" />

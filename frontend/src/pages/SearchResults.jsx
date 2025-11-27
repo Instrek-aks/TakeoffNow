@@ -5,14 +5,43 @@ import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
 import { Input } from "../components/ui/Input";
 import { Button } from "../components/ui/Button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "../components/ui/Dialogs";
 import { Search, MapPin, ArrowRight } from "lucide-react";
 import { searchDestinations } from "../utils/searchData";
+
+const whatsappNumber = "919549134848";
+const openWhatsAppChat = (message) => {
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    message
+  )}`;
+  const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(
+    navigator.userAgent || ""
+  );
+  if (isMobile) {
+    window.location.href = url;
+  } else {
+    window.open(url, "_blank");
+  }
+};
 
 const SearchResults = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get("q") || "");
   const [results, setResults] = useState([]);
   const navigate = useNavigate();
+  const [isRequestDialogOpen, setIsRequestDialogOpen] = useState(false);
+  const [requestData, setRequestData] = useState({
+    name: "",
+    place: searchParams.get("q") || "",
+    date: "",
+    phone: "",
+  });
 
   useEffect(() => {
     if (searchQuery) {
@@ -21,6 +50,10 @@ const SearchResults = () => {
     } else {
       setResults([]);
     }
+    setRequestData((prev) => ({
+      ...prev,
+      place: searchQuery,
+    }));
   }, [searchQuery]);
 
   const handleSearch = (e) => {
@@ -34,6 +67,28 @@ const SearchResults = () => {
 
   const handleDestinationClick = (destinationName) => {
     navigate(`/destination/${encodeURIComponent(destinationName)}`);
+  };
+
+  const handleRequestSubmit = (e) => {
+    e.preventDefault();
+    const { name, place, date, phone } = requestData;
+    const message = `Hello TakeoffNow! 👋
+
+I want details for a destination that isn't listed.
+- Name: ${name}
+- Destination: ${place}
+- Travel Date: ${date || "Not decided"}
+- Phone: ${phone}
+
+Please share the best packages available.`;
+    openWhatsAppChat(message);
+    setIsRequestDialogOpen(false);
+    setRequestData({
+      name: "",
+      place: searchQuery,
+      date: "",
+      phone: "",
+    });
   };
 
   return (
@@ -114,10 +169,13 @@ const SearchResults = () => {
                 <p className="text-gray-600 mb-6">
                   We couldn't find any destinations matching "{searchQuery}"
                 </p>
-                <p className="text-sm text-gray-500">
-                  Try searching for: Dubai, Bali, Singapore, Thailand, Vietnam,
-                  Malaysia, Australia, Europe, Paris, Switzerland, New Zealand
-                </p>
+                
+                <Button
+                  className="mt-6 bg-amber-600 hover:bg-amber-700 text-white px-6 py-3"
+                  onClick={() => setIsRequestDialogOpen(true)}
+                >
+                  Request details for this place
+                </Button>
               </div>
             )}
           </div>
@@ -161,6 +219,85 @@ const SearchResults = () => {
           </div>
         )}
       </div>
+
+      <Dialog open={isRequestDialogOpen} onOpenChange={setIsRequestDialogOpen}>
+        <DialogContent className="sm:max-w-md bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 border border-amber-200">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-gray-900">
+              Can't find your destination?
+            </DialogTitle>
+            <DialogDescription className="text-gray-600">
+              Share your contact details and we'll send custom packages on WhatsApp.
+            </DialogDescription>
+          </DialogHeader>
+          <form className="space-y-4 mt-4" onSubmit={handleRequestSubmit}>
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Your Name
+              </label>
+              <Input
+                type="text"
+                value={requestData.name}
+                onChange={(e) =>
+                  setRequestData((prev) => ({ ...prev, name: e.target.value }))
+                }
+                placeholder="Enter your name"
+                required
+                className="w-full"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Destination you're interested in
+              </label>
+              <Input
+                type="text"
+                value={requestData.place}
+                onChange={(e) =>
+                  setRequestData((prev) => ({ ...prev, place: e.target.value }))
+                }
+                placeholder="e.g., Santorini, Iceland"
+                required
+                className="w-full"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Travel Date
+              </label>
+              <Input
+                type="date"
+                value={requestData.date}
+                onChange={(e) =>
+                  setRequestData((prev) => ({ ...prev, date: e.target.value }))
+                }
+                className="w-full"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                WhatsApp Number
+              </label>
+              <Input
+                type="tel"
+                value={requestData.phone}
+                onChange={(e) =>
+                  setRequestData((prev) => ({ ...prev, phone: e.target.value }))
+                }
+                placeholder="Enter your mobile number"
+                required
+                className="w-full"
+              />
+            </div>
+            <Button
+              type="submit"
+              className="w-full bg-amber-600 hover:bg-amber-700 text-white py-3"
+            >
+              Send to WhatsApp
+            </Button>
+          </form>
+        </DialogContent>
+      </Dialog>
 
       <Footer />
       <WhatsAppButton />

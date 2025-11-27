@@ -192,8 +192,8 @@ const TravelStories = () => {
                   </h3>
 
                   <div className="flex items-center text-white text-xs mb-2 shrink-0">
-                    <MapPin className="w-3 h-3 mr-1 shrink-0" />
-                    <span className="truncate">{pkg.location}</span>
+                    <MapPin className="w-3 h-3 mr-1 shrink-0 text-black" />
+                    <span className="truncate text-black">{pkg.location}</span>
                   </div>
 
                   <div className="mb-3 min-h-6 shrink-0">
