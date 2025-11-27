@@ -45,10 +45,26 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Form submission functionality:
-    // Currently simulates form submission with a 2-second delay
-    // After submission: shows success message, resets form fields, and allows user to send another message
-    // TODO: Integrate with backend API to actually send the form data
+    const { name, email, phone, subject, message, service } = formData;
+    const whatsappNumber = "919549134848";
+    const waMessage = `Hello TakeoffNow! 👋
+
+New enquiry from the contact form:
+- Name: ${name}
+- Email: ${email}
+- Phone: ${phone || "Not provided"}
+- Service Interested: ${service || "Not specified"}
+- Subject: ${subject}
+- Message: ${message}
+
+Please reach out with more details.`;
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      waMessage
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -60,7 +76,7 @@ const Contact = () => {
         message: "",
         service: "",
       });
-    }, 2000);
+    }, 800);
   };
 
   const contactInfo = [
@@ -73,7 +89,7 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6 text-blue-600" />,
       title: "Email",
-      details: ["info@takeoffnow.com", "bookings@takeoffnow.com"],
+      details: ["Travel@takeoffnow.in"],
       description: "Send us an email anytime",
     },
     {
@@ -108,15 +124,15 @@ const Contact = () => {
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&h=1080&fit=crop"
+            src="/contact.jpg"
             alt="Contact Background"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl md:text-2xl mb-8 text-blue-700">
-            Get in touch with our aviation experts and start planning your next
+          <p className="text-xl md:text-2xl mb-8 text-black">
+            Get in touch with our travel experts and start planning your next
             adventure
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -168,7 +184,7 @@ const Contact = () => {
               {contactInfo.map((info, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 border border-amber-200 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow"
+                  className="bg-white border border-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow"
                 >
                   <div className="mb-4 flex justify-center">{info.icon}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -346,14 +362,14 @@ const Contact = () => {
                 <div className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 border border-amber-200 rounded-2xl shadow-lg overflow-hidden">
                   <div className="h-64">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.1234567890!2d77.2295!3d28.6129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2daa9eb4d0b%3A0x717971125923e5d!2sIndia%20Gate!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin"
+                      src="https://www.google.com/maps?q=Shop%20No.%2006%2C%20Dev%20Plaza%2C%20Bhiwadi%20-%20Alwar%20Bypass%20Road-301019&output=embed"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
                       allowFullScreen=""
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="TakeoffNow Office Location - Delhi India Gate"
+                      title="TakeoffNow Office Location - Bhiwadi"
                     ></iframe>
                   </div>
                 </div>
@@ -386,9 +402,7 @@ const Contact = () => {
                           Office Hours
                         </h4>
                         <p className="text-gray-600">
-                          Monday – Saturday: 10:00 AM – 7:00 PM
-                          <br />
-                          Sunday: <span className="font-bold">CLOSED</span>
+                          Monday – Sunday: 10:00 AM – 7:00 PM
                         </p>
                       </div>
                     </div>

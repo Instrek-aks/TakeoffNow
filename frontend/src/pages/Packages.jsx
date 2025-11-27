@@ -34,7 +34,7 @@ import {
 } from "lucide-react";
 
 const Packages = () => {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState("basic");
   const [showPriceForm, setShowPriceForm] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState(null);
   const [formStep, setFormStep] = useState(1); // 1: departure city, 2: dates, 3: hotel, 4: phone
@@ -880,7 +880,6 @@ const Packages = () => {
   ];
 
   const categories = [
-    { id: "all", name: "All Packages" },
     { id: "basic", name: "Basic Packages" },
     { id: "itineraries", name: "Ready-made Itineraries" },
   ];
@@ -899,19 +898,20 @@ const Packages = () => {
 
       {/* Hero Section */}
       <section className="relative h-[70vh] bg-linear-to-r from-blue-900 via-blue-800 to-indigo-900 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-transparent"></div>
         <div className="absolute inset-0">
           <img
-            src="/banner1.webp"
+            src="/about8.png"
             alt="Travel Background"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-105"
           />
         </div>
         <div className="relative z-10 text-center text-violet-500 px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-violet-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-white bg-clip-text text-transparent">
             Travel Packages
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white">
+          <p className="text-xl md:text-2xl mb-8 font-bold text-white">
             Discover handcrafted itineraries designed just for you. Your
             journey, perfectly planned.
           </p>
@@ -968,7 +968,7 @@ const Packages = () => {
       </section>
 
       {/* Basic Packages Section */}
-      {(selectedCategory === "all" || selectedCategory === "basic") && (
+      {selectedCategory === "basic" && (
         <section className="py-20 bg-gradient-to-br from-violet-50 via-pink-50 to-orange-50">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
@@ -1141,7 +1141,7 @@ const Packages = () => {
       )}
 
       {/* Ready-made Itineraries Section */}
-      {(selectedCategory === "all" || selectedCategory === "itineraries") && (
+      {selectedCategory === "itineraries" && (
         <section className="py-20 bg-gradient-to-br from-violet-50 via-pink-50 to-orange-50">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">

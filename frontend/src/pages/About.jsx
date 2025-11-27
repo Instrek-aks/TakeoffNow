@@ -16,13 +16,14 @@ import {
   Plane,
   Camera,
   Compass,
+  Linkedin,
 } from "lucide-react";
 
 const About = () => {
   const teamMember = {
     name: "Akshat Goel",
     role: "Founder & Travel Expert",
-    image: "/akshat.jpeg",
+    image: "/akshat.JPG",
     description:
       "Passionate traveler with extensive experience in creating personalized travel experiences. Dedicated to crafting unique journeys tailored to each traveler's dreams.",
   };
@@ -72,7 +73,7 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-transparent"></div>
         <div className="absolute inset-0">
           <img
-            src="/about6.jpg"
+            src="/about9.jpg"
             alt="About TakeoffNow"
             className="w-full h-full object-cover"
           />
@@ -82,12 +83,15 @@ const About = () => {
             <span className="text-white">About</span>{" "}
             <span className="text-white">TakeoffNow</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-blue-600 font-bold drop-shadow-2xl">
+          <p className="text-xl md:text-2xl mb-8 text-cyan-500 font-bold drop-shadow-2xl">
             Your trusted partner in creating unforgettable travel experiences
           </p>
           <Button
             size="lg"
             className="bg-orange-400 hover:bg-orange-500 text-white px-8 py-4 text-lg shadow-xl"
+            onClick={() => {
+              window.location.href = "/packages";
+            }}
           >
             Start Your Journey
           </Button>
@@ -290,9 +294,20 @@ const About = () => {
                 {/* Details on Right */}
                 <div className="p-6 md:p-8 flex flex-col justify-center space-y-6">
                   <div>
-                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-                      {teamMember.name}
-                    </h3>
+                    <div className="flex items-center gap-3 mb-3">
+                      <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-0">
+                        {teamMember.name}
+                      </h3>
+                      <a
+                        href="https://www.linkedin.com/in/akshat-goel-2b650b2aa?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-700 transition-colors"
+                        aria-label="Akshat Goel on LinkedIn"
+                      >
+                        <Linkedin className="w-7 h-7" />
+                      </a>
+                    </div>
                     <div className="inline-block bg-blue-600 text-white px-6 py-2 rounded-full text-lg font-semibold mb-4">
                       {teamMember.role}
                     </div>
@@ -342,6 +357,9 @@ const About = () => {
               <Button
                 size="lg"
                 className="bg-amber-50 text-blue-600 hover:bg-amber-100 border border-amber-300"
+                onClick={() => {
+                  window.location.href = "tel:+919549134848";
+                }}
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Us Now
@@ -350,6 +368,9 @@ const About = () => {
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-blue-600"
+                onClick={() => {
+                  window.location.href = "mailto:Travel@takeoffnow.in";
+                }}
               >
                 <Mail className="w-5 h-5 mr-2" />
                 Send Email
