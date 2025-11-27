@@ -21,6 +21,21 @@ import {
 } from "lucide-react";
 
 const Contact = () => {
+  const whatsappNumber = "919045102484";
+  const openWhatsAppChat = (message) => {
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(
+      navigator.userAgent || ""
+    );
+    if (isMobile) {
+      window.location.href = url;
+    } else {
+      window.open(url, "_blank");
+    }
+  };
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -46,7 +61,6 @@ const Contact = () => {
     setIsSubmitting(true);
 
     const { name, email, phone, subject, message, service } = formData;
-    const whatsappNumber = "919549134848";
     const waMessage = `Hello TakeoffNow! 👋
 
 New enquiry from the contact form:
@@ -59,11 +73,7 @@ New enquiry from the contact form:
 
 Please reach out with more details.`;
 
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      waMessage
-    )}`;
-
-    window.open(whatsappUrl, "_blank");
+    openWhatsAppChat(waMessage);
 
     setTimeout(() => {
       setIsSubmitting(false);
@@ -140,13 +150,9 @@ Please reach out with more details.`;
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg"
               onClick={() => {
-                const phoneNumber = "919549134848";
-                const message =
-                  "Hello! I'm interested in your travel services.";
-                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                  message
-                )}`;
-                window.open(whatsappUrl, "_blank");
+                openWhatsAppChat(
+                  "Hello! I'm interested in your travel services."
+                );
               }}
             >
               <MessageCircle className="w-5 h-5 mr-2" />
@@ -471,13 +477,9 @@ Please reach out with more details.`;
                 size="lg"
                 className="bg-amber-50 text-green-600 hover:bg-amber-100 border border-amber-300 px-8 py-4 text-lg"
                 onClick={() => {
-                  const phoneNumber = "919549134848";
-                  const message =
-                    "Hello! I'm interested in your travel services.";
-                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                    message
-                  )}`;
-                  window.open(whatsappUrl, "_blank");
+                  openWhatsAppChat(
+                    "Hello! I'm interested in your travel services."
+                  );
                 }}
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
