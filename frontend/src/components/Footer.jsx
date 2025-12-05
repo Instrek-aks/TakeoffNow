@@ -48,19 +48,19 @@ const Footer = () => {
             </div>
             <div className="flex space-x-3 mt-6">
               <a
-                href="#"
+                href="https://www.instagram.com/takeoffnow5/"
                 className="bg-white/80 hover:bg-white rounded-full p-2 transition-colors text-emerald-600 shadow"
                 title="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="bg-white/80 hover:bg-white rounded-full p-2 transition-colors text-blue-600 shadow"
                 title="Facebook"
               >
                 <Facebook className="w-5 h-5" />
-              </a>
+              </a> */}
               <a
                 href="https://www.linkedin.com/in/akshat-goel-2b650b2aa?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                 target="_blank"
