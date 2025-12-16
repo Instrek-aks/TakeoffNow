@@ -104,7 +104,7 @@ export const destinations = [
         title: "Sensational Singapore Discovery",
         type: "Tour Package",
         duration: "5 Days",
-        price: 349,
+        price: 94499,
         image: "/singapore.webp",
       },
     ],
